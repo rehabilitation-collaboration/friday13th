@@ -86,8 +86,8 @@ FIG2_CFG = {
 FOREST_DATA = [
     # (label, RR, CI_lo, CI_hi, significant, is_japan)
     ("Scanlon 1993 (UK)", 1.44, None, None, True, False),
-    ("Nayha 2002 - Women (Finland)", 1.63, None, None, True, False),
-    ("Nayha 2002 - Men (Finland)", 1.02, None, None, False, False),
+    ("Näyhä 2002 - Women (Finland)", 1.63, None, None, True, False),
+    ("Näyhä 2002 - Men (Finland)", 1.02, None, None, False, False),
     ("Radun 2004 (Finland)", 1.00, None, None, False, False),
     ("CVS 2008 (Netherlands)", 0.96, None, None, False, False),
     ("Schuld 2011 (Germany)", 1.00, None, None, False, False),
