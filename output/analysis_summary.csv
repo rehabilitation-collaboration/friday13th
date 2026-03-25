@@ -1,0 +1,6 @@
+Analysis,RR,p-value,Significant
+Scanlon (paired 6th vs 13th),1.0448,0.4720,No
+"Nayha (NegBin, overall)",1.0119,0.9708,No
+"Lo (ANOVA, 4 groups)",N/A (ANOVA),0.9258,No
+Case-crossover (same-month),1.0364,0.3228,No
+Adjusted NegBin (full model),1.0196,0.9527,No

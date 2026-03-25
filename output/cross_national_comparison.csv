@@ -1,0 +1,10 @@
+Country,Study,Period,N_events,Outcome,Design,Effect_RR,CI_95,Significant,Direction,Cultural_fear_13
+UK,Scanlon 1993,multiple years,110,Hospital admissions,Paired (6th vs 13th),1.44,not reported,Yes (p<0.05),Increase (+52%),Strong
+Finland,Nayha 2002,1971-1997,41 (women),Traffic fatalities,NegBin regression,Women 1.63 / Men 1.02,not reported,Women only,Increase (women),Moderate
+Finland,Radun 2004,1989-2002,21 Fri13s,Injury accidents,Matched (adjacent Fri),~1.0,not reported,No,Null,Moderate
+Netherlands,CVS 2008,~2 years,7500/day,Insurance claims,Descriptive,0.96,N/A (non-academic),No (decreased),Decrease (-4%),Moderate
+Germany,Schuld 2011,2001-2010,27914,Surgical outcomes,Retrospective cohort,~1.0,not reported,No,Null,Strong
+USA,Lo 2012,8 years,49094,ED visits,Multi-control comparison,Overall <1.0 / Penetrating 1.65,Penetrating: 1.04-2.61,Penetrating only,Decrease (overall) / Increase (penetrating),Strong
+Canada,Ranganathan 2024,2007-2019,19747,Surgical outcomes,Population cohort,1.02,0.94-1.09,No,Null,Strong
+USA,Shekhar 2025,not confirmed,not confirmed,EMS volume,Letter,~1.0,not confirmed,No,Null,Strong
+Japan,Present study,2019-2024,"1,884,793",Traffic accidents,Multiple (Scanlon/Nayha/Lo/Case-crossover),1.0196,0.5369-1.9363,No,Null,Absent

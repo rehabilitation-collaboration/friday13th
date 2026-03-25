@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.DS_Store
+notebooks/
+PLAN.md
+REVIEW-REPORT.md
+LITERATURE.md
+socarxiv-submission.html
