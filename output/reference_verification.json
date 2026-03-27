@@ -1,0 +1,398 @@
+[
+  {
+    "ref_number": 1,
+    "status": "MATCH",
+    "raw_text": "Scanlon TJ, Luben RN, Scanlon FL, Singleton N. Is Friday the 13th bad for your health? *BMJ*. 1993;307(6919):1584-1586. doi:10.1136/bmj.307.6919.1584",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Scanlon TJ, Luben RN, Scanlon FL, Singleton N",
+      "title": "Is Friday the 13th bad for your health? *BMJ*",
+      "journal": "",
+      "year": "1993",
+      "volume": "307",
+      "pages": "1584-1586",
+      "doi": "10.1136/bmj.307.6919.1584"
+    },
+    "crossref_data": {
+      "title": "Is Friday the 13th bad for your health?",
+      "journal": "BMJ",
+      "year": "1993",
+      "volume": "307",
+      "page": "1584-1586",
+      "doi": "10.1136/bmj.307.6919.1584",
+      "authors": "Scanlon TJ, Luben RN, Scanlon FL, Singleton N"
+    },
+    "crossref_doi": "10.1136/bmj.307.6919.1584",
+    "corrected_citation": "Scanlon TJ, Luben RN, Scanlon FL, Singleton N. Is Friday the 13th bad for your health?. BMJ. 1993;307:1584-1586. doi:10.1136/bmj.307.6919.1584.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 2,
+    "status": "MATCH",
+    "raw_text": "Näyhä S. Traffic deaths and superstition on Friday the 13th. *Am J Psychiatry*. 2002;159(12):2110-2111. doi:10.1176/appi.ajp.159.12.2110",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Näyhä S",
+      "title": "Traffic deaths and superstition on Friday the 13th",
+      "journal": "",
+      "year": "2002",
+      "volume": "159",
+      "pages": "2110-2111",
+      "doi": "10.1176/appi.ajp.159.12.2110"
+    },
+    "crossref_data": {
+      "title": "Traffic Deaths and Superstition on Friday the 13th",
+      "journal": "American Journal of Psychiatry",
+      "year": "2002",
+      "volume": "159",
+      "page": "2110-2111",
+      "doi": "10.1176/appi.ajp.159.12.2110",
+      "authors": "Näyhä S"
+    },
+    "crossref_doi": "10.1176/appi.ajp.159.12.2110",
+    "corrected_citation": "Näyhä S. Traffic Deaths and Superstition on Friday the 13th. American Journal of Psychiatry. 2002;159:2110-2111. doi:10.1176/appi.ajp.159.12.2110.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 3,
+    "status": "MATCH",
+    "raw_text": "Radun I, Summala H. Females do not have more injury road accidents on Friday the 13th. *BMC Public Health*. 2004;4:54. doi:10.1186/1471-2458-4-54",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Radun I, Summala H",
+      "title": "Females do not have more injury road accidents on Friday the 13th",
+      "journal": "",
+      "year": "2004",
+      "volume": "4",
+      "pages": "",
+      "doi": "10.1186/1471-2458-4-54"
+    },
+    "crossref_data": {
+      "title": "Females do not have more injury road accidents on Friday the 13th",
+      "journal": "BMC Public Health",
+      "year": "2004",
+      "volume": "4",
+      "page": "54",
+      "doi": "10.1186/1471-2458-4-54",
+      "authors": "Radun I, Summala H"
+    },
+    "crossref_doi": "10.1186/1471-2458-4-54",
+    "corrected_citation": "Radun I, Summala H. Females do not have more injury road accidents on Friday the 13th. BMC Public Health. 2004;4:54. doi:10.1186/1471-2458-4-54.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 4,
+    "status": "MATCH",
+    "raw_text": "Smith DF. Traffic accidents and Friday the 13th [letter]. *Am J Psychiatry*. 2004;161(11):2140. doi:10.1176/appi.ajp.161.11.2140-a",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Smith DF",
+      "title": "Traffic accidents and Friday the 13th [letter]",
+      "journal": "",
+      "year": "2004",
+      "volume": "161",
+      "pages": "",
+      "doi": "10.1176/appi.ajp.161.11.2140-a"
+    },
+    "crossref_data": {
+      "title": "Traffic Accidents and Friday the 13th",
+      "journal": "American Journal of Psychiatry",
+      "year": "2004",
+      "volume": "161",
+      "page": "2140-a-2140",
+      "doi": "10.1176/appi.ajp.161.11.2140-a",
+      "authors": "SMITH DF"
+    },
+    "crossref_doi": "10.1176/appi.ajp.161.11.2140-a",
+    "corrected_citation": "SMITH DF. Traffic Accidents and Friday the 13th. American Journal of Psychiatry. 2004;161:2140-a-2140. doi:10.1176/appi.ajp.161.11.2140-a.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 5,
+    "status": "MISMATCH",
+    "raw_text": "Centrum voor Verzekeringsstatistiek (CVS). Vrijdag de 13e [press release]. The Hague, Netherlands; 2008.",
+    "mismatched_fields": [
+      "title",
+      "year",
+      "author_1_surname"
+    ],
+    "manuscript_data": {
+      "authors": "Centrum voor Verzekeringsstatistiek (CVS)",
+      "title": "Vrijdag de 13e [press release]",
+      "journal": "",
+      "year": "2008",
+      "volume": "",
+      "pages": "",
+      "doi": ""
+    },
+    "crossref_data": {
+      "title": "Soms is vrijdag de 13e een geluksdag",
+      "journal": "Tijdschrift voor bedrijfs- en verzekeringsgeneeskunde",
+      "year": "2012",
+      "volume": "20",
+      "page": "183-184",
+      "doi": "10.1007/s12498-012-0093-4",
+      "authors": "Wiechers AM"
+    },
+    "crossref_doi": "10.1007/s12498-012-0093-4",
+    "corrected_citation": "Wiechers AM. Soms is vrijdag de 13e een geluksdag. Tijdschrift voor bedrijfs- en verzekeringsgeneeskunde. 2012;20:183-184. doi:10.1007/s12498-012-0093-4.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via title search (lower confidence)"
+    ]
+  },
+  {
+    "ref_number": 6,
+    "status": "MATCH",
+    "raw_text": "Schuld J, Slotta JE, Schuld S, et al. Popular belief meets surgical reality: impact of lunar phases, Friday the 13th and zodiac signs on emergency operations and intraoperative blood loss. *World J Surg*. 2011;35(9):1945-1949. doi:10.1007/s00268-011-1166-8",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Schuld J, Slotta JE, Schuld S, et al",
+      "title": "Popular belief meets surgical reality: impact of lunar phases, Friday the 13th and zodiac signs on emergency operations and intraoperative blood loss",
+      "journal": "",
+      "year": "2011",
+      "volume": "35",
+      "pages": "1945-1949",
+      "doi": "10.1007/s00268-011-1166-8"
+    },
+    "crossref_data": {
+      "title": "Popular Belief Meets Surgical Reality: Impact of Lunar Phases, Friday the 13th and Zodiac Signs on Emergency Operations and Intraoperative Blood Loss",
+      "journal": "World Journal of Surgery",
+      "year": "2011",
+      "volume": "35",
+      "page": "1945-1949",
+      "doi": "10.1007/s00268-011-1166-8",
+      "authors": "Schuld J, Slotta JE, Schuld S, Kollmar O, Schilling MK, Richter S"
+    },
+    "crossref_doi": "10.1007/s00268-011-1166-8",
+    "corrected_citation": "Schuld J, Slotta JE, Schuld S, Kollmar O, Schilling MK, Richter S. Popular Belief Meets Surgical Reality: Impact of Lunar Phases, Friday the 13th and Zodiac Signs on Emergency Operations and Intraoperative Blood Loss. World Journal of Surgery. 2011;35:1945-1949. doi:10.1007/s00268-011-1166-8.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 7,
+    "status": "MATCH",
+    "raw_text": "Lo BM, Visintainer CM, Best HA, Beydoun HA. Answering the myth: use of emergency services on Friday the 13th. *Am J Emerg Med*. 2012;30(6):886-889. doi:10.1016/j.ajem.2011.06.008",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Lo BM, Visintainer CM, Best HA, Beydoun HA",
+      "title": "Answering the myth: use of emergency services on Friday the 13th",
+      "journal": "",
+      "year": "2012",
+      "volume": "30",
+      "pages": "886-889",
+      "doi": "10.1016/j.ajem.2011.06.008"
+    },
+    "crossref_data": {
+      "title": "Answering the myth: use of emergency services on Friday the 13th",
+      "journal": "The American Journal of Emergency Medicine",
+      "year": "2012",
+      "volume": "30",
+      "page": "886-889",
+      "doi": "10.1016/j.ajem.2011.06.008",
+      "authors": "Lo BM, Visintainer CM, Best HA, Beydoun HA"
+    },
+    "crossref_doi": "10.1016/j.ajem.2011.06.008",
+    "corrected_citation": "Lo BM, Visintainer CM, Best HA, Beydoun HA. Answering the myth: use of emergency services on Friday the 13th. The American Journal of Emergency Medicine. 2012;30:886-889. doi:10.1016/j.ajem.2011.06.008.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 8,
+    "status": "MATCH",
+    "raw_text": "Ranganathan S, Riveros C, Geng M, et al. Superstition in surgery: a population-based cohort study to assess the association between surgery on Friday the 13th and postoperative outcomes. *Ann Surg Open*. 2024;5(1):e375. doi:10.1097/AS9.0000000000000375",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Ranganathan S, Riveros C, Geng M, et al",
+      "title": "Superstition in surgery: a population-based cohort study to assess the association between surgery on Friday the 13th and postoperative outcomes",
+      "journal": "",
+      "year": "2024",
+      "volume": "5",
+      "pages": "e375",
+      "doi": "10.1097/AS9.0000000000000375"
+    },
+    "crossref_data": {
+      "title": "Superstition in Surgery: A Population-Based Cohort Study to Assess the Association Between Surgery on Friday the 13th and Postoperative Outcomes",
+      "journal": "Annals of Surgery Open",
+      "year": "2024",
+      "volume": "5",
+      "page": "e375",
+      "doi": "10.1097/as9.0000000000000375",
+      "authors": "Ranganathan S, Riveros C, Geng M, Chang C, Tsugawa Y, Ravi B, Melchiode Z, Hu S, Kobashi K, Miles BJ, Klaassen Z, Nathens A, Coburn N, Detsky AS, Jerath A, Wallis CJD, Satkunasivam R"
+    },
+    "crossref_doi": "10.1097/as9.0000000000000375",
+    "corrected_citation": "Ranganathan S, Riveros C, Geng M, Chang C, Tsugawa Y, Ravi B, Melchiode Z, Hu S, Kobashi K, Miles BJ, Klaassen Z, Nathens A, Coburn N, Detsky AS, Jerath A, Wallis CJD, Satkunasivam R. Superstition in Surgery: A Population-Based Cohort Study to Assess the Association Between Surgery on Friday the 13th and Postoperative Outcomes. Annals of Surgery Open. 2024;5:e375. doi:10.1097/as9.0000000000000375.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 9,
+    "status": "MATCH",
+    "raw_text": "Shekhar AC, McCartin M, Kimbrell J, Stebel J, Zhou A, Desman J, Carter J, Milekic B, Abbott E, Blumen IJ. Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume. *Am J Emerg Med*. 2025;92:245-247. doi:10.1016/j.ajem.2025.03.001",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Shekhar AC, McCartin M, Kimbrell J, Stebel J, Zhou A, Desman J, Carter J, Milekic B, Abbott E, Blumen IJ",
+      "title": "Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume",
+      "journal": "",
+      "year": "2025",
+      "volume": "92",
+      "pages": "245-247",
+      "doi": "10.1016/j.ajem.2025.03.001"
+    },
+    "crossref_data": {
+      "title": "Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume",
+      "journal": "The American Journal of Emergency Medicine",
+      "year": "2025",
+      "volume": "92",
+      "page": "245-247",
+      "doi": "10.1016/j.ajem.2025.03.001",
+      "authors": "Shekhar AC, McCartin M, Kimbrell J, Stebel J, Zhou A, Desman J, Carter J, Milekic B, Abbott E, Blumen IJ"
+    },
+    "crossref_doi": "10.1016/j.ajem.2025.03.001",
+    "corrected_citation": "Shekhar AC, McCartin M, Kimbrell J, Stebel J, Zhou A, Desman J, Carter J, Milekic B, Abbott E, Blumen IJ. Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume. The American Journal of Emergency Medicine. 2025;92:245-247. doi:10.1016/j.ajem.2025.03.001.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 10,
+    "status": "MISMATCH",
+    "raw_text": "Vyse SA. *Believing in Magic: The Psychology of Superstition*. Updated ed. New York: Oxford University Press; 2014.",
+    "mismatched_fields": [
+      "title",
+      "year"
+    ],
+    "manuscript_data": {
+      "authors": "Vyse SA",
+      "title": "*Believing in Magic: The Psychology of Superstition*",
+      "journal": "",
+      "year": "2014",
+      "volume": "",
+      "pages": "",
+      "doi": ""
+    },
+    "crossref_data": {
+      "title": "Believing in Magic",
+      "journal": "Believing in Magic",
+      "year": "1997",
+      "volume": "",
+      "page": "3-23",
+      "doi": "10.1093/oso/9780195078824.003.0001",
+      "authors": "Vyse SA"
+    },
+    "crossref_doi": "10.1093/oso/9780195078824.003.0001",
+    "corrected_citation": "Vyse SA. Believing in Magic. Believing in Magic. 1997:3-23. doi:10.1093/oso/9780195078824.003.0001.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via title search (lower confidence)"
+    ]
+  },
+  {
+    "ref_number": 11,
+    "status": "MISMATCH",
+    "raw_text": "Davies RJ, Ikeno O. *The Japanese Mind: Understanding Contemporary Japanese Culture*. Tokyo: Tuttle Publishing; 2002.",
+    "mismatched_fields": [
+      "title",
+      "year",
+      "author_count",
+      "author_1_surname"
+    ],
+    "manuscript_data": {
+      "authors": "Davies RJ, Ikeno O",
+      "title": "*The Japanese Mind: Understanding Contemporary Japanese Culture*",
+      "journal": "",
+      "year": "2002",
+      "volume": "",
+      "pages": "",
+      "doi": ""
+    },
+    "crossref_data": {
+      "title": "Editor's Suppliment:* The Enigmatic Japanese Mind",
+      "journal": "The Japanese Mind",
+      "year": "1967",
+      "volume": "",
+      "page": "288-319",
+      "doi": "10.1515/9780824843052-016",
+      "authors": "Moore CA"
+    },
+    "crossref_doi": "10.1515/9780824843052-016",
+    "corrected_citation": "Moore CA. Editor's Suppliment:* The Enigmatic Japanese Mind. The Japanese Mind. 1967:288-319. doi:10.1515/9780824843052-016.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via title search (lower confidence)"
+    ]
+  },
+  {
+    "ref_number": 12,
+    "status": "MATCH",
+    "raw_text": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS. The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death. *BMJ*. 2001;323(7327):1443-1446. doi:10.1136/bmj.323.7327.1443\n\n---",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS",
+      "title": "The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death",
+      "journal": "",
+      "year": "2001",
+      "volume": "323",
+      "pages": "1443-1446",
+      "doi": "10.1136/bmj.323.7327.1443"
+    },
+    "crossref_data": {
+      "title": "The\n                    <i>Hound of the Baskervilles</i>\n                    effect: natural experiment on the influence of psychological stress on timing of death",
+      "journal": "BMJ",
+      "year": "2001",
+      "volume": "323",
+      "page": "1443-1446",
+      "doi": "10.1136/bmj.323.7327.1443",
+      "authors": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS"
+    },
+    "crossref_doi": "10.1136/bmj.323.7327.1443",
+    "corrected_citation": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS. The\n                    <i>Hound of the Baskervilles</i>\n                    effect: natural experiment on the influence of psychological stress on timing of death. BMJ. 2001;323:1443-1446. doi:10.1136/bmj.323.7327.1443.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  }
+]
