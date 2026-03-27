@@ -154,7 +154,7 @@ Friday the 13th is not associated with increased traffic accidents in Japan. Whe
 6. Schuld J, Slotta JE, Schuld S, et al. Popular belief meets surgical reality: impact of lunar phases, Friday the 13th and zodiac signs on emergency operations and intraoperative blood loss. *World J Surg*. 2011;35(9):1945-1949. doi:10.1007/s00268-011-1166-8
 7. Lo BM, Visintainer CM, Best HA, Beydoun HA. Answering the myth: use of emergency services on Friday the 13th. *Am J Emerg Med*. 2012;30(6):886-889. doi:10.1016/j.ajem.2011.06.008
 8. Ranganathan S, Riveros C, Geng M, et al. Superstition in surgery: a population-based cohort study to assess the association between surgery on Friday the 13th and postoperative outcomes. *Ann Surg Open*. 2024;5(1):e375. doi:10.1097/AS9.0000000000000375
-9. Shekhar AC, Sabo G, Stebel J, et al. Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume. *Am J Emerg Med*. 2025;92:245-247. doi:10.1016/j.ajem.2025.03.001
+9. Shekhar AC, McCartin M, Kimbrell J, Stebel J, Zhou A, Desman J, Carter J, Milekic B, Abbott E, Blumen IJ. Friday the 13th is not associated with increases in emergency medical services (EMS) patient volume. *Am J Emerg Med*. 2025;92:245-247. doi:10.1016/j.ajem.2025.03.001
 10. Vyse SA. *Believing in Magic: The Psychology of Superstition*. Updated ed. New York: Oxford University Press; 2014.
 11. Davies RJ, Ikeno O. *The Japanese Mind: Understanding Contemporary Japanese Culture*. Tokyo: Tuttle Publishing; 2002.
 12. Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS. The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death. *BMJ*. 2001;323(7327):1443-1446. doi:10.1136/bmj.323.7327.1443
