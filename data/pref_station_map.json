@@ -1,0 +1,512 @@
+[
+  {
+    "pref_code": 10,
+    "name_jp": "北海道（札幌方面）",
+    "prefecture_en": "Hokkaido",
+    "police_bureau_en": "Hokkaido_Sapporo",
+    "region": "Hokkaido",
+    "jma_block_no": "47412",
+    "jma_prec_no": 14,
+    "jma_station_en": "Sapporo"
+  },
+  {
+    "pref_code": 11,
+    "name_jp": "北海道（函館方面）",
+    "prefecture_en": "Hokkaido",
+    "police_bureau_en": "Hokkaido_Hakodate",
+    "region": "Hokkaido",
+    "jma_block_no": "47430",
+    "jma_prec_no": 23,
+    "jma_station_en": "Hakodate"
+  },
+  {
+    "pref_code": 12,
+    "name_jp": "北海道（旭川方面）",
+    "prefecture_en": "Hokkaido",
+    "police_bureau_en": "Hokkaido_Asahikawa",
+    "region": "Hokkaido",
+    "jma_block_no": "47407",
+    "jma_prec_no": 12,
+    "jma_station_en": "Asahikawa"
+  },
+  {
+    "pref_code": 13,
+    "name_jp": "北海道（釧路方面）",
+    "prefecture_en": "Hokkaido",
+    "police_bureau_en": "Hokkaido_Kushiro",
+    "region": "Hokkaido",
+    "jma_block_no": "47418",
+    "jma_prec_no": 19,
+    "jma_station_en": "Kushiro"
+  },
+  {
+    "pref_code": 14,
+    "name_jp": "北海道（北見方面）",
+    "prefecture_en": "Hokkaido",
+    "police_bureau_en": "Hokkaido_Kitami",
+    "region": "Hokkaido",
+    "jma_block_no": "47409",
+    "jma_prec_no": 17,
+    "jma_station_en": "Abashiri"
+  },
+  {
+    "pref_code": 20,
+    "name_jp": "青森",
+    "prefecture_en": "Aomori",
+    "police_bureau_en": "Aomori",
+    "region": "Tohoku",
+    "jma_block_no": "47575",
+    "jma_prec_no": 31,
+    "jma_station_en": "Aomori"
+  },
+  {
+    "pref_code": 21,
+    "name_jp": "岩手",
+    "prefecture_en": "Iwate",
+    "police_bureau_en": "Iwate",
+    "region": "Tohoku",
+    "jma_block_no": "47584",
+    "jma_prec_no": 33,
+    "jma_station_en": "Morioka"
+  },
+  {
+    "pref_code": 22,
+    "name_jp": "宮城",
+    "prefecture_en": "Miyagi",
+    "police_bureau_en": "Miyagi",
+    "region": "Tohoku",
+    "jma_block_no": "47590",
+    "jma_prec_no": 34,
+    "jma_station_en": "Sendai"
+  },
+  {
+    "pref_code": 23,
+    "name_jp": "秋田",
+    "prefecture_en": "Akita",
+    "police_bureau_en": "Akita",
+    "region": "Tohoku",
+    "jma_block_no": "47582",
+    "jma_prec_no": 32,
+    "jma_station_en": "Akita"
+  },
+  {
+    "pref_code": 24,
+    "name_jp": "山形",
+    "prefecture_en": "Yamagata",
+    "police_bureau_en": "Yamagata",
+    "region": "Tohoku",
+    "jma_block_no": "47588",
+    "jma_prec_no": 35,
+    "jma_station_en": "Yamagata"
+  },
+  {
+    "pref_code": 25,
+    "name_jp": "福島",
+    "prefecture_en": "Fukushima",
+    "police_bureau_en": "Fukushima",
+    "region": "Tohoku",
+    "jma_block_no": "47595",
+    "jma_prec_no": 36,
+    "jma_station_en": "Fukushima"
+  },
+  {
+    "pref_code": 30,
+    "name_jp": "東京",
+    "prefecture_en": "Tokyo",
+    "police_bureau_en": "Tokyo",
+    "region": "Kanto",
+    "jma_block_no": "47662",
+    "jma_prec_no": 44,
+    "jma_station_en": "Tokyo"
+  },
+  {
+    "pref_code": 40,
+    "name_jp": "茨城",
+    "prefecture_en": "Ibaraki",
+    "police_bureau_en": "Ibaraki",
+    "region": "Kanto",
+    "jma_block_no": "47629",
+    "jma_prec_no": 40,
+    "jma_station_en": "Mito"
+  },
+  {
+    "pref_code": 41,
+    "name_jp": "栃木",
+    "prefecture_en": "Tochigi",
+    "police_bureau_en": "Tochigi",
+    "region": "Kanto",
+    "jma_block_no": "47615",
+    "jma_prec_no": 41,
+    "jma_station_en": "Utsunomiya"
+  },
+  {
+    "pref_code": 42,
+    "name_jp": "群馬",
+    "prefecture_en": "Gunma",
+    "police_bureau_en": "Gunma",
+    "region": "Kanto",
+    "jma_block_no": "47624",
+    "jma_prec_no": 42,
+    "jma_station_en": "Maebashi"
+  },
+  {
+    "pref_code": 43,
+    "name_jp": "埼玉",
+    "prefecture_en": "Saitama",
+    "police_bureau_en": "Saitama",
+    "region": "Kanto",
+    "jma_block_no": "47626",
+    "jma_prec_no": 43,
+    "jma_station_en": "Kumagaya"
+  },
+  {
+    "pref_code": 44,
+    "name_jp": "千葉",
+    "prefecture_en": "Chiba",
+    "police_bureau_en": "Chiba",
+    "region": "Kanto",
+    "jma_block_no": "47648",
+    "jma_prec_no": 45,
+    "jma_station_en": "Choshi"
+  },
+  {
+    "pref_code": 45,
+    "name_jp": "神奈川",
+    "prefecture_en": "Kanagawa",
+    "police_bureau_en": "Kanagawa",
+    "region": "Kanto",
+    "jma_block_no": "47670",
+    "jma_prec_no": 46,
+    "jma_station_en": "Yokohama"
+  },
+  {
+    "pref_code": 46,
+    "name_jp": "新潟",
+    "prefecture_en": "Niigata",
+    "police_bureau_en": "Niigata",
+    "region": "Chubu",
+    "jma_block_no": "47604",
+    "jma_prec_no": 54,
+    "jma_station_en": "Niigata"
+  },
+  {
+    "pref_code": 47,
+    "name_jp": "山梨",
+    "prefecture_en": "Yamanashi",
+    "police_bureau_en": "Yamanashi",
+    "region": "Chubu",
+    "jma_block_no": "47638",
+    "jma_prec_no": 49,
+    "jma_station_en": "Kofu"
+  },
+  {
+    "pref_code": 48,
+    "name_jp": "長野",
+    "prefecture_en": "Nagano",
+    "police_bureau_en": "Nagano",
+    "region": "Chubu",
+    "jma_block_no": "47610",
+    "jma_prec_no": 48,
+    "jma_station_en": "Nagano"
+  },
+  {
+    "pref_code": 49,
+    "name_jp": "静岡",
+    "prefecture_en": "Shizuoka",
+    "police_bureau_en": "Shizuoka",
+    "region": "Chubu",
+    "jma_block_no": "47656",
+    "jma_prec_no": 50,
+    "jma_station_en": "Shizuoka"
+  },
+  {
+    "pref_code": 50,
+    "name_jp": "富山",
+    "prefecture_en": "Toyama",
+    "police_bureau_en": "Toyama",
+    "region": "Chubu",
+    "jma_block_no": "47607",
+    "jma_prec_no": 55,
+    "jma_station_en": "Toyama"
+  },
+  {
+    "pref_code": 51,
+    "name_jp": "石川",
+    "prefecture_en": "Ishikawa",
+    "police_bureau_en": "Ishikawa",
+    "region": "Chubu",
+    "jma_block_no": "47605",
+    "jma_prec_no": 56,
+    "jma_station_en": "Kanazawa"
+  },
+  {
+    "pref_code": 52,
+    "name_jp": "福井",
+    "prefecture_en": "Fukui",
+    "police_bureau_en": "Fukui",
+    "region": "Chubu",
+    "jma_block_no": "47616",
+    "jma_prec_no": 57,
+    "jma_station_en": "Fukui"
+  },
+  {
+    "pref_code": 53,
+    "name_jp": "岐阜",
+    "prefecture_en": "Gifu",
+    "police_bureau_en": "Gifu",
+    "region": "Chubu",
+    "jma_block_no": "47632",
+    "jma_prec_no": 52,
+    "jma_station_en": "Gifu"
+  },
+  {
+    "pref_code": 54,
+    "name_jp": "愛知",
+    "prefecture_en": "Aichi",
+    "police_bureau_en": "Aichi",
+    "region": "Chubu",
+    "jma_block_no": "47636",
+    "jma_prec_no": 51,
+    "jma_station_en": "Nagoya"
+  },
+  {
+    "pref_code": 55,
+    "name_jp": "三重",
+    "prefecture_en": "Mie",
+    "police_bureau_en": "Mie",
+    "region": "Kinki",
+    "jma_block_no": "47651",
+    "jma_prec_no": 53,
+    "jma_station_en": "Tsu"
+  },
+  {
+    "pref_code": 60,
+    "name_jp": "滋賀",
+    "prefecture_en": "Shiga",
+    "police_bureau_en": "Shiga",
+    "region": "Kinki",
+    "jma_block_no": "47761",
+    "jma_prec_no": 60,
+    "jma_station_en": "Hikone"
+  },
+  {
+    "pref_code": 61,
+    "name_jp": "京都",
+    "prefecture_en": "Kyoto",
+    "police_bureau_en": "Kyoto",
+    "region": "Kinki",
+    "jma_block_no": "47759",
+    "jma_prec_no": 61,
+    "jma_station_en": "Kyoto"
+  },
+  {
+    "pref_code": 62,
+    "name_jp": "大阪",
+    "prefecture_en": "Osaka",
+    "police_bureau_en": "Osaka",
+    "region": "Kinki",
+    "jma_block_no": "47772",
+    "jma_prec_no": 62,
+    "jma_station_en": "Osaka"
+  },
+  {
+    "pref_code": 63,
+    "name_jp": "兵庫",
+    "prefecture_en": "Hyogo",
+    "police_bureau_en": "Hyogo",
+    "region": "Kinki",
+    "jma_block_no": "47770",
+    "jma_prec_no": 63,
+    "jma_station_en": "Kobe"
+  },
+  {
+    "pref_code": 64,
+    "name_jp": "奈良",
+    "prefecture_en": "Nara",
+    "police_bureau_en": "Nara",
+    "region": "Kinki",
+    "jma_block_no": "47780",
+    "jma_prec_no": 64,
+    "jma_station_en": "Nara"
+  },
+  {
+    "pref_code": 65,
+    "name_jp": "和歌山",
+    "prefecture_en": "Wakayama",
+    "police_bureau_en": "Wakayama",
+    "region": "Kinki",
+    "jma_block_no": "47777",
+    "jma_prec_no": 65,
+    "jma_station_en": "Wakayama"
+  },
+  {
+    "pref_code": 70,
+    "name_jp": "鳥取",
+    "prefecture_en": "Tottori",
+    "police_bureau_en": "Tottori",
+    "region": "Chugoku",
+    "jma_block_no": "47746",
+    "jma_prec_no": 69,
+    "jma_station_en": "Tottori"
+  },
+  {
+    "pref_code": 71,
+    "name_jp": "島根",
+    "prefecture_en": "Shimane",
+    "police_bureau_en": "Shimane",
+    "region": "Chugoku",
+    "jma_block_no": "47741",
+    "jma_prec_no": 68,
+    "jma_station_en": "Matsue"
+  },
+  {
+    "pref_code": 72,
+    "name_jp": "岡山",
+    "prefecture_en": "Okayama",
+    "police_bureau_en": "Okayama",
+    "region": "Chugoku",
+    "jma_block_no": "47768",
+    "jma_prec_no": 66,
+    "jma_station_en": "Okayama"
+  },
+  {
+    "pref_code": 73,
+    "name_jp": "広島",
+    "prefecture_en": "Hiroshima",
+    "police_bureau_en": "Hiroshima",
+    "region": "Chugoku",
+    "jma_block_no": "47765",
+    "jma_prec_no": 67,
+    "jma_station_en": "Hiroshima"
+  },
+  {
+    "pref_code": 74,
+    "name_jp": "山口",
+    "prefecture_en": "Yamaguchi",
+    "police_bureau_en": "Yamaguchi",
+    "region": "Chugoku",
+    "jma_block_no": "47762",
+    "jma_prec_no": 81,
+    "jma_station_en": "Shimonoseki"
+  },
+  {
+    "pref_code": 80,
+    "name_jp": "徳島",
+    "prefecture_en": "Tokushima",
+    "police_bureau_en": "Tokushima",
+    "region": "Shikoku",
+    "jma_block_no": "47895",
+    "jma_prec_no": 71,
+    "jma_station_en": "Tokushima"
+  },
+  {
+    "pref_code": 81,
+    "name_jp": "香川",
+    "prefecture_en": "Kagawa",
+    "police_bureau_en": "Kagawa",
+    "region": "Shikoku",
+    "jma_block_no": "47891",
+    "jma_prec_no": 72,
+    "jma_station_en": "Takamatsu"
+  },
+  {
+    "pref_code": 82,
+    "name_jp": "愛媛",
+    "prefecture_en": "Ehime",
+    "police_bureau_en": "Ehime",
+    "region": "Shikoku",
+    "jma_block_no": "47887",
+    "jma_prec_no": 73,
+    "jma_station_en": "Matsuyama"
+  },
+  {
+    "pref_code": 83,
+    "name_jp": "高知",
+    "prefecture_en": "Kochi",
+    "police_bureau_en": "Kochi",
+    "region": "Shikoku",
+    "jma_block_no": "47893",
+    "jma_prec_no": 74,
+    "jma_station_en": "Kochi"
+  },
+  {
+    "pref_code": 90,
+    "name_jp": "福岡",
+    "prefecture_en": "Fukuoka",
+    "police_bureau_en": "Fukuoka",
+    "region": "Kyushu",
+    "jma_block_no": "47807",
+    "jma_prec_no": 82,
+    "jma_station_en": "Fukuoka"
+  },
+  {
+    "pref_code": 91,
+    "name_jp": "佐賀",
+    "prefecture_en": "Saga",
+    "police_bureau_en": "Saga",
+    "region": "Kyushu",
+    "jma_block_no": "47813",
+    "jma_prec_no": 85,
+    "jma_station_en": "Saga"
+  },
+  {
+    "pref_code": 92,
+    "name_jp": "長崎",
+    "prefecture_en": "Nagasaki",
+    "police_bureau_en": "Nagasaki",
+    "region": "Kyushu",
+    "jma_block_no": "47817",
+    "jma_prec_no": 84,
+    "jma_station_en": "Nagasaki"
+  },
+  {
+    "pref_code": 93,
+    "name_jp": "熊本",
+    "prefecture_en": "Kumamoto",
+    "police_bureau_en": "Kumamoto",
+    "region": "Kyushu",
+    "jma_block_no": "47819",
+    "jma_prec_no": 86,
+    "jma_station_en": "Kumamoto"
+  },
+  {
+    "pref_code": 94,
+    "name_jp": "大分",
+    "prefecture_en": "Oita",
+    "police_bureau_en": "Oita",
+    "region": "Kyushu",
+    "jma_block_no": "47815",
+    "jma_prec_no": 83,
+    "jma_station_en": "Oita"
+  },
+  {
+    "pref_code": 95,
+    "name_jp": "宮崎",
+    "prefecture_en": "Miyazaki",
+    "police_bureau_en": "Miyazaki",
+    "region": "Kyushu",
+    "jma_block_no": "47830",
+    "jma_prec_no": 87,
+    "jma_station_en": "Miyazaki"
+  },
+  {
+    "pref_code": 96,
+    "name_jp": "鹿児島",
+    "prefecture_en": "Kagoshima",
+    "police_bureau_en": "Kagoshima",
+    "region": "Kyushu",
+    "jma_block_no": "47827",
+    "jma_prec_no": 88,
+    "jma_station_en": "Kagoshima"
+  },
+  {
+    "pref_code": 97,
+    "name_jp": "沖縄",
+    "prefecture_en": "Okinawa",
+    "police_bureau_en": "Okinawa",
+    "region": "Okinawa",
+    "jma_block_no": "47936",
+    "jma_prec_no": 91,
+    "jma_station_en": "Naha"
+  }
+]
