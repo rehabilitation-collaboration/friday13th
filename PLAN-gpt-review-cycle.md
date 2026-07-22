@@ -1,7 +1,7 @@
 # PLAN: 13金 GPT査読反復サイクル (V2〜Vn)
 
 ## Background
-- V1受領: Major 8 + Minor 9（詳細=`gpt-reviews/round-1.md`）
+- V1受領: Major 8 + Minor 8（詳細=`gpt-reviews/round-1.md`。数=`awk '/^## Minor/,/^---$/' round-1.md | grep -c "^- "` で実数8確認）
 - 温度感: 合格まで無制限反復、追加解析OK、表現弱化OK、フルスクラッチOK
 - **原則: 工数より正確性・安全性最優先**（論文は永続公開資産）
 - 論文の芯: null-everywhere 主軸に再統合（文化媒介は補助解釈に降格）
@@ -24,6 +24,59 @@
 - V1↔V2 pdftotext 差分で変更箇所確認
 - `output/truth.json` ↔ manuscript の数値整合（既存 number_verification.py 資産）
 - 都道府県別データの ソース→pivot→panel の各段で sanity check
+
+**⚠️ tests/ 先例なし**: friday13th 配下に `tests/` ディレクトリは未作成、pytest 導入もこれから。fullmoon-accident にも test_*.py なし。Phase 2C 開始時に `tests/` 新設 + pytest 導入 + 命名規則 `test_<module>.py` を確立する。
+
+---
+
+## ⚠️ Phase 2C 着手前に必ず読む前提（初見テスト2026-07-22で炙り出された落とし穴）
+
+### NPA 都道府県コード の実態は「01-47」ではない
+- `fullmoon-accident/data/processed/accidents_clean.parquet` の `pref_code` 列は **10-97 の51種類**（`nunique()=51`）
+- 北海道が **10, 11, 12, 13, 14 の5コードに分裂**（道警の管轄単位、道内は複数方面本部）
+- `fullmoon-accident/src/02_parse_npa.py` のコメントには「prefecture code (01-47)」と書かれているが **実データと矛盾する誤記**
+- pref_code → 都道府県名 → JMA代表観測所 のマッピング表は現時点でコードベース全体に存在しない
+
+### JMA 観測所は 47 都道府県と数が合わない
+- `fullmoon-accident/src/06_scrape_jma_cloud.py` の `STATIONS` は **50局**（47都道府県と一致しない）
+- 「47都道府県代表観測所を1局ずつ選ぶ」基準が未定義
+- 候補基準案: (i) 都道府県庁所在地の気象台、(ii) 各都道府県内で人口最多都市の観測所、(iii) 既存 STATIONS から代表選定
+
+### Phase 2C 開始時の最初の3タスク（順序厳守）
+1. `fullmoon-accident/data/processed/accidents_clean.parquet` の **日付範囲確認**（2019-2024 カバー有無・欠日確認）
+2. **pref_code (51種類) → 都道府県名 → JMA代表観測所** のマッピング表作成
+   - 北海道5コードは方面本部の管轄地域を調べて集約 or 5コードのまま panel に含めて FE で吸収
+3. `tests/` 新設 + pytest 導入 + マッピング表の unit test 作成
+
+### C1 診断の実装ライブラリ指定
+- alpha (dispersion): `statsmodels.discrete.count_model.NegativeBinomial` の推定パラメータ末尾
+- Pearson residuals: fitted モデルの `.resid_pearson`
+- Robust HC1 SE: `model.get_robustcov_results(cov_type='HC1')`
+- Quasi-Poisson: `statsmodels.GLM(family=Poisson, ...).fit(scale='X2')` で Pearson scale 化
+
+### C5 Table 4 の subgroup 範囲（明示）
+- 対象 = severity(fatal / injury) + age(young / mid_low / mid_hi / elderly) + timeofday(daytime / nighttime) = **合計 8 subgroup**
+- Bonferroni adjustment = raw p × 8（Table 4 全体で調整）
+- 現行 manuscript 本文は「6 subgroup」と書かれているが Table 4 追加時に **8 に修正**（本文/Methods/Discussion も追随）
+- 既存 `subgroup_analyses()` は t検定ベースのみで NB-adjusted CI・Bonferroni は未実装 → **C5 で新規実装**
+
+### number_verification.md の既存 NOT_FOUND 7件
+- Phase 2A/2B 前から存在（subgroup p 値が manuscript 本文に未記載のため NOT_FOUND）
+- Phase 2C の Table 4 追加で 7件すべて解消見込み → **新規デグレではない・既知ギャップ**
+
+---
+
+## 案 a / b / c の内訳と却下理由（2026-07-22 段取り八分フェーズ4で確定）
+
+GPT V1 Major 5「事故発生地点で重み付けの内生性」への対処3案:
+
+| 案 | 内容 | 判定 |
+|----|------|-----|
+| **a（採用）** | 都道府県別事故数 × 都道府県別 JMA 天気 で完全再構築。都道府県 fixed effect NB panel model | 正確性最大。事故発生地点重み付けの内生性を根本解消。GPT指摘の第1候補「都道府県別の日次事故数 × 都道府県別天気」に直接対応 |
+| **b（却下）** | 全国観測所固定平均 + 降水/積雪/路面状態を追加変数。単一時系列を維持 | GPT指摘の第2候補「全国の人口・交通量・面積・観測所固定で平均した天気」に対応。中規模だが「事故発生地点で重み付け」の内生性を根本解消できない。曝露の内生性が残る |
+| **c（却下）** | 「weather-adjusted」表現削除・sensitivity 位置づけに降格 | 工数最軽量だが GPT が指摘した内生性に対処せず先送り。永続公開資産で先送りは不可 |
+
+決定: 段取り八分フェーズ4 認識すり合わせで「工数関係ない・論文はこれから一生ずっと公開され続ける・安全性や正確性は何よりも優先される」（瑞樹判断）で **案a確定**。関連 memory: [[feedback-paper-precision-over-effort]]
 
 ---
 
