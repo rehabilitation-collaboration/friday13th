@@ -47,13 +47,12 @@
 ## Phase 2B: 既存結果の再表現（V2）— 対応: Major 7 + Table 構成
 変更対象: `manuscript.md`
 
-- [ ] Fatal accidents 詳細 Table を Results に追加
-  - 列: subgroup / Fri13 mean / control mean / RR / 95% CI / raw p / Bonferroni-adjusted p / NB-adjusted IRR
-- [ ] Discussion "no plausible mechanism" → "consistent with chance in small counts under multiple testing"
-- [ ] Table 3 "systematic comparison" → "structured comparison"
-- [ ] Table 3 "Cultural fear of 13" 列に脚注: `Classified qualitatively based on prior cultural descriptions; should be interpreted descriptively`
+- [x] Discussion "no plausible mechanism" → "consistent with chance in small counts under multiple testing"（2026-07-22 完了）
+- [x] Table 3 "systematic comparison" → "structured comparison"（2026-07-22 完了）
+- [x] Table 3 "Cultural fear of 13" 列に脚注（2026-07-22 完了）
+- **→ Fatal accidents 詳細 Table は Phase 2C の C5 に移動**（正確性優先: NB-adjusted CI と subgroup 別 mean/CI の正式値を Phase 2C の C1 診断・再抽出と一緒に生成して Table 化する方が段階的で安全）
 
-ブリーフ: 既存の数値はそのまま、Table/文言のみ再構成。
+ブリーフ: 既存の数値はそのまま、Table/文言のみ再構成。Fatal Table は Phase 2C 統合。
 
 ## Phase 2C: 追加解析（V2）— 対応: Major 4, 5, 6 + Minor 8
 変更対象: `src/02_main_analysis.py`, `src/04_diagnostics.py`（新規）, `src/05_prefecture_analysis.py`（新規）, `src/03_figures.py`, `data/`, `output/`, `tests/`（新規）
@@ -87,8 +86,11 @@
 - [ ] Figure 1: same-month ratio plot（10 pair connected lines）を supplementary panel として追加
 - [ ] Figure S2: 都道府県別 IRR forest plot
 
-### C5. truth.json export（残置A）統合
+### C5. truth.json export（残置A）統合 + Fatal Table 追加
 - [ ] 現行 `src/02_main_analysis.py` の未 commit 差分を C1-C4 の新結果まで拡張
+- [ ] subgroup 別 mean / SE / t-based CI を新規抽出（Fatal Table 用）
+- [ ] Fatal accidents 詳細 Table を Table 4 として Results に追加
+  - 列: subgroup / Fri13 mean / control mean / RR / 95% CI / raw p / Bonferroni p / NB-adjusted count ratio
 - [ ] number_verification.py で V2 の全数値検証
 - [ ] Phase 2C 完了時に一括 commit
 
