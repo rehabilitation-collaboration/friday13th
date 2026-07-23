@@ -1,0 +1,445 @@
+{
+  "config": {
+    "n_perm_requested": 10000,
+    "permutation_seed": 20260723,
+    "z_crit_95": 1.959963984540054,
+    "generated_at_utc": "2026-07-23T10:51:07+00:00"
+  },
+  "pair_summary": {
+    "n_pairs": 10,
+    "pairs": [
+      {
+        "ym": "2019-09",
+        "fri13_date": "2019-09-13",
+        "fri13_count": 1110,
+        "n_controls": 3,
+        "control_mean": 1248.6666666666667,
+        "control_dates": [
+          "2019-09-06",
+          "2019-09-20",
+          "2019-09-27"
+        ]
+      },
+      {
+        "ym": "2019-12",
+        "fri13_date": "2019-12-13",
+        "fri13_count": 1343,
+        "n_controls": 3,
+        "control_mean": 1263.3333333333333,
+        "control_dates": [
+          "2019-12-06",
+          "2019-12-20",
+          "2019-12-27"
+        ]
+      },
+      {
+        "ym": "2020-03",
+        "fri13_date": "2020-03-13",
+        "fri13_count": 960,
+        "n_controls": 3,
+        "control_mean": 937.0,
+        "control_dates": [
+          "2020-03-06",
+          "2020-03-20",
+          "2020-03-27"
+        ]
+      },
+      {
+        "ym": "2020-11",
+        "fri13_date": "2020-11-13",
+        "fri13_count": 1178,
+        "n_controls": 3,
+        "control_mean": 1052.3333333333333,
+        "control_dates": [
+          "2020-11-06",
+          "2020-11-20",
+          "2020-11-27"
+        ]
+      },
+      {
+        "ym": "2021-08",
+        "fri13_date": "2021-08-13",
+        "fri13_count": 713,
+        "n_controls": 3,
+        "control_mean": 946.0,
+        "control_dates": [
+          "2021-08-06",
+          "2021-08-20",
+          "2021-08-27"
+        ]
+      },
+      {
+        "ym": "2022-05",
+        "fri13_date": "2022-05-13",
+        "fri13_count": 1022,
+        "n_controls": 3,
+        "control_mean": 905.3333333333334,
+        "control_dates": [
+          "2022-05-06",
+          "2022-05-20",
+          "2022-05-27"
+        ]
+      },
+      {
+        "ym": "2023-01",
+        "fri13_date": "2023-01-13",
+        "fri13_count": 1022,
+        "n_controls": 3,
+        "control_mean": 851.6666666666666,
+        "control_dates": [
+          "2023-01-06",
+          "2023-01-20",
+          "2023-01-27"
+        ]
+      },
+      {
+        "ym": "2023-10",
+        "fri13_date": "2023-10-13",
+        "fri13_count": 1081,
+        "n_controls": 3,
+        "control_mean": 1075.3333333333333,
+        "control_dates": [
+          "2023-10-06",
+          "2023-10-20",
+          "2023-10-27"
+        ]
+      },
+      {
+        "ym": "2024-09",
+        "fri13_date": "2024-09-13",
+        "fri13_count": 977,
+        "n_controls": 3,
+        "control_mean": 895.6666666666666,
+        "control_dates": [
+          "2024-09-06",
+          "2024-09-20",
+          "2024-09-27"
+        ]
+      },
+      {
+        "ym": "2024-12",
+        "fri13_date": "2024-12-13",
+        "fri13_count": 863,
+        "n_controls": 3,
+        "control_mean": 733.3333333333334,
+        "control_dates": [
+          "2024-12-06",
+          "2024-12-20",
+          "2024-12-27"
+        ]
+      }
+    ]
+  },
+  "conditional_poisson": {
+    "method": "conditional_poisson_newton_raphson_hand_implemented",
+    "n_strata": 10,
+    "n_iter": 4,
+    "converged": true,
+    "score_at_mle": 2.1600499167107046e-12,
+    "beta": 0.03571985315756448,
+    "count_ratio": 1.0363654713045818,
+    "small_G_correction": {
+      "G": 10,
+      "finite_cluster_correction_factor": 1.1111111111111112,
+      "t_crit_95_df": 2.262157162798205,
+      "z_crit_95": 1.959963984540054
+    },
+    "fisher_iid_diagnostic_only": {
+      "se_beta": 0.011446442656090287,
+      "critical_value": 1.959963984540054,
+      "critical_value_label": "z(0.975)",
+      "z": 3.1206073564313086,
+      "p_two_sided": 0.001804784989023256,
+      "count_ratio_ci_low": 1.013373878675636,
+      "count_ratio_ci_high": 1.0598787009549064
+    },
+    "sandwich_cluster_z": {
+      "se_beta": 0.04038976381397577,
+      "critical_value": 1.959963984540054,
+      "critical_value_label": "z(0.975)",
+      "z": 0.8843788570312116,
+      "p_two_sided": 0.3764917324455723,
+      "count_ratio_ci_low": 0.9574874842789469,
+      "count_ratio_ci_high": 1.1217414407470854
+    },
+    "sandwich_cluster_t": {
+      "se_beta": 0.04038976381397577,
+      "critical_value": 2.262157162798205,
+      "critical_value_label": "t(0.975, df=9)",
+      "z": 0.8843788570312116,
+      "p_two_sided": 0.39950095250035433,
+      "count_ratio_ci_low": 0.9458718914904964,
+      "count_ratio_ci_high": 1.1355167647702105
+    },
+    "per_stratum": [
+      {
+        "ym": "2019-09",
+        "y_case": 1110,
+        "y_total": 4856,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 1246.8124515564443,
+        "score_at_mle": -136.81245155644433
+      },
+      {
+        "ym": "2019-12",
+        "y_case": 1343,
+        "y_total": 5133,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 1317.934166770846,
+        "score_at_mle": 25.065833229153895
+      },
+      {
+        "ym": "2020-03",
+        "y_case": 960,
+        "y_total": 3771,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 968.2310038754842,
+        "score_at_mle": -8.231003875484248
+      },
+      {
+        "ym": "2020-11",
+        "y_case": 1178,
+        "y_total": 4335,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 1113.042005250656,
+        "score_at_mle": 64.95799474934392
+      },
+      {
+        "ym": "2021-08",
+        "y_case": 713,
+        "y_total": 3551,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 911.7444430553818,
+        "score_at_mle": -198.7444430553818
+      },
+      {
+        "ym": "2022-05",
+        "y_case": 1022,
+        "y_total": 3738,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 959.7580197524688,
+        "score_at_mle": 62.24198024753116
+      },
+      {
+        "ym": "2023-01",
+        "y_case": 1022,
+        "y_total": 3577,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 918.4201275159393,
+        "score_at_mle": 103.57987248406073
+      },
+      {
+        "ym": "2023-10",
+        "y_case": 1081,
+        "y_total": 4307,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 1105.8528066008248,
+        "score_at_mle": -24.852806600824806
+      },
+      {
+        "ym": "2024-09",
+        "y_case": 977,
+        "y_total": 3664,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 940.7579947493434,
+        "score_at_mle": 36.242005250656575
+      },
+      {
+        "ym": "2024-12",
+        "y_case": 863,
+        "y_total": 3063,
+        "n": 4,
+        "pi_at_mle": 0.25675709463682955,
+        "expected_case_at_mle": 786.446980872609,
+        "score_at_mle": 76.55301912739105
+      }
+    ]
+  },
+  "exact_sign": {
+    "method": "binomtest_two_sided_p_half",
+    "n_pairs": 10,
+    "n_plus": 8,
+    "n_minus": 2,
+    "n_zero": 0,
+    "n_nonzero": 10,
+    "expected_plus_h0": 5.0,
+    "p_two_sided": 0.109375,
+    "per_pair": [
+      {
+        "ym": "2019-09",
+        "fri13_count": 1110.0,
+        "control_mean": 1248.6666666666667,
+        "n_controls": 3,
+        "diff": -138.66666666666674,
+        "sign": "-"
+      },
+      {
+        "ym": "2019-12",
+        "fri13_count": 1343.0,
+        "control_mean": 1263.3333333333333,
+        "n_controls": 3,
+        "diff": 79.66666666666674,
+        "sign": "+"
+      },
+      {
+        "ym": "2020-03",
+        "fri13_count": 960.0,
+        "control_mean": 937.0,
+        "n_controls": 3,
+        "diff": 23.0,
+        "sign": "+"
+      },
+      {
+        "ym": "2020-11",
+        "fri13_count": 1178.0,
+        "control_mean": 1052.3333333333333,
+        "n_controls": 3,
+        "diff": 125.66666666666674,
+        "sign": "+"
+      },
+      {
+        "ym": "2021-08",
+        "fri13_count": 713.0,
+        "control_mean": 946.0,
+        "n_controls": 3,
+        "diff": -233.0,
+        "sign": "-"
+      },
+      {
+        "ym": "2022-05",
+        "fri13_count": 1022.0,
+        "control_mean": 905.3333333333334,
+        "n_controls": 3,
+        "diff": 116.66666666666663,
+        "sign": "+"
+      },
+      {
+        "ym": "2023-01",
+        "fri13_count": 1022.0,
+        "control_mean": 851.6666666666666,
+        "n_controls": 3,
+        "diff": 170.33333333333337,
+        "sign": "+"
+      },
+      {
+        "ym": "2023-10",
+        "fri13_count": 1081.0,
+        "control_mean": 1075.3333333333333,
+        "n_controls": 3,
+        "diff": 5.6666666666667425,
+        "sign": "+"
+      },
+      {
+        "ym": "2024-09",
+        "fri13_count": 977.0,
+        "control_mean": 895.6666666666666,
+        "n_controls": 3,
+        "diff": 81.33333333333337,
+        "sign": "+"
+      },
+      {
+        "ym": "2024-12",
+        "fri13_count": 863.0,
+        "control_mean": 733.3333333333334,
+        "n_controls": 3,
+        "diff": 129.66666666666663,
+        "sign": "+"
+      }
+    ]
+  },
+  "permutation": {
+    "method": "sign_flip_permutation_mean_log_ratio",
+    "n_pairs": 10,
+    "observed_mean_log_ratio": 0.035625655266268125,
+    "observed_geometric_ratio": 1.0362678524603894,
+    "exact_enumeration": {
+      "n_sign_patterns": 1024,
+      "n_extreme": 458,
+      "p_two_sided": 0.447265625
+    },
+    "monte_carlo": {
+      "n_perm": 10000,
+      "seed": 20260723,
+      "n_extreme": 4496,
+      "p_two_sided": 0.4496,
+      "mc_se_p": 0.004974533545971924
+    },
+    "per_pair": [
+      {
+        "ym": "2019-09",
+        "log_ratio": -0.11771630002954438,
+        "abs_log_ratio": 0.11771630002954438
+      },
+      {
+        "ym": "2019-12",
+        "log_ratio": 0.061152187114875245,
+        "abs_log_ratio": 0.061152187114875245
+      },
+      {
+        "ym": "2020-03",
+        "log_ratio": 0.024250002223459702,
+        "abs_log_ratio": 0.024250002223459702
+      },
+      {
+        "ym": "2020-11",
+        "log_ratio": 0.11280816432165017,
+        "abs_log_ratio": 0.11280816432165017
+      },
+      {
+        "ym": "2021-08",
+        "log_ratio": -0.28276114863758234,
+        "abs_log_ratio": 0.28276114863758234
+      },
+      {
+        "ym": "2022-05",
+        "log_ratio": 0.12121357075317268,
+        "abs_log_ratio": 0.12121357075317268
+      },
+      {
+        "ym": "2023-01",
+        "log_ratio": 0.1823215567939546,
+        "abs_log_ratio": 0.1823215567939546
+      },
+      {
+        "ym": "2023-10",
+        "log_ratio": 0.005255847622163907,
+        "abs_log_ratio": 0.005255847622163907
+      },
+      {
+        "ym": "2024-09",
+        "log_ratio": 0.08691833209540127,
+        "abs_log_ratio": 0.08691833209540127
+      },
+      {
+        "ym": "2024-12",
+        "log_ratio": 0.16281434040513038,
+        "abs_log_ratio": 0.16281434040513038
+      }
+    ]
+  },
+  "methods_draft_c3": {
+    "paragraphs": [
+      "Case-crossover alternative tests. To triangulate the prefecture-panel negative-binomial finding, we ran three date-level tests on national daily accident counts, restricted to the 40 Fridays (10 months x 4 Fridays each) inside the 10 Fri13-containing months of 2019-2024. Each of the 10 Fri13 dates was paired against the three same-month other Fridays; no month contained more than one Fri13.",
+      "Month-stratified conditional Poisson regression. Following the case-crossover-as-conditional-Poisson framing (Maclure 1991, Lu & Zeger 2007), we eliminated the 10 month intercepts by conditioning on the stratum totals and maximized the resulting conditional likelihood in beta via Newton-Raphson (iterations=4). The MLE gave count ratio 1.0364. With G=10 clusters, cluster-robust inference is small-G-sensitive: we report the cluster-by-stratum sandwich SE with the Cameron & Miller (2015) finite-cluster factor G/(G-1)=1.111 and Wald tests using BOTH the z(0.975)=1.96 and the t(G-1)=2.262 critical values. Sandwich SE_beta = 0.0404. z-based 95% CI [0.9575, 1.1217], p = 0.376. t(G-1)-based 95% CI [0.9459, 1.1355], p = 0.400. Under G=10 the t(G-1) inference is the honest primary reporting. Fisher iid SE is retained in the JSON for audit but is not reported here; Poisson equidispersion is violated for daily police accident counts (2C-C1 dispersion diagnostic gives nb2 alpha = 0.023), and the Fisher/sandwich SE ratio of 3.53 is consistent with that alpha plus within-stratum autocorrelation absorbed by the sandwich.",
+      "Exact sign test. Of the 10 same-month case-control comparisons, 8 favored a higher Fri13 count and 2 favored a higher control mean (ties=0). Ties, if present, are excluded from the denominator and the two-sided binomial exact test against p=0.5 is computed on the 10 non-tied pairs; here 10 = 10. p = 0.109. With ten pairs the test has limited power to distinguish small effects and reaches its smallest achievable two-sided p at 10-0/0-10 splits, so an 8-2 split landing at p=0.11 reflects the discrete power ceiling, not a borderline signal.",
+      "Paired log-ratio permutation test (sign-flip null, Pesarin & Salmaso 2010 §4). For each pair we computed log(fri13_count / mean(other Fridays)) and permuted the 10 signs; the sign-flip null tests symmetry of the pair-wise log-ratio around 0 without additional distributional assumptions. The 2^10 = 1024 sign patterns admit exact enumeration; the observed mean log-ratio was +0.0356 (geometric count ratio 1.0363). Exact two-sided p = 0.447 (458 extreme patterns of 1024). The Monte-Carlo estimate at 10000 iterations matched (p = 0.450, MC SE = 0.0050).",
+      "Scope, primary vs. sensitivity, and limitations. Among the three tests, the month-stratified conditional Poisson with t(G-1)-based cluster-robust SE is the primary case-crossover result (p=0.400); the paired log-ratio permutation test (p=0.447) is the more powerful nonparametric complement, and the exact sign test (p=0.109) is a coarse rank-based fallback whose discrete p-value floor at n=10 should not be over-interpreted. All three land above 0.10 with point estimates near 1.04, consistent with the prefecture-panel cluster result but not corroborating it in a strict inferential sense (independent samples share the same accident stream). Case-crossover uses national daily aggregates and does not exploit prefecture heterogeneity (handled by the 2C-C2 panel model); n=10 pairs limits power to small effects."
+    ],
+    "notes": [
+      "Scaffold only. Do NOT copy verbatim into manuscript.md — fact-check each paragraph against the current JSON (2C-C1 P1-3/P1-5/P1-6 lesson).",
+      "manuscript.md replacement map for 2C-C5: (a) L19 Abstract Methods list = add 'month-stratified conditional Poisson regression + sign test + sign-flip permutation'; (b) L21 Abstract Results = REPLACE 'mean ratio of 1.05 (p=0.32)' with 't(G-1)-based cluster p from the conditional Poisson' (see paragraph 2); (c) L59 Methods case-crossover paragraph = REPLACE with paragraphs 1-4 here; (d) L99 Results case-crossover paragraph = REPLACE with the sandwich-t(G-1) result + 8/10 sign-count sentence; (e) Table 1 L188-202 'Mean' row = arithmetic 1.05 uses per-pair-ratio mean, not the geometric ratio 1.036 used here — add a geometric-mean note OR add a geometric row for referee transparency.",
+      "Old Näyhä-style t-test on per-pair arithmetic ratios (src/02_main_analysis.py::case_crossover, mean=1.05, t=1.05, p=0.32) is superseded by the conditional Poisson MLE here; the '8 of 10 Fridays higher' framing IS preserved and appears in paragraph 3 as the exact sign test's 8+/2- count.",
+      "Fisher iid SE is NOT reported in the manuscript-facing text — Poisson equidispersion is misspecified for these counts and the Fisher CI ([1.013, 1.060]) would misleadingly exclude 1.0 if pasted alongside the sandwich CI. Kept in case_crossover_results.json['conditional_poisson']['fisher_iid_diagnostic_only'] for audit only.",
+      "Citations to add to bibliography if not already present: Maclure (1991) AJE 133:144-153 (case-crossover); Lu & Zeger (2007) Biostatistics 8:337-344 (CC-conditional-Poisson equivalence); Cameron & Miller (2015) J Human Resources 50:317-372 (cluster-robust inference small-G); Pesarin & Salmaso (2010) Permutation Tests for Complex Data."
+    ]
+  }
+}

@@ -1,0 +1,1018 @@
+{
+  "project": "friday13th",
+  "phase": "2C-C4",
+  "generated": "2026-07-23T19:40:36",
+  "script": "src/07_prefecture_by_prefecture_fit.py",
+  "model_notes": "Per-prefecture NB2 MLE reusing the mean model from 2C-C2-e primary (weather+holiday+cloud with year/month/weekday FE); prefecture FE dropped since each subset is a single prefecture. Standard errors are HC1 heteroscedasticity-robust (Cameron & Miller 2015 §3.4): within a single-prefecture subset each date has exactly one observation, so cluster-on-date is identified as HC0 with a ~0.8% finite-sample scaling — HC1 is reported instead as the honest label. Weather covariates are dropped per prefecture when zero-variance (6 prefectures — Kagawa/Miyazaki/Oita/Okinawa/Osaka/Shizuoka) or pairwise-collinear (|corr| >= 0.999; snowfall_cm vs snow_depth_max_cm in 2 prefectures with 1-2 snow days). Non-convergence is a flag, not a raise. See src/03_prefecture_panel_weather_nb.py for the panel-model counterpart with two-way cluster (prefecture, date) SE.",
+  "values": [
+    {
+      "id": "pref_by_pref_n_prefectures",
+      "value": 47,
+      "label": "N prefectures fitted (Figure S3 forest)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_by_pref_n_converged",
+      "value": 47,
+      "label": "N prefectures converged (Figure S3 forest)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_by_pref_n_non_converged",
+      "value": 0,
+      "label": "N prefectures non-converged (Figure S3 forest)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_by_pref_ratio_max_pref",
+      "value": "Iwate",
+      "label": "Prefecture with maximum is_fri13 count ratio",
+      "section": "results",
+      "format": "s"
+    },
+    {
+      "id": "pref_by_pref_ratio_max",
+      "value": 1.2851799305129084,
+      "label": "Max prefecture-level is_fri13 count ratio",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_by_pref_ratio_min_pref",
+      "value": "Tottori",
+      "label": "Prefecture with minimum is_fri13 count ratio",
+      "section": "results",
+      "format": "s"
+    },
+    {
+      "id": "pref_by_pref_ratio_min",
+      "value": 0.5898586689006986,
+      "label": "Min prefecture-level is_fri13 count ratio",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_by_pref_ratio_median",
+      "value": 1.0095322384638896,
+      "label": "Median prefecture-level is_fri13 count ratio",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_by_pref_n_ci_excludes_one",
+      "value": 5,
+      "label": "N prefectures whose 95% CI excludes 1.0 (nominal alpha=0.05, uncorrected)",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "pref_by_pref_n_ci_excludes_one_binomial_p",
+      "value": 0.0845264125014825,
+      "label": "Binomial one-sided p-value: excess significant prefectures vs alpha=0.05 null",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "pref_by_pref_n_bonferroni_significant",
+      "value": 1,
+      "label": "N prefectures significant under Bonferroni correction (alpha_family=0.05)",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "pref_by_pref_n_bh_fdr_significant",
+      "value": 1,
+      "label": "N prefectures significant under Benjamini-Hochberg FDR (q=0.05)",
+      "section": "results",
+      "format": "d"
+    }
+  ],
+  "diagnostics": {
+    "n_prefectures": 47,
+    "n_converged": 47,
+    "n_non_converged": 0,
+    "n_listwise_dropped": 16,
+    "dropped_covariates_by_prefecture": {
+      "Ehime": [
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "pairwise_collinear"
+        }
+      ],
+      "Kagawa": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ],
+      "Miyazaki": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ],
+      "Oita": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ],
+      "Okayama": [
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "pairwise_collinear"
+        }
+      ],
+      "Okinawa": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ],
+      "Osaka": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ],
+      "Shizuoka": [
+        {
+          "col": "snowfall_cm",
+          "reason": "zero_variance"
+        },
+        {
+          "col": "snow_depth_max_cm",
+          "reason": "zero_variance"
+        }
+      ]
+    },
+    "results": [
+      {
+        "prefecture_en": "Aichi",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014250128670408622,
+        "is_fri13_coef": 0.030694477390481156,
+        "is_fri13_se": 0.04372612386068806,
+        "is_fri13_p": 0.4826971563102701,
+        "count_ratio": 1.031170409880317,
+        "count_ratio_ci_low": 0.9464783800788367,
+        "count_ratio_ci_high": 1.1234407849064365,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Akita",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.04542554710612729,
+        "is_fri13_coef": 0.2392999866083673,
+        "is_fri13_se": 0.20505182591676696,
+        "is_fri13_p": 0.2432014957594718,
+        "count_ratio": 1.2703595702873722,
+        "count_ratio_ci_low": 0.8499360164016346,
+        "count_ratio_ci_high": 1.8987469723345793,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Aomori",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.044520940479091664,
+        "is_fri13_coef": -0.12472238347532087,
+        "is_fri13_se": 0.1657488967439641,
+        "is_fri13_p": 0.4517637090087252,
+        "count_ratio": 0.8827419323183089,
+        "count_ratio_ci_low": 0.6378932996378792,
+        "count_ratio_ci_high": 1.2215731369422107,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Chiba",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014055892288562844,
+        "is_fri13_coef": -0.030836720248327423,
+        "is_fri13_se": 0.051356107947298765,
+        "is_fri13_p": 0.5482070843926393,
+        "count_ratio": 0.9696338817307977,
+        "count_ratio_ci_low": 0.8767855509611467,
+        "count_ratio_ci_high": 1.0723145056048002,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Ehime",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "pairwise_collinear"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.012445107906454641,
+        "is_fri13_coef": 0.2274188149329443,
+        "is_fri13_se": 0.1325828107742652,
+        "is_fri13_p": 0.0862909025410092,
+        "count_ratio": 1.255355519494954,
+        "count_ratio_ci_low": 0.9680817728839296,
+        "count_ratio_ci_high": 1.6278764092745646,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Fukui",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.031726753650801146,
+        "is_fri13_coef": 0.19597779094470288,
+        "is_fri13_se": 0.1587530771628732,
+        "is_fri13_p": 0.21702340925138253,
+        "count_ratio": 1.2164998877210242,
+        "count_ratio_ci_low": 0.8912123762513462,
+        "count_ratio_ci_high": 1.660515513765599,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Fukuoka",
+        "n_obs": 2191,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.01950549704102459,
+        "is_fri13_coef": -0.03861027490068228,
+        "is_fri13_se": 0.05232784010976096,
+        "is_fri13_p": 0.46060353738760873,
+        "count_ratio": 0.9621256005845641,
+        "count_ratio_ci_low": 0.8683408501439009,
+        "count_ratio_ci_high": 1.066039529462197,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Fukushima",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.021869165217904225,
+        "is_fri13_coef": 0.0034074786471540667,
+        "is_fri13_se": 0.10340183686292204,
+        "is_fri13_p": 0.9737114669240413,
+        "count_ratio": 1.003413290702129,
+        "count_ratio_ci_low": 0.8193397896929902,
+        "count_ratio_ci_high": 1.2288408846041048,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Gifu",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.019865416133048215,
+        "is_fri13_coef": -0.13751607924365336,
+        "is_fri13_se": 0.09266513177667246,
+        "is_fri13_p": 0.13780598987623424,
+        "count_ratio": 0.8715203364966555,
+        "count_ratio_ci_low": 0.7267764101348594,
+        "count_ratio_ci_high": 1.0450912912628842,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Gunma",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014789397077285637,
+        "is_fri13_coef": 0.0254122243789786,
+        "is_fri13_se": 0.08815095382624948,
+        "is_fri13_p": 0.7731318299872119,
+        "count_ratio": 1.025737867540571,
+        "count_ratio_ci_low": 0.8629828416381331,
+        "count_ratio_ci_high": 1.219187824070159,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Hiroshima",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.016144573039134334,
+        "is_fri13_coef": -0.03296736497950599,
+        "is_fri13_se": 0.08772433553543613,
+        "is_fri13_p": 0.7070608443294214,
+        "count_ratio": 0.9675701357449944,
+        "count_ratio_ci_low": 0.8147256051759544,
+        "count_ratio_ci_high": 1.1490886767740651,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Hokkaido",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.027607624273972894,
+        "is_fri13_coef": 0.029933793510564147,
+        "is_fri13_se": 0.06844575014660491,
+        "is_fri13_p": 0.6618676599655255,
+        "count_ratio": 1.030386313434646,
+        "count_ratio_ci_low": 0.9010293818207373,
+        "count_ratio_ci_high": 1.1783144660255578,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Hyogo",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014510822703070634,
+        "is_fri13_coef": 0.1569943427481149,
+        "is_fri13_se": 0.05642983373169269,
+        "is_fri13_p": 0.005400573486923973,
+        "count_ratio": 1.1699889949597437,
+        "count_ratio_ci_low": 1.0474869358356225,
+        "count_ratio_ci_high": 1.3068174900290335,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Ibaraki",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.013451685426312913,
+        "is_fri13_coef": 0.009487093341464988,
+        "is_fri13_se": 0.08291303223617175,
+        "is_fri13_p": 0.908903099452608,
+        "count_ratio": 1.0095322384638896,
+        "count_ratio_ci_low": 0.8581130196026748,
+        "count_ratio_ci_high": 1.1876702919270505,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Ishikawa",
+        "n_obs": 2191,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.016967168665932487,
+        "is_fri13_coef": -0.0830319349328258,
+        "is_fri13_se": 0.14634889729411302,
+        "is_fri13_p": 0.570472291136501,
+        "count_ratio": 0.9203217563373625,
+        "count_ratio_ci_low": 0.6908237845865614,
+        "count_ratio_ci_high": 1.2260610507132275,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Iwate",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.03023079258929172,
+        "is_fri13_coef": 0.2508987322902275,
+        "is_fri13_se": 0.13449275313639283,
+        "is_fri13_p": 0.062108747783655556,
+        "count_ratio": 1.2851799305129084,
+        "count_ratio_ci_low": 0.9873781126639288,
+        "count_ratio_ci_high": 1.6728013641470543,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kagawa",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.0076906059376083665,
+        "is_fri13_coef": 0.007587363138438128,
+        "is_fri13_se": 0.11794257046434582,
+        "is_fri13_p": 0.9487066725836462,
+        "count_ratio": 1.0076162201147527,
+        "count_ratio_ci_low": 0.7996542540129751,
+        "count_ratio_ci_high": 1.269661784381463,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kagoshima",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.01626598112043352,
+        "is_fri13_coef": 0.20382387094153764,
+        "is_fri13_se": 0.07582895175895975,
+        "is_fri13_p": 0.007189375051600649,
+        "count_ratio": 1.2260821857367021,
+        "count_ratio_ci_low": 1.056753905801492,
+        "count_ratio_ci_high": 1.4225426733017201,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kanagawa",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014704131969552177,
+        "is_fri13_coef": -0.012976043910303083,
+        "is_fri13_se": 0.05048329223041898,
+        "is_fri13_p": 0.7971506703802171,
+        "count_ratio": 0.9871077819796077,
+        "count_ratio_ci_low": 0.8941144619501417,
+        "count_ratio_ci_high": 1.0897729705875567,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kochi",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.024785427415116294,
+        "is_fri13_coef": 0.13959800422871124,
+        "is_fri13_se": 0.14694872041304818,
+        "is_fri13_p": 0.3421235948610386,
+        "count_ratio": 1.1498114865842777,
+        "count_ratio_ci_low": 0.8620722498020874,
+        "count_ratio_ci_high": 1.5335912447995668,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kumamoto",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.02248605599391623,
+        "is_fri13_coef": -0.03800330415851144,
+        "is_fri13_se": 0.1560902908370833,
+        "is_fri13_p": 0.807641317317707,
+        "count_ratio": 0.962709759940297,
+        "count_ratio_ci_low": 0.7089752562711142,
+        "count_ratio_ci_high": 1.307253072214257,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Kyoto",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.023386359279947623,
+        "is_fri13_coef": -0.11657956780695963,
+        "is_fri13_se": 0.13581972461141953,
+        "is_fri13_p": 0.3907044823934541,
+        "count_ratio": 0.8899592820510646,
+        "count_ratio_ci_low": 0.6819620032260826,
+        "count_ratio_ci_high": 1.1613953856110588,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Mie",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.019334194704501866,
+        "is_fri13_coef": -0.4855419995408817,
+        "is_fri13_se": 0.09325916493255408,
+        "is_fri13_p": 1.9256736600083667e-07,
+        "count_ratio": 0.6153635795846629,
+        "count_ratio_ci_low": 0.5125655857116735,
+        "count_ratio_ci_high": 0.7387783059088541,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Miyagi",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.02325413381634556,
+        "is_fri13_coef": 0.042237153482558604,
+        "is_fri13_se": 0.07798336479989566,
+        "is_fri13_p": 0.588082047855995,
+        "count_ratio": 1.0431418341377765,
+        "count_ratio_ci_low": 0.895290141389876,
+        "count_ratio_ci_high": 1.2154103299284127,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Miyazaki",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.016921176368009695,
+        "is_fri13_coef": 0.15079239925011667,
+        "is_fri13_se": 0.0812832895400883,
+        "is_fri13_p": 0.06357532814034159,
+        "count_ratio": 1.162755244163213,
+        "count_ratio_ci_low": 0.9915162708754471,
+        "count_ratio_ci_high": 1.3635678985230584,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Nagano",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.023093894112887595,
+        "is_fri13_coef": 0.033994775104931575,
+        "is_fri13_se": 0.07342799878391694,
+        "is_fri13_p": 0.6433876816358399,
+        "count_ratio": 1.0345792011462303,
+        "count_ratio_ci_low": 0.8959044986927001,
+        "count_ratio_ci_high": 1.1947189962838984,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Nagasaki",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.018339157475763757,
+        "is_fri13_coef": -0.024402919835259072,
+        "is_fri13_se": 0.09182119074681126,
+        "is_fri13_p": 0.790419687730237,
+        "count_ratio": 0.9758924241171812,
+        "count_ratio_ci_low": 0.8151614014848714,
+        "count_ratio_ci_high": 1.1683158963544025,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Nara",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.010138855258344454,
+        "is_fri13_coef": -0.03645016038369622,
+        "is_fri13_se": 0.0854573580513992,
+        "is_fri13_p": 0.6697214074123226,
+        "count_ratio": 0.9642061483632781,
+        "count_ratio_ci_low": 0.8155084425422611,
+        "count_ratio_ci_high": 1.140017010300135,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Niigata",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.02144762706221782,
+        "is_fri13_coef": -0.04230328530624521,
+        "is_fri13_se": 0.11571464142315316,
+        "is_fri13_p": 0.7146763941903187,
+        "count_ratio": 0.9585790135523455,
+        "count_ratio_ci_low": 0.7640669865111955,
+        "count_ratio_ci_high": 1.2026088568734725,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Oita",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.019801237060048875,
+        "is_fri13_coef": 0.22469167231051893,
+        "is_fri13_se": 0.10049703442032408,
+        "is_fri13_p": 0.02536461231733789,
+        "count_ratio": 1.251936649942812,
+        "count_ratio_ci_low": 1.028108909272599,
+        "count_ratio_ci_high": 1.5244935252812362,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Okayama",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "pairwise_collinear"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.014572872905508905,
+        "is_fri13_coef": 0.17262989288772598,
+        "is_fri13_se": 0.12389302665957147,
+        "is_fri13_p": 0.1635053314361924,
+        "count_ratio": 1.188426178697963,
+        "count_ratio_ci_low": 0.9322111097860414,
+        "count_ratio_ci_high": 1.5150610922656813,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Okinawa",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.026261918264892263,
+        "is_fri13_coef": 0.18195132831377156,
+        "is_fri13_se": 0.11627342385866361,
+        "is_fri13_p": 0.11761634811830361,
+        "count_ratio": 1.1995558080551083,
+        "count_ratio_ci_low": 0.9550988893464465,
+        "count_ratio_ci_high": 1.5065813107827772,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Osaka",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.016484264316977516,
+        "is_fri13_coef": 0.13251108149880406,
+        "is_fri13_se": 0.051721887328583085,
+        "is_fri13_p": 0.010407360023274715,
+        "count_ratio": 1.1416916676739353,
+        "count_ratio_ci_low": 1.0316279052577826,
+        "count_ratio_ci_high": 1.2634980668833145,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Saga",
+        "n_obs": 2190,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.015490225329086761,
+        "is_fri13_coef": 0.045270268979852285,
+        "is_fri13_se": 0.1401121190789453,
+        "is_fri13_p": 0.7466192761958016,
+        "count_ratio": 1.0463106069984742,
+        "count_ratio_ci_low": 0.7950546391392395,
+        "count_ratio_ci_high": 1.3769693709387776,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Saitama",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.016956465300865326,
+        "is_fri13_coef": -0.04659112243415936,
+        "is_fri13_se": 0.05137861570531046,
+        "is_fri13_p": 0.36450234033230566,
+        "count_ratio": 0.9544775822865456,
+        "count_ratio_ci_low": 0.8630424857647703,
+        "count_ratio_ci_high": 1.0555997765049516,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Shiga",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.01180191125613914,
+        "is_fri13_coef": -0.001867866360270411,
+        "is_fri13_se": 0.13265424604209977,
+        "is_fri13_p": 0.988765587766961,
+        "count_ratio": 0.9981338770164656,
+        "count_ratio_ci_low": 0.7696145983972881,
+        "count_ratio_ci_high": 1.2945066771376768,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Shimane",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.043353416608871584,
+        "is_fri13_coef": 0.22841779898386036,
+        "is_fri13_se": 0.199046708949475,
+        "is_fri13_p": 0.25115075341787174,
+        "count_ratio": 1.2566102262488301,
+        "count_ratio_ci_low": 0.8506907760817152,
+        "count_ratio_ci_high": 1.8562200333079135,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Shizuoka",
+        "n_obs": 2192,
+        "dropped_covariates": [
+          "snowfall_cm",
+          "snow_depth_max_cm"
+        ],
+        "dropped_reason": [
+          "zero_variance",
+          "zero_variance"
+        ],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.012653798690684783,
+        "is_fri13_coef": 0.023905383794186327,
+        "is_fri13_se": 0.05704646029623726,
+        "is_fri13_p": 0.6751787634669945,
+        "count_ratio": 1.0241934080117858,
+        "count_ratio_ci_low": 0.9158491385005877,
+        "count_ratio_ci_high": 1.1453547237399333,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Tochigi",
+        "n_obs": 2182,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.01574358092464114,
+        "is_fri13_coef": -0.2366243832250566,
+        "is_fri13_se": 0.12561285964437544,
+        "is_fri13_p": 0.059597551192374275,
+        "count_ratio": 0.789287702046229,
+        "count_ratio_ci_low": 0.6170402241295014,
+        "count_ratio_ci_high": 1.0096182586480291,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Tokushima",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.0125426969604924,
+        "is_fri13_coef": -0.18399514103214837,
+        "is_fri13_se": 0.18576637161575715,
+        "is_fri13_p": 0.3219467521586826,
+        "count_ratio": 0.831939846185818,
+        "count_ratio_ci_low": 0.5780525260395616,
+        "count_ratio_ci_high": 1.197337398408521,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Tokyo",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.01589083101746531,
+        "is_fri13_coef": 0.007963292866709408,
+        "is_fri13_se": 0.04131740106100942,
+        "is_fri13_p": 0.8471668226757253,
+        "count_ratio": 1.0079950842152594,
+        "count_ratio_ci_low": 0.929584724693656,
+        "count_ratio_ci_high": 1.0930193481147916,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Tottori",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.008369060717975883,
+        "is_fri13_coef": -0.5278723150137791,
+        "is_fri13_se": 0.31135804384968974,
+        "is_fri13_p": 0.09000206990323954,
+        "count_ratio": 0.5898586689006986,
+        "count_ratio_ci_low": 0.3204199283885588,
+        "count_ratio_ci_high": 1.0858664472809603,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Toyama",
+        "n_obs": 2190,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.028677565948081848,
+        "is_fri13_coef": -0.12355024695636756,
+        "is_fri13_se": 0.15441294834380265,
+        "is_fri13_p": 0.4236361768668019,
+        "count_ratio": 0.8837772330123327,
+        "count_ratio_ci_low": 0.6529896077501888,
+        "count_ratio_ci_high": 1.1961326617157166,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Wakayama",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.0005695658539285283,
+        "is_fri13_coef": 0.11105589421162976,
+        "is_fri13_se": 0.1653122063001977,
+        "is_fri13_p": 0.501714287073849,
+        "count_ratio": 1.1174573645073504,
+        "count_ratio_ci_low": 0.8081964843345355,
+        "count_ratio_ci_high": 1.5450586406842575,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Yamagata",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.04122144199015543,
+        "is_fri13_coef": 0.07381604797994701,
+        "is_fri13_se": 0.12570114898059254,
+        "is_fri13_p": 0.5570462428732529,
+        "count_ratio": 1.0766087429267055,
+        "count_ratio_ci_low": 0.8415131178367394,
+        "count_ratio_ci_high": 1.3773836209777224,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Yamaguchi",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.021376462342166756,
+        "is_fri13_coef": 0.07400183089373405,
+        "is_fri13_se": 0.10844337959931806,
+        "is_fri13_p": 0.4949856555509944,
+        "count_ratio": 1.0768087770168577,
+        "count_ratio_ci_low": 0.8706255632643743,
+        "count_ratio_ci_high": 1.331820694436055,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      },
+      {
+        "prefecture_en": "Yamanashi",
+        "n_obs": 2192,
+        "dropped_covariates": [],
+        "dropped_reason": [],
+        "converged": true,
+        "non_conv_reason": null,
+        "alpha_mle_nb2": 0.018747797488382605,
+        "is_fri13_coef": -0.06115260931684459,
+        "is_fri13_se": 0.11631558129876297,
+        "is_fri13_p": 0.5990637560946872,
+        "count_ratio": 0.9406796723392589,
+        "count_ratio_ci_low": 0.7489171172214371,
+        "count_ratio_ci_high": 1.1815436255954312,
+        "se_source": "hc1_heteroscedasticity_robust",
+        "nb2_runtime_warnings": []
+      }
+    ]
+  }
+}

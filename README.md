@@ -15,8 +15,12 @@ Using 1,884,793 police-recorded traffic accident records (2019–2024), we repro
 ├── src/
 │   ├── 00_preliminary.py    # Preliminary Friday the 13th identification
 │   ├── 01_prepare_data.py   # Data preparation and aggregation
-│   ├── 02_main_analysis.py  # All statistical analyses (5 methods)
-│   └── 03_figures.py        # Figure generation
+│   ├── 01a_build_panels.py       # Bureau/prefecture x day accident panels
+│   ├── 01b_build_cloud_panels.py # Bureau/prefecture x day cloud-cover panels
+│   ├── 02_main_analysis.py       # National-level statistical analyses (5 methods)
+│   ├── 02_prefecture_panel_nb.py # Prefecture/bureau NB panel model (Phase 2C-C2-c)
+│   ├── 03_figures.py             # Figure generation
+│   └── pref_mapping.py           # NPA pref_code <-> prefecture <-> JMA station mapping
 ├── output/
 │   ├── figures/             # Figure 1 (scatter) and Figure 2 (forest plot)
 │   ├── *.csv                # Analysis result tables
@@ -33,11 +37,15 @@ Using 1,884,793 police-recorded traffic accident records (2019–2024), we repro
 ## Reproduction
 
 ```bash
-pip install pandas scipy statsmodels pyarrow matplotlib weasyprint markdown
+pip install pandas scipy statsmodels pyarrow matplotlib weasyprint markdown pytest
 python3 src/01_prepare_data.py
+python3 src/01a_build_panels.py         # accident panels (bureau/prefecture x day)
+python3 src/01b_build_cloud_panels.py   # cloud-cover panels
 python3 src/02_main_analysis.py
+python3 src/02_prefecture_panel_nb.py   # NB panel with two-way cluster SE
 python3 src/03_figures.py
 python3 generate_pdf.py
+python3 -m pytest tests/                # 27 tests, ~10s
 ```
 
 ## Citation

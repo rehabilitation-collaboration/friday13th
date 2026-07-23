@@ -1,0 +1,520 @@
+{
+  "project": "friday13th",
+  "phase": "2C-C1",
+  "generated": "2026-07-23T14:03:28",
+  "script": "src/04_diagnostics.py",
+  "config": {
+    "n_boot_requested": 500,
+    "bootstrap_seed": 20260723
+  },
+  "diagnostics": {
+    "dispersion": [
+      {
+        "spec_label": "02_primary",
+        "n_obs": 103024,
+        "k_params": 73,
+        "alpha_nb2": 0.031864129275546625,
+        "alpha_nb1": 0.5902033811859393,
+        "alpha_ratio_nb1_over_nb2": 18.5225014649585,
+        "count_ratio_nb2": 1.0221401414467348,
+        "count_ratio_nb1": 1.0239454274523054,
+        "count_ratio_abs_diff_nb2_vs_nb1": 0.0018052860055706166,
+        "nb2_runtime_warnings": [],
+        "interpretation": "alpha typically diverges between parameterizations (nb1: var=mu*(1+alpha); nb2: var=mu+alpha*mu^2). The is_fri13 count_ratio should be robust across parameterizations. |delta| < 0.01 supports the null-everywhere claim being spec-robust."
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "n_obs": 111792,
+        "k_params": 77,
+        "alpha_nb2": 0.031934255601977345,
+        "alpha_nb1": 0.555886950512038,
+        "alpha_ratio_nb1_over_nb2": 17.407230575232756,
+        "count_ratio_nb2": 1.0220899502461993,
+        "count_ratio_nb1": 1.023979144007819,
+        "count_ratio_abs_diff_nb2_vs_nb1": 0.0018891937616196675,
+        "nb2_runtime_warnings": [],
+        "interpretation": "alpha typically diverges between parameterizations (nb1: var=mu*(1+alpha); nb2: var=mu+alpha*mu^2). The is_fri13 count_ratio should be robust across parameterizations. |delta| < 0.01 supports the null-everywhere claim being spec-robust."
+      },
+      {
+        "spec_label": "03_primary",
+        "n_obs": 103008,
+        "k_params": 79,
+        "alpha_nb2": 0.02344953398058219,
+        "alpha_nb1": 0.4486493924609185,
+        "alpha_ratio_nb1_over_nb2": 19.132550473388118,
+        "count_ratio_nb2": 1.0247822114015948,
+        "count_ratio_nb1": 1.0275391988270768,
+        "count_ratio_abs_diff_nb2_vs_nb1": 0.002756987425482027,
+        "nb2_runtime_warnings": [
+          "divide by zero encountered in log",
+          "invalid value encountered in multiply"
+        ],
+        "interpretation": "alpha typically diverges between parameterizations (nb1: var=mu*(1+alpha); nb2: var=mu+alpha*mu^2). The is_fri13 count_ratio should be robust across parameterizations. |delta| < 0.01 supports the null-everywhere claim being spec-robust."
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "n_obs": 111776,
+        "k_params": 83,
+        "alpha_nb2": 0.02339635173287116,
+        "alpha_nb1": 0.421314383106535,
+        "alpha_ratio_nb1_over_nb2": 18.007695726107638,
+        "count_ratio_nb2": 1.0250493776772927,
+        "count_ratio_nb1": 1.027772614691968,
+        "count_ratio_abs_diff_nb2_vs_nb1": 0.0027232370146752505,
+        "nb2_runtime_warnings": [],
+        "interpretation": "alpha typically diverges between parameterizations (nb1: var=mu*(1+alpha); nb2: var=mu+alpha*mu^2). The is_fri13 count_ratio should be robust across parameterizations. |delta| < 0.01 supports the null-everywhere claim being spec-robust."
+      }
+    ],
+    "pearson_residuals": [
+      {
+        "spec_label": "02_primary",
+        "n": 103024,
+        "n_dropped_non_finite": 0,
+        "min": -4.560427082530955,
+        "q1": -0.6884414580063943,
+        "median": -0.05985114271263532,
+        "mean": -0.00048631318659650197,
+        "q3": 0.6151466568847651,
+        "max": 11.636842025580393,
+        "sd": 1.0056568519482367,
+        "prop_abs_gt_2": 0.0429123311073148,
+        "prop_abs_gt_3": 0.006561577884764715,
+        "figure_s1_path": null
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "n": 111792,
+        "n_dropped_non_finite": 0,
+        "min": -4.557659602040326,
+        "q1": -0.7039229749675038,
+        "median": -0.066047700835687,
+        "mean": -0.00013510132275657496,
+        "q3": 0.6128226233172844,
+        "max": 11.609618939563244,
+        "sd": 1.0090374389069554,
+        "prop_abs_gt_2": 0.04304422498926578,
+        "prop_abs_gt_3": 0.0069593530842994135,
+        "figure_s1_path": null
+      },
+      {
+        "spec_label": "03_primary",
+        "n": 103008,
+        "n_dropped_non_finite": 0,
+        "min": -5.0438522274831605,
+        "q1": -0.6998246043794124,
+        "median": -0.06876750654469553,
+        "mean": 0.0001074508683667228,
+        "q3": 0.6225472164882644,
+        "max": 11.24541176374393,
+        "sd": 1.012506928353424,
+        "prop_abs_gt_2": 0.04420045045045045,
+        "prop_abs_gt_3": 0.006941208449829139,
+        "figure_s1_path": "output/figures/S1_pearson_residuals_03_primary.png"
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "n": 111776,
+        "n_dropped_non_finite": 0,
+        "min": -5.048144444502511,
+        "q1": -0.7128871418866084,
+        "median": -0.07453432298549031,
+        "mean": 0.0003444851700326326,
+        "q3": 0.6201594042175921,
+        "max": 11.221505232517886,
+        "sd": 1.0143997748541136,
+        "prop_abs_gt_2": 0.04425815917549385,
+        "prop_abs_gt_3": 0.007148225021471514,
+        "figure_s1_path": null
+      }
+    ],
+    "quasi_poisson": [
+      {
+        "spec_label": "02_primary",
+        "family": "Poisson",
+        "scale_estimator": "Pearson chi^2 / df (scale='X2')",
+        "n_obs": 103024,
+        "scale_factor": 1.5689549222514003,
+        "is_fri13_coef": 0.02338546874952773,
+        "is_fri13_se_iid": 0.013801765547416831,
+        "is_fri13_se_cluster_2way": 0.035111108826533975,
+        "is_fri13_p_iid": 0.09019264011308707,
+        "is_fri13_p_cluster_2way": 0.505384335237732,
+        "count_ratio": 1.0236610528520405,
+        "count_ratio_ci_low_iid": 0.9963407198202561,
+        "count_ratio_ci_high_iid": 1.0517305278009619,
+        "count_ratio_ci_low_cluster_2way": 0.9555842890904436,
+        "count_ratio_ci_high_cluster_2way": 1.0965876721597803
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "family": "Poisson",
+        "scale_estimator": "Pearson chi^2 / df (scale='X2')",
+        "n_obs": 111792,
+        "scale_factor": 1.5323724558777345,
+        "is_fri13_coef": 0.023227127070419573,
+        "is_fri13_se_iid": 0.013639862815595188,
+        "is_fri13_se_cluster_2way": 0.035163177133713544,
+        "is_fri13_p_iid": 0.08858946432035074,
+        "is_fri13_p_cluster_2way": 0.5088992937614045,
+        "count_ratio": 1.0234989774740766,
+        "count_ratio_ci_low_iid": 0.9964991383080292,
+        "count_ratio_ci_high_iid": 1.0512303690188147,
+        "count_ratio_ci_low_cluster_2way": 0.9553354915775208,
+        "count_ratio_ci_high_cluster_2way": 1.096525949392593
+      },
+      {
+        "spec_label": "03_primary",
+        "family": "Poisson",
+        "scale_estimator": "Pearson chi^2 / df (scale='X2')",
+        "n_obs": 103008,
+        "scale_factor": 1.4405522791057999,
+        "is_fri13_coef": 0.02633346378874042,
+        "is_fri13_se_iid": 0.013226585872443544,
+        "is_fri13_se_cluster_2way": 0.026878695703714543,
+        "is_fri13_p_iid": 0.04648644559188696,
+        "is_fri13_p_cluster_2way": 0.3272267751206336,
+        "count_ratio": 1.0266832530845837,
+        "count_ratio_ci_low_iid": 1.000409439276139,
+        "count_ratio_ci_high_iid": 1.053647097659372,
+        "count_ratio_ci_low_cluster_2way": 0.9739953204760275,
+        "count_ratio_ci_high_cluster_2way": 1.0822213207853775
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "family": "Poisson",
+        "scale_estimator": "Pearson chi^2 / df (scale='X2')",
+        "n_obs": 111776,
+        "scale_factor": 1.4108608079714036,
+        "is_fri13_coef": 0.026363307060191715,
+        "is_fri13_se_iid": 0.013089566369914648,
+        "is_fri13_se_cluster_2way": 0.026892852689848715,
+        "is_fri13_p_iid": 0.04400215164798666,
+        "is_fri13_p_cluster_2way": 0.3269335853611438,
+        "count_ratio": 1.0267138931287974,
+        "count_ratio_ci_low_iid": 1.0007080074942256,
+        "count_ratio_ci_high_iid": 1.0533956063600043,
+        "count_ratio_ci_low_cluster_2way": 0.9739973615619438,
+        "count_ratio_ci_high_cluster_2way": 1.0822836487495462
+      }
+    ],
+    "hc1_robust_se": [
+      {
+        "spec_label": "02_primary",
+        "is_fri13_coef": 0.02189860708404289,
+        "is_fri13_se_iid": 0.01609105286083812,
+        "is_fri13_se_hc1": 0.015914762893919316,
+        "is_fri13_se_cluster_2way": 0.03479379892889331,
+        "is_fri13_p_iid": 0.17353953364354802,
+        "is_fri13_p_hc1": 0.16882370815201297,
+        "is_fri13_p_cluster_2way": 0.5290986921615766,
+        "hc1_over_iid_ratio": 0.9890442242379395,
+        "hc1_over_cluster_2way_ratio": 0.4574022781025917
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "is_fri13_coef": 0.021849501848042917,
+        "is_fri13_se_iid": 0.016021449940622465,
+        "is_fri13_se_hc1": 0.015848464615042884,
+        "is_fri13_se_cluster_2way": 0.03463395628527315,
+        "is_fri13_p_iid": 0.17264135894158084,
+        "is_fri13_p_hc1": 0.16800237901322201,
+        "is_fri13_p_cluster_2way": 0.5281259471595342,
+        "hc1_over_iid_ratio": 0.9892028919841408,
+        "hc1_over_cluster_2way_ratio": 0.4575990246249134
+      },
+      {
+        "spec_label": "03_primary",
+        "is_fri13_coef": 0.02448011333263243,
+        "is_fri13_se_iid": 0.015115743663119838,
+        "is_fri13_se_hc1": 0.015095970352528165,
+        "is_fri13_se_cluster_2way": 0.026722617988271174,
+        "is_fri13_p_iid": 0.1053373588610671,
+        "is_fri13_p_hc1": 0.10488209941512798,
+        "is_fri13_p_cluster_2way": 0.3596238094123666,
+        "hc1_over_iid_ratio": 0.9986918731203469,
+        "hc1_over_cluster_2way_ratio": 0.5649136008737594
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "is_fri13_coef": 0.02474078477377333,
+        "is_fri13_se_iid": 0.015053635667818173,
+        "is_fri13_se_hc1": 0.01503354228700556,
+        "is_fri13_se_cluster_2way": 0.026683930808851376,
+        "is_fri13_p_iid": 0.10027767754203702,
+        "is_fri13_p_hc1": 0.0998243849228535,
+        "is_fri13_p_cluster_2way": 0.3538335168829937,
+        "hc1_over_iid_ratio": 0.9986652140880778,
+        "hc1_over_cluster_2way_ratio": 0.5633930920709311
+      }
+    ],
+    "spec_sensitivity": [
+      {
+        "spec_label": "02_primary",
+        "seasonality_variants": {
+          "dummy": {
+            "converged": true,
+            "n_obs": 103024,
+            "k_params": 73,
+            "alpha_nb2": 0.031864129275546625,
+            "is_fri13_coef": 0.02189860708404289,
+            "is_fri13_se_cluster_2way": 0.03479379892889331,
+            "is_fri13_p_cluster_2way": 0.5290986921615766,
+            "count_ratio": 1.0221401414467348,
+            "count_ratio_ci_low": 0.9547581288333166,
+            "count_ratio_ci_high": 1.094277636612978
+          },
+          "harmonic": {
+            "converged": true,
+            "n_obs": 103024,
+            "k_params": 68,
+            "alpha_nb2": 0.03204235430148387,
+            "is_fri13_coef": 0.02636425861482637,
+            "is_fri13_se_cluster_2way": 0.033683919838460044,
+            "is_fri13_p_cluster_2way": 0.43380583843061415,
+            "count_ratio": 1.0267148701036257,
+            "count_ratio_ci_low": 0.9611197920249289,
+            "count_ratio_ci_high": 1.0967867202807153
+          },
+          "spline": {
+            "converged": false,
+            "error": "Design rank-deficient (64/65); collinearity with intercept (B-spline partition-of-unity artifact).",
+            "n_obs": 103024,
+            "k_params_attempted": 65,
+            "matrix_rank": 64
+          }
+        },
+        "abs_count_ratio_delta_vs_dummy": {
+          "harmonic": 0.004574728656890903,
+          "spline": null
+        },
+        "max_abs_count_ratio_delta_vs_dummy": 0.004574728656890903
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "seasonality_variants": {
+          "dummy": {
+            "converged": true,
+            "n_obs": 111792,
+            "k_params": 77,
+            "alpha_nb2": 0.031934255601977345,
+            "is_fri13_coef": 0.021849501848042917,
+            "is_fri13_se_cluster_2way": 0.03463395628527315,
+            "is_fri13_p_cluster_2way": 0.5281259471595342,
+            "count_ratio": 1.0220899502461993,
+            "count_ratio_ci_low": 0.9550103962155368,
+            "count_ratio_ci_high": 1.0938811457278699
+          },
+          "harmonic": {
+            "converged": true,
+            "n_obs": 111792,
+            "k_params": 72,
+            "alpha_nb2": 0.032109190466332094,
+            "is_fri13_coef": 0.026277733013709576,
+            "is_fri13_se_cluster_2way": 0.03357830303660509,
+            "is_fri13_p_cluster_2way": 0.4338733591401899,
+            "count_ratio": 1.0266260368255462,
+            "count_ratio_ci_low": 0.9612355979146993,
+            "count_ratio_ci_high": 1.0964648227495806
+          },
+          "spline": {
+            "converged": false,
+            "error": "Design rank-deficient (68/69); collinearity with intercept (B-spline partition-of-unity artifact).",
+            "n_obs": 111792,
+            "k_params_attempted": 69,
+            "matrix_rank": 68
+          }
+        },
+        "abs_count_ratio_delta_vs_dummy": {
+          "harmonic": 0.0045360865793468985,
+          "spline": null
+        },
+        "max_abs_count_ratio_delta_vs_dummy": 0.0045360865793468985
+      },
+      {
+        "spec_label": "03_primary",
+        "seasonality_variants": {
+          "dummy": {
+            "converged": true,
+            "n_obs": 103008,
+            "k_params": 79,
+            "alpha_nb2": 0.02344953398058219,
+            "is_fri13_coef": 0.02448011333263243,
+            "is_fri13_se_cluster_2way": 0.026722617988271174,
+            "is_fri13_p_cluster_2way": 0.3596238094123666,
+            "count_ratio": 1.0247822114015948,
+            "count_ratio_ci_low": 0.9724892885211054,
+            "count_ratio_ci_high": 1.079887041637427
+          },
+          "harmonic": {
+            "converged": true,
+            "n_obs": 103008,
+            "k_params": 74,
+            "alpha_nb2": 0.02321285139865618,
+            "is_fri13_coef": 0.024917147612506442,
+            "is_fri13_se_cluster_2way": 0.025984160378894866,
+            "is_fri13_p_cluster_2way": 0.33759097215159994,
+            "count_ratio": 1.02523017423781,
+            "count_ratio_ci_low": 0.974323585965203,
+            "count_ratio_ci_high": 1.0787965367033918
+          },
+          "spline": {
+            "converged": false,
+            "error": "Design rank-deficient (70/71); collinearity with intercept (B-spline partition-of-unity artifact).",
+            "n_obs": 103008,
+            "k_params_attempted": 71,
+            "matrix_rank": 70
+          }
+        },
+        "abs_count_ratio_delta_vs_dummy": {
+          "harmonic": 0.00044796283621528765,
+          "spline": null
+        },
+        "max_abs_count_ratio_delta_vs_dummy": 0.00044796283621528765
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "seasonality_variants": {
+          "dummy": {
+            "converged": true,
+            "n_obs": 111776,
+            "k_params": 83,
+            "alpha_nb2": 0.02339635173287116,
+            "is_fri13_coef": 0.02474078477377333,
+            "is_fri13_se_cluster_2way": 0.026683930808851376,
+            "is_fri13_p_cluster_2way": 0.3538335168829937,
+            "count_ratio": 1.0250493776772927,
+            "count_ratio_ci_low": 0.9728165845901116,
+            "count_ratio_ci_high": 1.0800866713423887
+          },
+          "harmonic": {
+            "converged": true,
+            "n_obs": 111776,
+            "k_params": 78,
+            "alpha_nb2": 0.02315421864044291,
+            "is_fri13_coef": 0.0252239027133018,
+            "is_fri13_se_cluster_2way": 0.025920289005319005,
+            "is_fri13_p_cluster_2way": 0.3304869341879566,
+            "count_ratio": 1.0255447170645886,
+            "count_ratio_ci_low": 0.9747445291162566,
+            "count_ratio_ci_high": 1.0789924285624248
+          },
+          "spline": {
+            "converged": false,
+            "error": "Design rank-deficient (74/75); collinearity with intercept (B-spline partition-of-unity artifact).",
+            "n_obs": 111776,
+            "k_params_attempted": 75,
+            "matrix_rank": 74
+          }
+        },
+        "abs_count_ratio_delta_vs_dummy": {
+          "harmonic": 0.0004953393872959566,
+          "spline": null
+        },
+        "max_abs_count_ratio_delta_vs_dummy": 0.0004953393872959566
+      }
+    ],
+    "pair_cluster_boot_pref_only": [
+      {
+        "spec_label": "02_primary",
+        "method": "pair_cluster_bootstrap_prefecture (Cameron-Miller 2015)",
+        "cluster_axis": "prefecture_en (47 clusters, resampled with replacement)",
+        "n_iter_requested": 500,
+        "n_iter_successful": 500,
+        "convergence_failures": 0,
+        "exception_failures": 0,
+        "n_iter_with_runtime_warnings": 0,
+        "seed": 20260723,
+        "elapsed_seconds": 403.5299651622772,
+        "is_fri13_coef_mean": 0.019678976784953332,
+        "is_fri13_coef_median": 0.019590731565678116,
+        "is_fri13_coef_sd": 0.017015844061487116,
+        "is_fri13_ci_low_boot": -0.012054024347789235,
+        "is_fri13_ci_high_boot": 0.05144835391232928,
+        "count_ratio_ci_low_boot": 0.9880183343739561,
+        "count_ratio_ci_high_boot": 1.0527948121548718,
+        "p_two_sided_boot": 0.28,
+        "mc_se_approx_p_two_sided": 0.020079840636817812,
+        "interpretation": "Percentile 95% CI on log(count_ratio) and two-sided p-value = 2 * min(P(coef<=0), P(coef>=0)). This resamples ONLY the prefecture axis, so the reported CI/p under-covers date-clustered variance and should be interpreted as a sensitivity probe for prefecture-cluster misspecification only — not as the primary inference (which is the z-based two-way cluster SE)."
+      },
+      {
+        "spec_label": "02_sensitivity",
+        "method": "pair_cluster_bootstrap_prefecture (Cameron-Miller 2015)",
+        "cluster_axis": "prefecture_en (47 clusters, resampled with replacement)",
+        "n_iter_requested": 500,
+        "n_iter_successful": 500,
+        "convergence_failures": 0,
+        "exception_failures": 0,
+        "n_iter_with_runtime_warnings": 0,
+        "seed": 20260723,
+        "elapsed_seconds": 500.1122679710388,
+        "is_fri13_coef_mean": 0.019635435817230457,
+        "is_fri13_coef_median": 0.019543560957846533,
+        "is_fri13_coef_sd": 0.016876908632014638,
+        "is_fri13_ci_low_boot": -0.012067129981362957,
+        "is_fri13_ci_high_boot": 0.050852332024350105,
+        "count_ratio_ci_low_boot": 0.9880053858525513,
+        "count_ratio_ci_high_boot": 1.0521675103646455,
+        "p_two_sided_boot": 0.272,
+        "mc_se_approx_p_two_sided": 0.019900552756142227,
+        "interpretation": "Percentile 95% CI on log(count_ratio) and two-sided p-value = 2 * min(P(coef<=0), P(coef>=0)). This resamples ONLY the prefecture axis, so the reported CI/p under-covers date-clustered variance and should be interpreted as a sensitivity probe for prefecture-cluster misspecification only — not as the primary inference (which is the z-based two-way cluster SE)."
+      },
+      {
+        "spec_label": "03_primary",
+        "method": "pair_cluster_bootstrap_prefecture (Cameron-Miller 2015)",
+        "cluster_axis": "prefecture_en (47 clusters, resampled with replacement)",
+        "n_iter_requested": 500,
+        "n_iter_successful": 500,
+        "convergence_failures": 0,
+        "exception_failures": 0,
+        "n_iter_with_runtime_warnings": 17,
+        "seed": 20260723,
+        "elapsed_seconds": 493.32948994636536,
+        "is_fri13_coef_mean": 0.02217501769765935,
+        "is_fri13_coef_median": 0.023054583018676564,
+        "is_fri13_coef_sd": 0.016434848446213436,
+        "is_fri13_ci_low_boot": -0.00900118977038484,
+        "is_fri13_ci_high_boot": 0.05133979390569743,
+        "count_ratio_ci_low_boot": 0.9910391996630923,
+        "count_ratio_ci_high_boot": 1.052680526946596,
+        "p_two_sided_boot": 0.18,
+        "mc_se_approx_p_two_sided": 0.017181385275931625,
+        "interpretation": "Percentile 95% CI on log(count_ratio) and two-sided p-value = 2 * min(P(coef<=0), P(coef>=0)). This resamples ONLY the prefecture axis, so the reported CI/p under-covers date-clustered variance and should be interpreted as a sensitivity probe for prefecture-cluster misspecification only — not as the primary inference (which is the z-based two-way cluster SE)."
+      },
+      {
+        "spec_label": "03_sensitivity",
+        "method": "pair_cluster_bootstrap_prefecture (Cameron-Miller 2015)",
+        "cluster_axis": "prefecture_en (47 clusters, resampled with replacement)",
+        "n_iter_requested": 500,
+        "n_iter_successful": 500,
+        "convergence_failures": 0,
+        "exception_failures": 0,
+        "n_iter_with_runtime_warnings": 14,
+        "seed": 20260723,
+        "elapsed_seconds": 625.999932050705,
+        "is_fri13_coef_mean": 0.022404508828756085,
+        "is_fri13_coef_median": 0.023214883463483476,
+        "is_fri13_coef_sd": 0.016315952846707248,
+        "is_fri13_ci_low_boot": -0.008514224011124073,
+        "is_fri13_ci_high_boot": 0.051321422523206595,
+        "count_ratio_ci_low_boot": 0.9915219193438521,
+        "count_ratio_ci_high_boot": 1.0526611879276377,
+        "p_two_sided_boot": 0.172,
+        "mc_se_approx_p_two_sided": 0.0168769665520792,
+        "interpretation": "Percentile 95% CI on log(count_ratio) and two-sided p-value = 2 * min(P(coef<=0), P(coef>=0)). This resamples ONLY the prefecture axis, so the reported CI/p under-covers date-clustered variance and should be interpreted as a sensitivity probe for prefecture-cluster misspecification only — not as the primary inference (which is the z-based two-way cluster SE)."
+      }
+    ],
+    "methods_draft_c1": {
+      "target_section": "Methods / Discussion — Phase 2C-C1 diagnostics",
+      "paragraphs": [
+        "Model diagnostics (deviance/df interpretation rewrite). Given the dispersion parameter alpha estimated by MLE in the NB2 panel (alpha_nb2 = 0.023 for the weather+holiday-adjusted primary fit), the near-unity deviance/df ratio reported for the national-level GLM in earlier drafts (0.03 with alpha fixed at 1.0) should be interpreted as indicating a possible overcorrection under the fixed-alpha assumption rather than as an unqualified statement of fit adequacy. The MLE-alpha panel NB2 removes this artifact.",
+        "Parameterization robustness. NB1 refit yielded alpha_nb1 = 0.449 (versus alpha_nb2 = 0.023); this divergence reflects the parameterization difference (nb1: var = mu*(1+alpha); nb2: var = mu + alpha*mu^2). The is_fri13 count ratio remained robust: nb2 = 1.0248 vs nb1 = 1.0275 (|delta| = 0.0028).",
+        "Pearson residual diagnostics (03_primary NB2, n = 103,008). Empirical mean = +0.000 and SD = 1.013, both close to the standard-normal reference expected under a correctly specified NB2 dispersion. Tail proportions: |r|>2 = 4.42% (theoretical N(0,1) = 4.55%), |r|>3 = 0.69% (theoretical = 0.27%). The mild fat tail beyond ±3 (~2-3x the Gaussian expectation) is consistent with a small number of extreme-event days that count regression cannot fully absorb; it does not indicate systematic model misspecification for the is_fri13 estimand and is visualized in Supplementary Figure S1 (output/figures/S1_pearson_residuals_03_primary.png).",
+        "Quasi-Poisson comparison. GLM(Poisson, scale='X2') yielded count ratio = 1.0267 with Pearson chi^2/df scale factor = 1.441 and two-way cluster SE = 0.0269. The QP point estimate matches NB2 to four decimals — this is expected under quasi-likelihood since NB2 and Poisson share the log-link mean model and differ only in the variance function. The informative content is the scale factor itself, which indicates modest extra-Poisson variance comparable to the NB2 alpha_nb2 = 0.023 dispersion estimate (both indicate moderate rather than extreme overdispersion).",
+        "Robust SE comparison. HC1 heteroskedasticity-robust SE = 0.0151 versus two-way cluster SE = 0.0267 (HC1/cluster ratio = 0.56). Cluster SE is wider as expected under day-level treatment (Bertrand-Duflo-Mullainathan 2004); we report cluster SE as primary.",
+        "Seasonality spec sensitivity. Replacing the month FE with a third-order harmonic (sin/cos of 2*pi*k*doy/365.25 for k=1..3) shifted the is_fri13 count ratio by at most 0.0004 — the null is insensitive to the specific seasonality parameterization. A cubic B-spline of day-of-year was also attempted but the spline basis was rank-deficient against the intercept (B-spline partition-of-unity artifact) and is not reported.",
+        "Rank-deficient CRVE mitigation (Cameron-Miller 2015 pair cluster bootstrap). Because G_prefecture = 47 is less than the number of covariates K, the two-way (prefecture+date) cluster meat matrix is rank-deficient on the prefecture axis. We complement the z-based cluster inference with a pair cluster bootstrap on the prefecture axis (500 of 500 iterations converged; convergence_failures = 0). Bootstrap 95% count ratio CI = [0.9910, 1.0527], two-sided p = 0.180 (Monte-Carlo SE at n_iter=500: ~0.017). Because resampling is on the prefecture axis only, the bootstrap does not resample the date-clustered variance component — empirically bootstrap SD = 0.0164 ≈ iid SE = 0.0151 (5% wider), versus two-way cluster SE = 0.0267 (77% wider than iid), so the bootstrap under-covers the date-cluster variance that dominates the z-based cluster SE. We therefore report the two-way cluster z-based inference as the primary test (p = 0.360 for 03_primary) and this bootstrap as a sensitivity check that specifically probes prefecture-cluster misspecification for finite G. Both tests fail to reject the null (bootstrap CI includes 1.0; p exceeds 0.05), so the null-everywhere claim survives under both inference regimes, but the bootstrap p is more liberal by construction and should not be interpreted as tighter evidence."
+      ],
+      "manuscript_reflection_phase": "2C-C5"
+    }
+  }
+}

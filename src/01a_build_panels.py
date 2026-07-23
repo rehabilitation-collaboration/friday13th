@@ -9,7 +9,17 @@ year/month/day-of-month) plus per-unit counts (total / fatal / injury /
 day-vs-night). Missing (date, unit) cells are filled with 0 counts so the
 panel is a strict rectangle (no implicit-zero bias).
 
+Confounder flags added in Phase 2C-C2-e:
+  - is_holiday:  Japanese national holidays sourced from Cabinet Office CSV
+                 (data/jp_holidays_2019_2024.csv, 111 dates 2019-2024).
+  - is_obon:     Hardcoded 8/13-16 each year (Obon travel period; not a
+                 national holiday but a major domestic travel event that
+                 confounds Fri13 traffic exposure -- notably 2021-08-13 which
+                 is both Fri13 and Obon initial day).
+  - is_newyear:  Hardcoded 1/1-3 each year.
+
 Input:  fullmoon-accident/data/processed/accidents_clean.parquet
+        friday13th/data/jp_holidays_2019_2024.csv
 Output: friday13th/data/processed/accidents_by_{bureau,prefecture}_daily.parquet
 """
 from __future__ import annotations
@@ -25,12 +35,33 @@ FULLMOON_ACC = Path(
     "/Users/mizukishirai/claude/analysis/fullmoon-accident/data/processed/accidents_clean.parquet"
 )
 OUT_DIR = FRIDAY13 / "data" / "processed"
+HOLIDAYS_CSV = FRIDAY13 / "data" / "jp_holidays_2019_2024.csv"
 
 sys.path.insert(0, str(FRIDAY13 / "src"))
 import pref_mapping  # noqa: E402
 
 DATE_START = "2019-01-01"
 DATE_END = "2024-12-31"
+
+
+def load_holidays() -> set:
+    """Return set of Japanese national holiday dates from Cabinet Office CSV.
+
+    Source: https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv
+    Original encoding is Shift-JIS; CSV in-repo is converted to UTF-8.
+    """
+    if not HOLIDAYS_CSV.exists():
+        raise FileNotFoundError(
+            f"Holiday CSV not found: {HOLIDAYS_CSV}.\n"
+            "Regenerate from https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv:\n"
+            "  curl -sS -o /tmp/s.csv <url> && \\\n"
+            "  iconv -f SHIFT-JIS -t UTF-8 /tmp/s.csv | \\\n"
+            "  awk -F, 'NR>1 && $1 ~ /^(2019|2020|2021|2022|2023|2024)/ {\n"
+            "    gsub(/\\//, \"-\", $1); printf \"%s,%s\\n\", $1, $2}' \\\n"
+            "  > data/jp_holidays_2019_2024.csv"
+        )
+    df = pd.read_csv(HOLIDAYS_CSV, parse_dates=["date"])
+    return set(df["date"])
 
 
 def load_accidents() -> pd.DataFrame:
@@ -92,8 +123,8 @@ def build_prefecture_panel(bureau_panel: pd.DataFrame, mapping: pd.DataFrame) ->
     return pref_panel
 
 
-def add_calendar_covariates(panel: pd.DataFrame) -> pd.DataFrame:
-    """Fri13 flag, weekday (Mon=0..Sun=6), year/month/day."""
+def add_calendar_covariates(panel: pd.DataFrame, holidays: set) -> pd.DataFrame:
+    """Fri13, weekday, national-holiday / obon / newyear flags, year/month/day."""
     d = panel["date"]
     panel["year"] = d.dt.year.astype(np.int16)
     panel["month"] = d.dt.month.astype(np.int8)
@@ -102,6 +133,13 @@ def add_calendar_covariates(panel: pd.DataFrame) -> pd.DataFrame:
     panel["is_friday"] = (panel["weekday"] == 4).astype(np.int8)
     panel["is_13th"] = (panel["day_of_month"] == 13).astype(np.int8)
     panel["is_fri13"] = (panel["is_friday"] & panel["is_13th"]).astype(np.int8)
+    panel["is_holiday"] = d.isin(holidays).astype(np.int8)
+    panel["is_obon"] = (
+        (panel["month"] == 8) & panel["day_of_month"].between(13, 16)
+    ).astype(np.int8)
+    panel["is_newyear"] = (
+        (panel["month"] == 1) & panel["day_of_month"].between(1, 3)
+    ).astype(np.int8)
     return panel
 
 
@@ -126,20 +164,61 @@ def sanity_check(bureau: pd.DataFrame, pref: pd.DataFrame) -> None:
     fatals = bureau["fatal_count"].sum()
     assert fatals == 16_257, fatals
 
+    # Phase 2C-C2-e flags
+    # is_holiday: 111 national-holiday dates x 51 bureau / x 47 pref
+    holiday_dates_bureau = bureau.loc[bureau["is_holiday"] == 1, "date"].nunique()
+    holiday_dates_pref = pref.loc[pref["is_holiday"] == 1, "date"].nunique()
+    assert holiday_dates_bureau == 111, holiday_dates_bureau
+    assert holiday_dates_pref == 111, holiday_dates_pref
+    assert (bureau["is_holiday"] == 1).sum() == 111 * 51
+    assert (pref["is_holiday"] == 1).sum() == 111 * 47
+
+    # is_obon: 6 years x 4 days (8/13-16) = 24 dates
+    obon_dates = bureau.loc[bureau["is_obon"] == 1, "date"].nunique()
+    assert obon_dates == 24, obon_dates
+    assert (bureau["is_obon"] == 1).sum() == 24 * 51
+    assert (pref["is_obon"] == 1).sum() == 24 * 47
+
+    # is_newyear: 6 years x 3 days (1/1-3) = 18 dates
+    newyear_dates = bureau.loc[bureau["is_newyear"] == 1, "date"].nunique()
+    assert newyear_dates == 18, newyear_dates
+    assert (bureau["is_newyear"] == 1).sum() == 18 * 51
+    assert (pref["is_newyear"] == 1).sum() == 18 * 47
+
+    # 2021-08-13 must be both is_fri13=1 and is_obon=1 (the key confounding case)
+    obon_fri13_rows = bureau[
+        (bureau["is_obon"] == 1) & (bureau["is_fri13"] == 1)
+    ]
+    assert obon_fri13_rows.shape[0] == 51, obon_fri13_rows.shape
+    assert (
+        obon_fri13_rows["date"].dt.strftime("%Y-%m-%d").eq("2021-08-13")
+    ).all(), obon_fri13_rows["date"].unique()
+
+    # Sanity: national-holiday and obon are disjoint from Fri13 EXCEPT via is_obon
+    # (i.e. no Fri13 date is a national holiday, per CAO data)
+    fri13_and_holiday = bureau[
+        (bureau["is_fri13"] == 1) & (bureau["is_holiday"] == 1)
+    ]
+    assert fri13_and_holiday.empty, fri13_and_holiday["date"].unique()
+
 
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     mapping = pd.DataFrame(pref_mapping.load_mapping())
+
+    print("Loading holidays ...", flush=True)
+    holidays = load_holidays()
+    print(f"  loaded {len(holidays):,} national-holiday dates", flush=True)
 
     print("Loading accidents ...", flush=True)
     acc = load_accidents()
     print(f"  loaded {len(acc):,} rows", flush=True)
 
     print("Building bureau panel ...", flush=True)
-    bureau = add_calendar_covariates(build_bureau_panel(acc, mapping))
+    bureau = add_calendar_covariates(build_bureau_panel(acc, mapping), holidays)
 
     print("Building prefecture panel ...", flush=True)
-    pref = add_calendar_covariates(build_prefecture_panel(bureau, mapping))
+    pref = add_calendar_covariates(build_prefecture_panel(bureau, mapping), holidays)
 
     sanity_check(bureau, pref)
 
@@ -155,7 +234,9 @@ def main() -> None:
     fri13 = bureau.loc[bureau["is_fri13"] == 1].groupby("date")["total_count"].sum()
     print("\n=== Daily accident totals on the 10 Friday the 13th days ===")
     for date, cnt in fri13.items():
-        print(f"  {date.date()}  total={cnt}")
+        is_obon = (date.month == 8 and 13 <= date.day <= 16)
+        tag = "  [Obon]" if is_obon else ""
+        print(f"  {date.date()}  total={cnt}{tag}")
 
     # Top-15 prefectures by 6-yr total
     top = (
@@ -166,6 +247,15 @@ def main() -> None:
     print("\n=== 6-year totals by prefecture (top 15) ===")
     for name, v in top.items():
         print(f"  {name:<12s} {v:>10,}")
+
+    # Phase 2C-C2-e: confounder-flag summary
+    print("\n=== Phase 2C-C2-e confounder flags (bureau panel) ===")
+    print(f"  is_holiday : {(bureau['is_holiday']==1).sum():>7,} rows  "
+          f"({bureau.loc[bureau['is_holiday']==1, 'date'].nunique()} unique dates)")
+    print(f"  is_obon    : {(bureau['is_obon']==1).sum():>7,} rows  "
+          f"({bureau.loc[bureau['is_obon']==1, 'date'].nunique()} unique dates)")
+    print(f"  is_newyear : {(bureau['is_newyear']==1).sum():>7,} rows  "
+          f"({bureau.loc[bureau['is_newyear']==1, 'date'].nunique()} unique dates)")
 
 
 if __name__ == "__main__":

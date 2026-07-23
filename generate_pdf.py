@@ -18,6 +18,9 @@ MANUSCRIPT_MD = PROJECT_DIR / "manuscript.md"
 FIGURE_FILES = {
     "Figure 1": "figure1_scatter.png",
     "Figure 2": "figure2_forest.png",
+    "Figure S1": "S1_pearson_residuals_03_primary.png",
+    "Figure S2": "S2_same_month_pair_plot.png",
+    "Figure S3": "S3_prefecture_forest.png",
 }
 
 CSS = """
@@ -71,7 +74,7 @@ em { font-style: italic; }
 def extract_figure_legends(md_text: str) -> dict[str, str]:
     """Extract figure legend text from manuscript."""
     legends = {}
-    pattern = r'\*\*Figure (\d+)\.\*\*\s*(.*?)(?=\n\n|\*\*Figure|\Z)'
+    pattern = r'\*\*Figure (S?\d+)\.\*\*\s*(.*?)(?=\n\n|\*\*Figure|\Z)'
     for m in re.finditer(pattern, md_text, re.DOTALL):
         fig_num = m.group(1)
         text = m.group(2).strip().replace("\n", " ")

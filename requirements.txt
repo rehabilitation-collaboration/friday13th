@@ -1,0 +1,24 @@
+# Friday13th analysis — pinned dependencies for Phase 2C-C1 (NB diagnostics + wild-cluster bootstrap)
+# Python 3.14.3 target. Install into ./venv via: python3 -m venv venv && venv/bin/pip install -r requirements.txt
+# Pins captured 2026-07-23 after successful resolve on macOS arm64.
+
+# Core numeric stack
+numpy==2.4.2
+scipy==1.18.0
+pandas==3.0.1
+pyarrow==25.0.0
+
+# Statistics / econometrics
+statsmodels==0.14.6
+patsy==1.0.2
+
+# Plotting (Figure S1 Pearson residual + Q-Q)
+matplotlib==3.10.8
+
+# Testing
+pytest==9.0.2
+
+# Scraping stack (kept in sync with system deps for 06b_scrape_jma_weather.py)
+requests==2.34.2
+beautifulsoup4==4.15.0
+lxml==6.1.1

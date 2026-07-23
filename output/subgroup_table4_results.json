@@ -1,0 +1,1096 @@
+{
+  "project": "friday13th",
+  "phase": "2C-C5-Table4",
+  "generated": "2026-07-23T12:34:31+00:00",
+  "script": "src/09_subgroup_table4.py",
+  "config": {
+    "n_subgroups": 8,
+    "alpha_family": 0.05,
+    "bonferroni_threshold": 0.00625
+  },
+  "values": [
+    {
+      "id": "t4_fatal_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Fatal accidents] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_fatal_mean_fri13",
+      "value": 9.9,
+      "label": "Table 4 [Fatal accidents] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_fatal_mean_other",
+      "value": 7.572847682119205,
+      "label": "Table 4 [Fatal accidents] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_fatal_rr_crude",
+      "value": 1.3073021425448186,
+      "label": "Table 4 [Fatal accidents] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_fatal_p_raw",
+      "value": 0.08702400026164696,
+      "label": "Table 4 [Fatal accidents] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_fatal_p_bonferroni",
+      "value": 0.6961920020931757,
+      "label": "Table 4 [Fatal accidents] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_fatal_nb_count_ratio",
+      "value": 1.2270252117875835,
+      "label": "Table 4 [Fatal accidents] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_fatal_nb_ci_low",
+      "value": 0.9996830726755079,
+      "label": "Table 4 [Fatal accidents] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_fatal_nb_ci_high",
+      "value": 1.5060681845225876,
+      "label": "Table 4 [Fatal accidents] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_fatal_nb_p",
+      "value": 0.05035545312236156,
+      "label": "Table 4 [Fatal accidents] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_fatal_nb_alpha",
+      "value": null,
+      "label": "Table 4 [Fatal accidents] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_injury_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Injury accidents] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_injury_mean_fri13",
+      "value": 1017.0,
+      "label": "Table 4 [Injury accidents] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_injury_mean_other",
+      "value": 981.026402640264,
+      "label": "Table 4 [Injury accidents] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_injury_rr_crude",
+      "value": 1.0366693467810033,
+      "label": "Table 4 [Injury accidents] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_injury_p_raw",
+      "value": 0.528156399280082,
+      "label": "Table 4 [Injury accidents] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_injury_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Injury accidents] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_injury_nb_count_ratio",
+      "value": 0.9913125534543178,
+      "label": "Table 4 [Injury accidents] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_injury_nb_ci_low",
+      "value": 0.9141625989189811,
+      "label": "Table 4 [Injury accidents] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_injury_nb_ci_high",
+      "value": 1.0749735110561145,
+      "label": "Table 4 [Injury accidents] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_injury_nb_p",
+      "value": 0.8328299263892165,
+      "label": "Table 4 [Injury accidents] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_injury_nb_alpha",
+      "value": 0.015103623233456157,
+      "label": "Table 4 [Injury accidents] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_young_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Age <=24 (young)] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_young_mean_fri13",
+      "value": 114.2,
+      "label": "Table 4 [Age <=24 (young)] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_young_mean_other",
+      "value": 112.64026402640265,
+      "label": "Table 4 [Age <=24 (young)] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_young_rr_crude",
+      "value": 1.0138470553765015,
+      "label": "Table 4 [Age <=24 (young)] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_young_p_raw",
+      "value": 0.7858697871792315,
+      "label": "Table 4 [Age <=24 (young)] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_young_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Age <=24 (young)] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_young_nb_count_ratio",
+      "value": 0.9896634106284535,
+      "label": "Table 4 [Age <=24 (young)] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_young_nb_ci_low",
+      "value": 0.9047779898110156,
+      "label": "Table 4 [Age <=24 (young)] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_young_nb_ci_high",
+      "value": 1.0825127018632725,
+      "label": "Table 4 [Age <=24 (young)] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_young_nb_p",
+      "value": 0.8203501786936511,
+      "label": "Table 4 [Age <=24 (young)] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_young_nb_alpha",
+      "value": 0.010872016184875693,
+      "label": "Table 4 [Age <=24 (young)] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_low_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Age 25-44 (mid-lower)] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_mid_low_mean_fri13",
+      "value": 317.9,
+      "label": "Table 4 [Age 25-44 (mid-lower)] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_mid_low_mean_other",
+      "value": 314.006600660066,
+      "label": "Table 4 [Age 25-44 (mid-lower)] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_mid_low_rr_crude",
+      "value": 1.0123991003111072,
+      "label": "Table 4 [Age 25-44 (mid-lower)] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_low_p_raw",
+      "value": 0.8543490201829147,
+      "label": "Table 4 [Age 25-44 (mid-lower)] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_low_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Age 25-44 (mid-lower)] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_low_nb_count_ratio",
+      "value": 0.9730414874486946,
+      "label": "Table 4 [Age 25-44 (mid-lower)] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_low_nb_ci_low",
+      "value": 0.8911029688886776,
+      "label": "Table 4 [Age 25-44 (mid-lower)] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_low_nb_ci_high",
+      "value": 1.062514399965656,
+      "label": "Table 4 [Age 25-44 (mid-lower)] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_low_nb_p",
+      "value": 0.5425903678420319,
+      "label": "Table 4 [Age 25-44 (mid-lower)] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_low_nb_alpha",
+      "value": 0.015759228629918697,
+      "label": "Table 4 [Age 25-44 (mid-lower)] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_hi_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Age 45-64 (mid-upper)] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_mid_hi_mean_fri13",
+      "value": 364.8,
+      "label": "Table 4 [Age 45-64 (mid-upper)] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_mid_hi_mean_other",
+      "value": 344.34323432343234,
+      "label": "Table 4 [Age 45-64 (mid-upper)] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_mid_hi_rr_crude",
+      "value": 1.059408066247508,
+      "label": "Table 4 [Age 45-64 (mid-upper)] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_hi_p_raw",
+      "value": 0.2839440576645055,
+      "label": "Table 4 [Age 45-64 (mid-upper)] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_hi_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Age 45-64 (mid-upper)] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_hi_nb_count_ratio",
+      "value": 1.0180399407979248,
+      "label": "Table 4 [Age 45-64 (mid-upper)] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_hi_nb_ci_low",
+      "value": 0.9365599980338463,
+      "label": "Table 4 [Age 45-64 (mid-upper)] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_hi_nb_ci_high",
+      "value": 1.1066085709784796,
+      "label": "Table 4 [Age 45-64 (mid-upper)] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_mid_hi_nb_p",
+      "value": 0.6744351971117768,
+      "label": "Table 4 [Age 45-64 (mid-upper)] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_mid_hi_nb_alpha",
+      "value": 0.014296054438420887,
+      "label": "Table 4 [Age 45-64 (mid-upper)] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_elderly_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Age >=65 (elderly)] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_elderly_mean_fri13",
+      "value": 229.8,
+      "label": "Table 4 [Age >=65 (elderly)] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_elderly_mean_other",
+      "value": 217.5082508250825,
+      "label": "Table 4 [Age >=65 (elderly)] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_elderly_rr_crude",
+      "value": 1.0565116455504135,
+      "label": "Table 4 [Age >=65 (elderly)] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_elderly_p_raw",
+      "value": 0.5088108303366916,
+      "label": "Table 4 [Age >=65 (elderly)] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_elderly_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Age >=65 (elderly)] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_elderly_nb_count_ratio",
+      "value": 0.9803964467395645,
+      "label": "Table 4 [Age >=65 (elderly)] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_elderly_nb_ci_low",
+      "value": 0.8883024448392368,
+      "label": "Table 4 [Age >=65 (elderly)] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_elderly_nb_ci_high",
+      "value": 1.0820382161095095,
+      "label": "Table 4 [Age >=65 (elderly)] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_elderly_nb_p",
+      "value": 0.6940464160909807,
+      "label": "Table 4 [Age >=65 (elderly)] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_elderly_nb_alpha",
+      "value": 0.019409051952447496,
+      "label": "Table 4 [Age >=65 (elderly)] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_daytime_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Daytime] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_daytime_mean_fri13",
+      "value": 687.1,
+      "label": "Table 4 [Daytime] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_daytime_mean_other",
+      "value": 720.3498349834983,
+      "label": "Table 4 [Daytime] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_daytime_rr_crude",
+      "value": 0.9538421009227274,
+      "label": "Table 4 [Daytime] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_daytime_p_raw",
+      "value": 0.38009348358665257,
+      "label": "Table 4 [Daytime] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_daytime_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Daytime] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_daytime_nb_count_ratio",
+      "value": 0.961676118009389,
+      "label": "Table 4 [Daytime] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_daytime_nb_ci_low",
+      "value": 0.8835321433416256,
+      "label": "Table 4 [Daytime] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_daytime_nb_ci_high",
+      "value": 1.046731534239177,
+      "label": "Table 4 [Daytime] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_daytime_nb_p",
+      "value": 0.36614201067612884,
+      "label": "Table 4 [Daytime] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_daytime_nb_alpha",
+      "value": 0.016135151030682922,
+      "label": "Table 4 [Daytime] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_nighttime_n_fri13",
+      "value": 10,
+      "label": "Table 4 [Nighttime] N Fri13",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_nighttime_mean_fri13",
+      "value": 339.8,
+      "label": "Table 4 [Nighttime] mean Fri13",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_nighttime_mean_other",
+      "value": 268.22442244224425,
+      "label": "Table 4 [Nighttime] mean other Fri",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "t4_nighttime_rr_crude",
+      "value": 1.2668495914952258,
+      "label": "Table 4 [Nighttime] crude rate ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_nighttime_p_raw",
+      "value": 0.14202927487895695,
+      "label": "Table 4 [Nighttime] raw p (Welch t)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_nighttime_p_bonferroni",
+      "value": 1.0,
+      "label": "Table 4 [Nighttime] Bonferroni p (x8)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_nighttime_nb_count_ratio",
+      "value": 1.0645962448920296,
+      "label": "Table 4 [Nighttime] NB-adjusted count ratio",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_nighttime_nb_ci_low",
+      "value": 0.9576625243547187,
+      "label": "Table 4 [Nighttime] NB CI lower",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_nighttime_nb_ci_high",
+      "value": 1.1834703100676116,
+      "label": "Table 4 [Nighttime] NB CI upper",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_nighttime_nb_p",
+      "value": 0.24646124840350914,
+      "label": "Table 4 [Nighttime] NB p-value",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_nighttime_nb_alpha",
+      "value": 0.02402487146663723,
+      "label": "Table 4 [Nighttime] NB alpha (dispersion)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "t4_n_subgroups",
+      "value": 8,
+      "label": "Table 4 total subgroups",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "t4_alpha_family",
+      "value": 0.05,
+      "label": "Table 4 family-wise alpha",
+      "section": "methods",
+      "format": ".3f"
+    },
+    {
+      "id": "t4_bonferroni_threshold",
+      "value": 0.00625,
+      "label": "Table 4 Bonferroni-adjusted threshold (alpha / 8)",
+      "section": "methods",
+      "format": ".5f"
+    },
+    {
+      "id": "t4_n_raw_significant",
+      "value": 0,
+      "label": "Table 4 N subgroups with raw p<0.05",
+      "section": "results",
+      "format": "d"
+    },
+    {
+      "id": "t4_n_bonferroni_significant",
+      "value": 0,
+      "label": "Table 4 N subgroups surviving Bonferroni",
+      "section": "results",
+      "format": "d"
+    }
+  ],
+  "table4_rows": [
+    {
+      "subgroup_key": "fatal",
+      "subgroup_label": "Fatal accidents",
+      "n_fri13": 10,
+      "n_other": 302,
+      "mean_fri13": 9.9,
+      "mean_other": 7.57,
+      "rr_crude": 1.307,
+      "ci_low_crude": 0.946,
+      "ci_high_crude": 1.669,
+      "p_raw": 0.087,
+      "p_bonferroni": 0.6962,
+      "nb_count_ratio": 1.227,
+      "nb_ci_low": 1.0,
+      "nb_ci_high": 1.506,
+      "nb_p": 0.0504,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "injury",
+      "subgroup_label": "Injury accidents",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 1017.0,
+      "mean_other": 981.03,
+      "rr_crude": 1.037,
+      "ci_low_crude": 0.911,
+      "ci_high_crude": 1.162,
+      "p_raw": 0.5282,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 0.991,
+      "nb_ci_low": 0.914,
+      "nb_ci_high": 1.075,
+      "nb_p": 0.8328,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "young",
+      "subgroup_label": "Age <=24 (young)",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 114.2,
+      "mean_other": 112.64,
+      "rr_crude": 1.014,
+      "ci_low_crude": 0.903,
+      "ci_high_crude": 1.124,
+      "p_raw": 0.7859,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 0.99,
+      "nb_ci_low": 0.905,
+      "nb_ci_high": 1.083,
+      "nb_p": 0.8204,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "mid_low",
+      "subgroup_label": "Age 25-44 (mid-lower)",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 317.9,
+      "mean_other": 314.01,
+      "rr_crude": 1.012,
+      "ci_low_crude": 0.865,
+      "ci_high_crude": 1.16,
+      "p_raw": 0.8543,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 0.973,
+      "nb_ci_low": 0.891,
+      "nb_ci_high": 1.063,
+      "nb_p": 0.5426,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "mid_hi",
+      "subgroup_label": "Age 45-64 (mid-upper)",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 364.8,
+      "mean_other": 344.34,
+      "rr_crude": 1.059,
+      "ci_low_crude": 0.942,
+      "ci_high_crude": 1.177,
+      "p_raw": 0.2839,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 1.018,
+      "nb_ci_low": 0.937,
+      "nb_ci_high": 1.107,
+      "nb_p": 0.6744,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "elderly",
+      "subgroup_label": "Age >=65 (elderly)",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 229.8,
+      "mean_other": 217.51,
+      "rr_crude": 1.057,
+      "ci_low_crude": 0.871,
+      "ci_high_crude": 1.242,
+      "p_raw": 0.5088,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 0.98,
+      "nb_ci_low": 0.888,
+      "nb_ci_high": 1.082,
+      "nb_p": 0.694,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "daytime",
+      "subgroup_label": "Daytime",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 687.1,
+      "mean_other": 720.35,
+      "rr_crude": 0.954,
+      "ci_low_crude": 0.842,
+      "ci_high_crude": 1.066,
+      "p_raw": 0.3801,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 0.962,
+      "nb_ci_low": 0.884,
+      "nb_ci_high": 1.047,
+      "nb_p": 0.3661,
+      "nb_converged": true
+    },
+    {
+      "subgroup_key": "nighttime",
+      "subgroup_label": "Nighttime",
+      "n_fri13": 10,
+      "n_other": 303,
+      "mean_fri13": 339.8,
+      "mean_other": 268.22,
+      "rr_crude": 1.267,
+      "ci_low_crude": 0.893,
+      "ci_high_crude": 1.641,
+      "p_raw": 0.142,
+      "p_bonferroni": 1.0,
+      "nb_count_ratio": 1.065,
+      "nb_ci_low": 0.958,
+      "nb_ci_high": 1.183,
+      "nb_p": 0.2465,
+      "nb_converged": true
+    }
+  ],
+  "per_subgroup": {
+    "fatal": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 302,
+        "mean_fri13": 9.9,
+        "sd_fri13": 3.8137179293236207,
+        "mean_other": 7.572847682119205,
+        "sd_other": 2.8738119607978025,
+        "rate_ratio_crude": 1.3073021425448186
+      },
+      "welch": {
+        "t_stat": 1.9117507437820755,
+        "p_value": 0.08702400026164696,
+        "df_welch": 9.34152569303637,
+        "mean_diff": 2.3271523178807954,
+        "se_diff": 1.2172885641341078,
+        "ci_low": -0.41127540362587967,
+        "ci_high": 5.06558003938747
+      },
+      "nb": {
+        "converged": true,
+        "family": "poisson",
+        "fit_method": "poisson_glm_fallback",
+        "n_obs": 312,
+        "k_params": 19,
+        "alpha_nb2": null,
+        "coef": 0.20459271302182036,
+        "se_iid": 0.1045476815873618,
+        "z": 1.9569320898891407,
+        "count_ratio": 1.2270252117875835,
+        "ci_low": 0.9996830726755079,
+        "ci_high": 1.5060681845225876,
+        "p_value": 0.05035545312236156,
+        "fallback_reason": "NB2 MLE (BFGS+NM) failed to converge; Poisson approximation used. Reported CI/p ignore extra-Poisson dispersion — see per_subgroup JSON for the raw NB2 attempt failure and treat this row as approximate."
+      }
+    },
+    "injury": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 1017.0,
+        "sd_fri13": 170.82739827088628,
+        "mean_other": 981.026402640264,
+        "sd_other": 177.508863585979,
+        "rate_ratio_crude": 1.0366693467810033
+      },
+      "welch": {
+        "t_stat": 0.6543692549682878,
+        "p_value": 0.528156399280082,
+        "df_welch": 9.652502017682831,
+        "mean_diff": 35.973597359736004,
+        "se_diff": 54.974461417016556,
+        "ci_low": -87.11751281286067,
+        "ci_high": 159.06470753233268
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.015103623233456157,
+        "coef": -0.008725402395587958,
+        "se_iid": 0.041338220208471325,
+        "z": -0.21107348965642905,
+        "count_ratio": 0.9913125534543178,
+        "ci_low": 0.9141625989189811,
+        "ci_high": 1.0749735110561145,
+        "p_value": 0.8328299263892165
+      }
+    },
+    "young": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 114.2,
+        "sd_fri13": 17.229174224101524,
+        "mean_other": 112.64026402640265,
+        "sd_other": 21.62900529679381,
+        "rate_ratio_crude": 1.0138470553765015
+      },
+      "welch": {
+        "t_stat": 0.2791105991629471,
+        "p_value": 0.7858697871792315,
+        "df_welch": 9.95975571860709,
+        "mean_diff": 1.5597359735973555,
+        "se_diff": 5.5882362700485215,
+        "ci_low": -10.8984534742539,
+        "ci_high": 14.017925421448611
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.010872016184875693,
+        "coef": -0.01039038292714307,
+        "se_iid": 0.0457535435768423,
+        "z": -0.22709460546356589,
+        "count_ratio": 0.9896634106284535,
+        "ci_low": 0.9047779898110156,
+        "ci_high": 1.0825127018632725,
+        "p_value": 0.8203501786936511
+      }
+    },
+    "mid_low": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 317.9,
+        "sd_fri13": 64.18627406056359,
+        "mean_other": 314.006600660066,
+        "sd_other": 65.95442904956352,
+        "rate_ratio_crude": 1.0123991003111072
+      },
+      "welch": {
+        "t_stat": 0.18855966017036174,
+        "p_value": 0.8543490201829147,
+        "df_welch": 9.637819438010965,
+        "mean_diff": 3.8933993399339784,
+        "se_diff": 20.64810329216934,
+        "ci_low": -42.34887141472455,
+        "ci_high": 50.135670094592506
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.015759228629918697,
+        "coef": -0.027328559011718448,
+        "se_iid": 0.04488181126747053,
+        "z": -0.6089005376555661,
+        "count_ratio": 0.9730414874486946,
+        "ci_low": 0.8911029688886776,
+        "ci_high": 1.062514399965656,
+        "p_value": 0.5425903678420319
+      }
+    },
+    "mid_hi": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 364.8,
+        "sd_fri13": 55.95792069840416,
+        "mean_other": 344.34323432343234,
+        "sd_other": 60.831280719772984,
+        "rate_ratio_crude": 1.059408066247508
+      },
+      "welch": {
+        "t_stat": 1.1341413539925256,
+        "p_value": 0.2839440576645055,
+        "df_welch": 9.715288127714958,
+        "mean_diff": 20.45676567656767,
+        "se_diff": 18.037227550651934,
+        "ci_low": -19.892900823421904,
+        "ci_high": 60.806432176557244
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.014296054438420887,
+        "coef": 0.01787915193423985,
+        "se_iid": 0.0425624376275832,
+        "z": 0.42006879612207665,
+        "count_ratio": 1.0180399407979248,
+        "ci_low": 0.9365599980338463,
+        "ci_high": 1.1066085709784796,
+        "p_value": 0.6744351971117768
+      }
+    },
+    "elderly": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 229.8,
+        "sd_fri13": 56.029357384222145,
+        "mean_other": 217.5082508250825,
+        "sd_other": 43.718459941373595,
+        "rate_ratio_crude": 1.0565116455504135
+      },
+      "welch": {
+        "t_stat": 0.6868755473567077,
+        "p_value": 0.5088108303366916,
+        "df_welch": 9.36520422989688,
+        "mean_diff": 12.291749174917499,
+        "se_diff": 17.895161972528562,
+        "ci_low": -27.95055525992713,
+        "ci_high": 52.534053609762125
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.019409051952447496,
+        "coef": -0.01979825163139715,
+        "se_iid": 0.05032987957403844,
+        "z": -0.3933697397839521,
+        "count_ratio": 0.9803964467395645,
+        "ci_low": 0.8883024448392368,
+        "ci_high": 1.0820382161095095,
+        "p_value": 0.6940464160909807
+      }
+    },
+    "daytime": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 687.1,
+        "sd_fri13": 111.75911595928092,
+        "mean_other": 720.3498349834983,
+        "sd_other": 135.78877877801855,
+        "rate_ratio_crude": 0.9538421009227274
+      },
+      "welch": {
+        "t_stat": -0.918705854429757,
+        "p_value": 0.38009348358665257,
+        "df_welch": 9.897647859585481,
+        "mean_diff": -33.24983498349832,
+        "se_diff": 36.19203559352147,
+        "ci_low": -114.00389417947152,
+        "ci_high": 47.50422421247488
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.016135151030682922,
+        "coef": -0.039077560670322406,
+        "se_iid": 0.04324061363281471,
+        "z": -0.9037235456960995,
+        "count_ratio": 0.961676118009389,
+        "ci_low": 0.8835321433416256,
+        "ci_high": 1.046731534239177,
+        "p_value": 0.36614201067612884
+      }
+    },
+    "nighttime": {
+      "desc": {
+        "n_fri13": 10,
+        "n_other": 303,
+        "mean_fri13": 339.8,
+        "sd_fri13": 139.52443035779314,
+        "mean_other": 268.22442244224425,
+        "sd_other": 123.83660912341385,
+        "rate_ratio_crude": 1.2668495914952258
+      },
+      "welch": {
+        "t_stat": 1.6015524112709345,
+        "p_value": 0.14202927487895695,
+        "df_welch": 9.473872827227193,
+        "mean_diff": 71.57557755775576,
+        "se_diff": 44.691373853295225,
+        "ci_low": -28.75771406961188,
+        "ci_high": 171.90886918512342
+      },
+      "nb": {
+        "converged": true,
+        "family": "nb2",
+        "fit_method": "nb2_bfgs",
+        "n_obs": 313,
+        "k_params": 19,
+        "alpha_nb2": 0.02402487146663723,
+        "coef": 0.06259561450253455,
+        "se_iid": 0.054008874366711326,
+        "z": 1.1589875781805907,
+        "count_ratio": 1.0645962448920296,
+        "ci_low": 0.9576625243547187,
+        "ci_high": 1.1834703100676116,
+        "p_value": 0.24646124840350914
+      }
+    }
+  },
+  "n_raw_significant": 0,
+  "n_bonferroni_significant": 0,
+  "methods_notes": "Table 4 reports subgroup-specific comparisons of Fri13 vs. all other Fridays on national daily accident counts, partitioned into 8 subgroups (severity x2, age x4, time-of-day x2). For each subgroup we report the crude rate ratio with Welch two-sample t-test raw p, the Bonferroni-adjusted p (alpha_family=0.050, threshold=0.00625), and a covariate-adjusted NB2 count ratio from a national-level NB2 model with year, month, weekday, and holiday controls; alpha was estimated by MLE. All 8 subgroups use the same national-level NB2 specification for direct comparability. Prefecture-level heterogeneity for the overall is_fri13 estimand is reported separately in Figure S3 (Phase 2C-C4)."
+}

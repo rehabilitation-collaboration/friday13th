@@ -1,0 +1,387 @@
+{
+  "project": "friday13th",
+  "phase": "2C-C2-e",
+  "generated": "2026-07-22T21:21:01",
+  "script": "src/03_prefecture_panel_weather_nb.py",
+  "adjustments": [
+    "is_holiday",
+    "is_obon",
+    "is_newyear",
+    "cloud_cover",
+    "precipitation_mm",
+    "snowfall_cm",
+    "snow_depth_max_cm"
+  ],
+  "values": [
+    {
+      "id": "pref_nb_wh_alpha_nb2",
+      "value": 0.02344953398058219,
+      "label": "Prefecture panel NB2 MLE alpha (weather+holiday)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_wh_alpha_nb1",
+      "value": 0.4486493924609185,
+      "label": "Prefecture panel NB1 MLE alpha (weather+holiday, sensitivity)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_wh_ratio_nb1",
+      "value": 1.0275391988270768,
+      "label": "Prefecture panel is_fri13 count ratio under NB1 (weather+holiday, robustness)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_wh_n_obs",
+      "value": 103008,
+      "label": "Prefecture panel N observations (weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_wh_n_clusters_pref",
+      "value": 47,
+      "label": "Prefecture panel N prefecture clusters (weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_wh_n_clusters_date",
+      "value": 2192,
+      "label": "Prefecture panel N date clusters (weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_wh_k_params",
+      "value": 79,
+      "label": "Prefecture panel N parameters (weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_wh_coef",
+      "value": 0.02448011333263243,
+      "label": "Prefecture panel NB coefficient (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_wh_se_cluster",
+      "value": 0.026722617988271174,
+      "label": "Prefecture panel two-way cluster SE (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_wh_count_ratio",
+      "value": 1.0247822114015948,
+      "label": "Prefecture panel count ratio (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_wh_ci_low",
+      "value": 0.9724892885211054,
+      "label": "Prefecture panel count ratio 95% CI lower (weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_wh_ci_high",
+      "value": 1.079887041637427,
+      "label": "Prefecture panel count ratio 95% CI upper (weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_wh_p",
+      "value": 0.3596238094123666,
+      "label": "Prefecture panel p-value (is_fri13, weather+holiday, two-way cluster SE)",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "bureau_nb_wh_alpha_nb2",
+      "value": 0.02339635173287116,
+      "label": "Bureau panel NB2 MLE alpha (weather+holiday)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_wh_ratio_nb1",
+      "value": 1.027772614691968,
+      "label": "Bureau panel is_fri13 count ratio under NB1 (weather+holiday, robustness)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_wh_n_obs",
+      "value": 111776,
+      "label": "Bureau panel N observations (weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "bureau_nb_wh_n_clusters_pref",
+      "value": 47,
+      "label": "Bureau panel N prefecture clusters (Hokkaido combined, weather+holiday)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "bureau_nb_wh_coef",
+      "value": 0.02474078477377333,
+      "label": "Bureau panel coefficient (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_wh_se_cluster",
+      "value": 0.026683930808851376,
+      "label": "Bureau panel two-way cluster SE (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_wh_count_ratio",
+      "value": 1.0250493776772927,
+      "label": "Bureau panel count ratio (is_fri13, weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_wh_ci_low",
+      "value": 0.9728165845901116,
+      "label": "Bureau panel count ratio 95% CI lower (weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_wh_ci_high",
+      "value": 1.0800866713423887,
+      "label": "Bureau panel count ratio 95% CI upper (weather+holiday)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_wh_p",
+      "value": 0.3538335168829937,
+      "label": "Bureau panel p-value (is_fri13, weather+holiday, two-way cluster SE)",
+      "section": "results",
+      "format": ".3f"
+    }
+  ],
+  "diagnostics": {
+    "primary_47_prefecture": {
+      "label": "prefecture_47_FE_weather_holiday",
+      "family": "NegativeBinomial(nb2)",
+      "n_obs": 103008,
+      "k_params": 79,
+      "alpha_mle_nb2": 0.02344953398058219,
+      "alpha_mle_nb1": 0.4486493924609185,
+      "is_fri13_ratio_nb1": 1.0275391988270768,
+      "nb2_runtime_warnings": [
+        "divide by zero encountered in log",
+        "invalid value encountered in multiply"
+      ],
+      "poisson_llf": -289703.29630231165,
+      "nb_llf": -284284.1745411611,
+      "iid_se": {
+        "se_source": "iid",
+        "is_fri13_coef": 0.02448011333263243,
+        "is_fri13_se": 0.015115743663119838,
+        "is_fri13_z": 1.6195110130347248,
+        "is_fri13_p": 0.1053373588610671,
+        "count_ratio": 1.0247822114015948,
+        "count_ratio_ci_low": 0.9948664775482983,
+        "count_ratio_ci_high": 1.0555975143449934
+      },
+      "cluster_se": {
+        "se_source": "cluster_2way_pref_date",
+        "is_fri13_coef": 0.02448011333263243,
+        "is_fri13_se": 0.026722617988271174,
+        "is_fri13_z": 0.9160821497121651,
+        "is_fri13_p": 0.3596238094123666,
+        "count_ratio": 1.0247822114015948,
+        "count_ratio_ci_low": 0.9724892885211054,
+        "count_ratio_ci_high": 1.079887041637427
+      },
+      "n_clusters_pref": 47,
+      "n_clusters_date": 2192,
+      "weather_coefs": {
+        "is_13th": {
+          "coef": 0.006289261352336325,
+          "se": 0.012234314923681027,
+          "count_ratio": 1.006309080283543,
+          "p": 0.6072049322468032
+        },
+        "is_holiday": {
+          "coef": -0.3227310848727942,
+          "se": 0.020179024178981354,
+          "count_ratio": 0.7241685680686127,
+          "p": 1.4207499561935897e-57
+        },
+        "is_obon": {
+          "coef": -0.25158214705363746,
+          "se": 0.028313902062845703,
+          "count_ratio": 0.7775695799361322,
+          "p": 6.365474854766077e-19
+        },
+        "is_newyear": {
+          "coef": -0.5052147076010972,
+          "se": 0.04362029257362468,
+          "count_ratio": 0.6033760121023048,
+          "p": 5.0784885554028555e-31
+        },
+        "cloud_cover": {
+          "coef": -0.02422016968003257,
+          "se": 0.00208020898319711,
+          "count_ratio": 0.9760707849064076,
+          "p": 2.486807739317192e-31
+        },
+        "precipitation_mm": {
+          "coef": 0.000786165257880396,
+          "se": 0.0003122959646777568,
+          "count_ratio": 1.000786474366785,
+          "p": 0.011823377029416137
+        },
+        "snowfall_cm": {
+          "coef": 0.025105642970153445,
+          "se": 0.0034654553232751233,
+          "count_ratio": 1.0254234435807883,
+          "p": 4.338970909029895e-13
+        },
+        "snow_depth_max_cm": {
+          "coef": 0.0012004734177034424,
+          "se": 0.000881383438916214,
+          "count_ratio": 1.0012011942743444,
+          "p": 0.1731874393052808
+        }
+      },
+      "converged": true
+    },
+    "sensitivity_51_bureau": {
+      "label": "bureau_51_FE_weather_holiday",
+      "family": "NegativeBinomial(nb2)",
+      "n_obs": 111776,
+      "k_params": 83,
+      "alpha_mle_nb2": 0.02339635173287116,
+      "alpha_mle_nb1": 0.421314383106535,
+      "is_fri13_ratio_nb1": 1.027772614691968,
+      "nb2_runtime_warnings": [],
+      "poisson_llf": -302552.2707730592,
+      "nb_llf": -297214.22775404446,
+      "iid_se": {
+        "se_source": "iid",
+        "is_fri13_coef": 0.02474078477377333,
+        "is_fri13_se": 0.015053635667818173,
+        "is_fri13_z": 1.6435089382868784,
+        "is_fri13_p": 0.10027767754203702,
+        "count_ratio": 1.0250493776772927,
+        "count_ratio_ci_low": 0.9952469903352696,
+        "count_ratio_ci_high": 1.0557441890104544
+      },
+      "cluster_se": {
+        "se_source": "cluster_2way_pref_date",
+        "is_fri13_coef": 0.02474078477377333,
+        "is_fri13_se": 0.026683930808851376,
+        "is_fri13_z": 0.9271791682793045,
+        "is_fri13_p": 0.3538335168829937,
+        "count_ratio": 1.0250493776772927,
+        "count_ratio_ci_low": 0.9728165845901116,
+        "count_ratio_ci_high": 1.0800866713423887
+      },
+      "n_clusters_pref": 47,
+      "n_clusters_date": 2192,
+      "weather_coefs": {
+        "is_13th": {
+          "coef": 0.006040252481295567,
+          "se": 0.012233487043643786,
+          "count_ratio": 1.0060585315912616,
+          "p": 0.6214845817009349
+        },
+        "is_holiday": {
+          "coef": -0.32297800808692034,
+          "se": 0.020134754574792624,
+          "count_ratio": 0.7239897761130667,
+          "p": 6.627167476481681e-58
+        },
+        "is_obon": {
+          "coef": -0.25055209900731895,
+          "se": 0.028524020171994003,
+          "count_ratio": 0.778370926604755,
+          "p": 1.579041413504331e-18
+        },
+        "is_newyear": {
+          "coef": -0.5035765518740825,
+          "se": 0.04382430411181446,
+          "count_ratio": 0.6043652460104477,
+          "p": 1.4673737584884809e-30
+        },
+        "cloud_cover": {
+          "coef": -0.02392930302383498,
+          "se": 0.001996697354417052,
+          "count_ratio": 0.9763547326452883,
+          "p": 4.287229907419898e-33
+        },
+        "precipitation_mm": {
+          "coef": 0.0007912354126895361,
+          "se": 0.00031112051759218495,
+          "count_ratio": 1.0007915485220042,
+          "p": 0.010984869004429545
+        },
+        "snowfall_cm": {
+          "coef": 0.0240252362665521,
+          "se": 0.0025837142398797094,
+          "count_ratio": 1.0243161674802828,
+          "p": 1.421460481746276e-20
+        },
+        "snow_depth_max_cm": {
+          "coef": 0.0012710947568657042,
+          "se": 0.000530827983538343,
+          "count_ratio": 1.0012719029401957,
+          "p": 0.016640722358122913
+        }
+      },
+      "converged": true
+    }
+  },
+  "diff_vs_2c_c_unadjusted": {
+    "prior_source": "prefecture_panel_results.json",
+    "prior_phase": "2C-C2-c",
+    "primary_47_prefecture": {
+      "prior_count_ratio": 1.0221401414467348,
+      "new_count_ratio": 1.0247822114015948,
+      "delta_count_ratio": 0.002642069954859938,
+      "prior_ci": [
+        0.9547581288333166,
+        1.094277636612978
+      ],
+      "new_ci": [
+        0.9724892885211054,
+        1.079887041637427
+      ],
+      "prior_p": 0.5290986921615766,
+      "new_p": 0.3596238094123666
+    },
+    "sensitivity_51_bureau": {
+      "prior_count_ratio": 1.0220899502461993,
+      "new_count_ratio": 1.0250493776772927,
+      "delta_count_ratio": 0.002959427431093342,
+      "prior_ci": [
+        0.9550103962155368,
+        1.0938811457278699
+      ],
+      "new_ci": [
+        0.9728165845901116,
+        1.0800866713423887
+      ],
+      "prior_p": 0.5281259471595342,
+      "new_p": 0.3538335168829937
+    }
+  }
+}

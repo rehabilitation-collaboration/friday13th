@@ -1,0 +1,230 @@
+{
+  "project": "friday13th",
+  "phase": "2C-C2-c",
+  "generated": "2026-07-22T13:49:25",
+  "script": "src/02_prefecture_panel_nb.py",
+  "values": [
+    {
+      "id": "pref_nb_alpha_nb2",
+      "value": 0.031864129275546625,
+      "label": "Prefecture panel NB2 MLE alpha",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_alpha_nb1",
+      "value": 0.5902033811859393,
+      "label": "Prefecture panel NB1 MLE alpha (sensitivity)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_n_obs",
+      "value": 103024,
+      "label": "Prefecture panel N observations",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_n_clusters_pref",
+      "value": 47,
+      "label": "Prefecture panel N prefecture clusters",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_n_clusters_date",
+      "value": 2192,
+      "label": "Prefecture panel N date clusters",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_k_params",
+      "value": 73,
+      "label": "Prefecture panel N parameters",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "pref_nb_coef",
+      "value": 0.02189860708404289,
+      "label": "Prefecture panel NB coefficient (is_fri13)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_se_cluster",
+      "value": 0.03479379892889331,
+      "label": "Prefecture panel two-way cluster SE (is_fri13)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "pref_nb_count_ratio",
+      "value": 1.0221401414467348,
+      "label": "Prefecture panel count ratio (is_fri13)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_ci_low",
+      "value": 0.9547581288333166,
+      "label": "Prefecture panel count ratio 95% CI lower",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_ci_high",
+      "value": 1.094277636612978,
+      "label": "Prefecture panel count ratio 95% CI upper",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "pref_nb_p",
+      "value": 0.5290986921615766,
+      "label": "Prefecture panel p-value (is_fri13, two-way cluster SE)",
+      "section": "results",
+      "format": ".3f"
+    },
+    {
+      "id": "bureau_nb_alpha_nb2",
+      "value": 0.031934255601977345,
+      "label": "Bureau panel NB2 MLE alpha",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_alpha_nb1",
+      "value": 0.555886950512038,
+      "label": "Bureau panel NB1 MLE alpha (sensitivity)",
+      "section": "methods",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_n_obs",
+      "value": 111792,
+      "label": "Bureau panel N observations",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "bureau_nb_n_clusters_pref",
+      "value": 47,
+      "label": "Bureau panel N prefecture clusters (Hokkaido combined)",
+      "section": "methods",
+      "format": "d"
+    },
+    {
+      "id": "bureau_nb_coef",
+      "value": 0.021849501848042917,
+      "label": "Bureau panel coefficient (is_fri13)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_se_cluster",
+      "value": 0.03463395628527315,
+      "label": "Bureau panel two-way cluster SE (is_fri13)",
+      "section": "results",
+      "format": ".4f"
+    },
+    {
+      "id": "bureau_nb_count_ratio",
+      "value": 1.0220899502461993,
+      "label": "Bureau panel count ratio (is_fri13)",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_ci_low",
+      "value": 0.9550103962155368,
+      "label": "Bureau panel count ratio 95% CI lower",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_ci_high",
+      "value": 1.0938811457278699,
+      "label": "Bureau panel count ratio 95% CI upper",
+      "section": "results",
+      "format": ".2f"
+    },
+    {
+      "id": "bureau_nb_p",
+      "value": 0.5281259471595342,
+      "label": "Bureau panel p-value (is_fri13, two-way cluster SE)",
+      "section": "results",
+      "format": ".3f"
+    }
+  ],
+  "diagnostics": {
+    "primary_47_prefecture": {
+      "label": "prefecture_47_FE",
+      "family": "NegativeBinomial(nb2)",
+      "n_obs": 103024,
+      "k_params": 73,
+      "alpha_mle_nb2": 0.031864129275546625,
+      "alpha_mle_nb1": 0.5902033811859393,
+      "poisson_llf": -296883.4930046946,
+      "nb_llf": -288062.34677964856,
+      "iid_se": {
+        "se_source": "iid",
+        "is_fri13_coef": 0.02189860708404289,
+        "is_fri13_se": 0.01609105286083812,
+        "is_fri13_z": 1.3609182241479678,
+        "is_fri13_p": 0.17353953364354802,
+        "count_ratio": 1.0221401414467348,
+        "count_ratio_ci_low": 0.9904064579525855,
+        "count_ratio_ci_high": 1.0548906061421985
+      },
+      "cluster_se": {
+        "se_source": "cluster_2way_pref_date",
+        "is_fri13_coef": 0.02189860708404289,
+        "is_fri13_se": 0.03479379892889331,
+        "is_fri13_z": 0.6293824692381592,
+        "is_fri13_p": 0.5290986921615766,
+        "count_ratio": 1.0221401414467348,
+        "count_ratio_ci_low": 0.9547581288333166,
+        "count_ratio_ci_high": 1.094277636612978
+      },
+      "n_clusters_pref": 47,
+      "n_clusters_date": 2192,
+      "converged": true
+    },
+    "sensitivity_51_bureau": {
+      "label": "bureau_51_FE",
+      "family": "NegativeBinomial(nb2)",
+      "n_obs": 111792,
+      "k_params": 77,
+      "alpha_mle_nb2": 0.031934255601977345,
+      "alpha_mle_nb1": 0.555886950512038,
+      "poisson_llf": -309859.1629166855,
+      "nb_llf": -301139.6881141327,
+      "iid_se": {
+        "se_source": "iid",
+        "is_fri13_coef": 0.021849501848042917,
+        "is_fri13_se": 0.016021449940622465,
+        "is_fri13_z": 1.3637655723433244,
+        "is_fri13_p": 0.17264135894158084,
+        "count_ratio": 1.0220899502461993,
+        "count_ratio_ci_low": 0.9904929405414359,
+        "count_ratio_ci_high": 1.0546949136489845
+      },
+      "cluster_se": {
+        "se_source": "cluster_2way_pref_date",
+        "is_fri13_coef": 0.021849501848042917,
+        "is_fri13_se": 0.03463395628527315,
+        "is_fri13_z": 0.6308693603489254,
+        "is_fri13_p": 0.5281259471595342,
+        "count_ratio": 1.0220899502461993,
+        "count_ratio_ci_low": 0.9550103962155368,
+        "count_ratio_ci_high": 1.0938811457278699
+      },
+      "n_clusters_pref": 47,
+      "n_clusters_date": 2192,
+      "converged": true
+    }
+  }
+}

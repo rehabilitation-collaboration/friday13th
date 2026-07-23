@@ -11,9 +11,16 @@ B. 独自分析:
   - 負の二項回帰 (天候・祝日・季節を共変量に追加)
   - サブグループ: 重症度別、時間帯別、年齢層別
   - 感度分析: COVID除外、お盆・年末年始除外
+
+Usage:
+  python 02_main_analysis.py                  # normal run
+  python 02_main_analysis.py --export-truth   # also export truth.json
 """
 
+import json
+import sys
 import warnings
+from datetime import datetime
 from pathlib import Path
 
 import numpy as np
@@ -781,7 +788,223 @@ def main():
     summary_df.to_csv(OUTPUT_DIR / "analysis_summary.csv", index=False)
 
     print(f"\n  Results saved to {OUTPUT_DIR}")
+
+    # Export truth JSON if requested
+    if "--export-truth" in sys.argv:
+        export_truth(
+            daily, scanlon_res, nayha_res, lo_res,
+            crossover_res, adjnb_res, subgroup_res,
+            sensitivity_res, power_res,
+        )
+
     print("\nDone.")
+
+
+# ===========================================================================
+# Truth JSON export (for verify_numbers.py)
+# ===========================================================================
+
+def _v(id_: str, value, label: str, section: str, fmt: str = ".2f",
+       context: str = "") -> dict:
+    """Helper to create a truth value entry."""
+    entry = {
+        "id": id_,
+        "value": value,
+        "label": label,
+        "section": section,
+        "format": fmt,
+    }
+    if context:
+        entry["context"] = context
+    return entry
+
+
+def export_truth(daily, scanlon_res, nayha_res, lo_res,
+                 crossover_res, adjnb_res, subgroup_res,
+                 sensitivity_res, power_res) -> None:
+    """Export analysis results as truth.json for manuscript verification."""
+
+    values = []
+
+    # --- Descriptive statistics ---
+    fridays = daily[daily["is_friday"] == 1]
+    fri13 = fridays[fridays["is_friday13th"] == 1]
+    other_fri = fridays[fridays["is_friday13th"] == 0]
+
+    values.append(_v("total_records", int(daily["total"].sum()),
+                      "Total accident records", "methods", "d"))
+    values.append(_v("n_friday13", len(fri13), "Number of Friday the 13ths",
+                      "methods", "d"))
+    values.append(_v("n_other_fri", len(other_fri), "Number of other Fridays",
+                      "methods", "d"))
+    values.append(_v("n_total_fri", len(fridays), "Total Fridays",
+                      "methods", "d"))
+
+    values.append(_v("fri13_mean", fri13["total"].mean(),
+                      "Mean daily accidents on Fri 13th", "results", ".1f"))
+    values.append(_v("fri13_sd", fri13["total"].std(),
+                      "SD of Fri 13th daily accidents", "results", ".1f"))
+    values.append(_v("other_fri_mean", other_fri["total"].mean(),
+                      "Mean daily accidents on other Fridays", "results", ".1f"))
+    values.append(_v("other_fri_sd", other_fri["total"].std(),
+                      "SD of other Friday daily accidents", "results", ".1f"))
+    values.append(_v("crude_rr", fri13["total"].mean() / other_fri["total"].mean(),
+                      "Crude rate ratio", "results", ".2f"))
+
+    values.append(_v("fri13_min", int(fri13["total"].min()),
+                      "Min Fri 13th daily count", "results", "d"))
+    values.append(_v("fri13_max", int(fri13["total"].max()),
+                      "Max Fri 13th daily count", "results", "d"))
+
+    # --- Scanlon ---
+    if scanlon_res:
+        values.append(_v("scanlon_n_pairs", scanlon_res["n_pairs"],
+                          "Scanlon paired observations", "results", "d"))
+        values.append(_v("scanlon_mean_fri13", scanlon_res["mean_fri13"],
+                          "Scanlon mean Fri 13th", "results", ".1f"))
+        values.append(_v("scanlon_mean_fri6", scanlon_res["mean_control"],
+                          "Scanlon mean Fri 6th", "results", ".1f"))
+        values.append(_v("scanlon_rr", scanlon_res["rr"],
+                          "Scanlon rate ratio", "results", ".2f"))
+        values.append(_v("scanlon_mean_diff",
+                          scanlon_res["mean_fri13"] - scanlon_res["mean_control"],
+                          "Scanlon mean difference", "results", ".1f"))
+        values.append(_v("scanlon_t", scanlon_res["t_stat"],
+                          "Scanlon paired t-stat", "results", ".2f"))
+        values.append(_v("scanlon_p_t", scanlon_res["p_paired_t"],
+                          "Scanlon paired t p-value", "results", ".2f"))
+        values.append(_v("scanlon_p_wilcoxon", scanlon_res["p_wilcoxon"],
+                          "Scanlon Wilcoxon p-value", "results", ".2f"))
+
+    # --- Nayha ---
+    nayha_ov = nayha_res.get("overall", {})
+    if nayha_ov and "rr" in nayha_ov:
+        values.append(_v("nayha_rr", nayha_ov["rr"],
+                          "Nayha overall IRR", "results", ".2f"))
+        values.append(_v("nayha_ci_low", nayha_ov["ci_low"],
+                          "Nayha 95% CI lower", "results", ".2f"))
+        values.append(_v("nayha_ci_high", nayha_ov["ci_high"],
+                          "Nayha 95% CI upper", "results", ".2f"))
+        values.append(_v("nayha_p", nayha_ov["p_value"],
+                          "Nayha p-value", "results", ".2f"))
+
+    # Age-stratified Nayha
+    for ag in ["young", "mid_low", "mid_hi", "elderly"]:
+        key = f"age_{ag}"
+        if key in nayha_res and "rr" in nayha_res[key]:
+            values.append(_v(f"nayha_{key}_rr", nayha_res[key]["rr"],
+                              f"Nayha {ag} IRR", "results", ".2f"))
+
+    # --- Lo ---
+    values.append(_v("lo_f", lo_res["f_stat"],
+                      "Lo ANOVA F-stat", "results", ".2f"))
+    values.append(_v("lo_p_anova", lo_res["p_anova"],
+                      "Lo ANOVA p-value", "results", ".2f"))
+    values.append(_v("lo_h", lo_res["h_stat"],
+                      "Lo Kruskal-Wallis H", "results", ".2f"))
+    values.append(_v("lo_p_kw", lo_res["p_kruskal"],
+                      "Lo Kruskal-Wallis p-value", "results", ".2f"))
+
+    for day, mean_val in lo_res.get("group_means", {}).items():
+        values.append(_v(f"lo_mean_{day}", mean_val,
+                          f"Lo group mean ({day}th)", "results", ".1f"))
+
+    # --- Case-crossover ---
+    values.append(_v("cc_mean_ratio", crossover_res["mean_ratio"],
+                      "Case-crossover mean ratio", "results", ".2f"))
+    values.append(_v("cc_overall_rr", crossover_res["overall_rr"],
+                      "Case-crossover overall RR", "results", ".2f"))
+    values.append(_v("cc_t", crossover_res["t_ratio"],
+                      "Case-crossover t-stat", "results", ".2f"))
+    values.append(_v("cc_p", crossover_res["p_ratio"],
+                      "Case-crossover p-value", "results", ".2f"))
+    values.append(_v("cc_n_above_1", crossover_res["n_above_1"],
+                      "Case-crossover n ratios > 1", "results", "d"))
+    values.append(_v("cc_n_total", crossover_res["n_total"],
+                      "Case-crossover total observations", "results", "d"))
+
+    # --- Adjusted NegBin ---
+    values.append(_v("adj_rr", adjnb_res["rr"],
+                      "Adjusted NegBin IRR", "results", ".2f"))
+    values.append(_v("adj_ci_low", adjnb_res["ci_low"],
+                      "Adjusted NegBin CI lower", "results", ".2f"))
+    values.append(_v("adj_ci_high", adjnb_res["ci_high"],
+                      "Adjusted NegBin CI upper", "results", ".2f"))
+    values.append(_v("adj_p", adjnb_res["p_value"],
+                      "Adjusted NegBin p-value", "results", ".2f"))
+
+    # --- Subgroup ---
+    for key, val in subgroup_res.items():
+        if isinstance(val, dict) and "rr" in val:
+            values.append(_v(f"sub_{key}_rr", val["rr"],
+                              f"Subgroup {key} RR", "results", ".2f"))
+            values.append(_v(f"sub_{key}_p", val["p"],
+                              f"Subgroup {key} p-value", "results", ".3f"))
+
+    # --- Sensitivity ---
+    for label, val in sensitivity_res.items():
+        safe_label = label.lower().replace(" ", "_").replace("(", "").replace(")", "")
+        values.append(_v(f"sens_{safe_label}_rr", val["rr"],
+                          f"Sensitivity '{label}' RR", "results", ".2f"))
+        values.append(_v(f"sens_{safe_label}_p", val["p"],
+                          f"Sensitivity '{label}' p-value", "results", ".2f"))
+        values.append(_v(f"sens_{safe_label}_n_fri13", val["n_fri13"],
+                          f"Sensitivity '{label}' n Fri 13th", "results", "d"))
+
+    # --- Power ---
+    values.append(_v("power_n_fri13", power_res["n_fri13"],
+                      "Power analysis n Fri 13th", "methods", "d"))
+    values.append(_v("power_n_other", power_res["n_other"],
+                      "Power analysis n other Fridays", "methods", "d"))
+    values.append(_v("power_min_diff", power_res["min_detectable_diff"],
+                      "Min detectable difference", "methods", ".1f"))
+    values.append(_v("power_min_pct", power_res["min_detectable_pct"],
+                      "Min detectable % difference", "methods", ".1f"))
+
+    # --- Table 1: Case-crossover detail ---
+    cc_detail = crossover_res.get("detail")
+    if cc_detail is not None:
+        table1_rows = []
+        for _, row in cc_detail.iterrows():
+            table1_rows.append({
+                "date": row["date"].strftime("%Y-%m-%d"),
+                "accidents": int(row["case_count"]),
+                "control_mean": round(row["control_mean"], 0),
+                "ratio": round(row["ratio"], 2),
+            })
+        tables = {"table1": table1_rows}
+    else:
+        tables = {}
+
+    # Build truth document
+    truth = {
+        "project": "friday13th",
+        "generated": datetime.now().isoformat(timespec="seconds"),
+        "script": "src/02_main_analysis.py",
+        "values": values,
+        "tables": tables,
+    }
+
+    # Convert numpy types to Python native
+    def _convert(obj):
+        import numpy as np
+        if isinstance(obj, (np.integer,)):
+            return int(obj)
+        if isinstance(obj, (np.floating,)):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        if isinstance(obj, dict):
+            return {k: _convert(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [_convert(i) for i in obj]
+        return obj
+
+    truth = _convert(truth)
+
+    out_path = OUTPUT_DIR / "truth.json"
+    out_path.write_text(json.dumps(truth, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"\n  Truth JSON exported to: {out_path}")
 
 
 if __name__ == "__main__":
