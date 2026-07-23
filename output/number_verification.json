@@ -1,7 +1,7 @@
 {
   "project": "friday13th",
   "phase": "2C-C5-number-verification",
-  "generated": "2026-07-23T14:12:28+00:00",
+  "generated": "2026-07-23T22:31:38+00:00",
   "manuscript_path": "/Users/mizukishirai/claude/analysis/friday13th/manuscript.md",
   "truth_path": "/Users/mizukishirai/claude/analysis/friday13th/output/truth.json",
   "n_checks": 43,
@@ -460,10 +460,10 @@
       "expected": 1.2270252117875835,
       "rendered": "1.227",
       "tol": 0.02,
-      "found": 1.227,
-      "found_str": "1.227",
+      "found": 1.23,
+      "found_str": "1.23",
       "status": "MATCH",
-      "note": "|Δ|=0.0000 ≤ tol=0.02"
+      "note": "|Δ|=0.0030 ≤ tol=0.02"
     },
     {
       "id": "t4_nighttime_rr_crude",

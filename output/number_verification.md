@@ -1,6 +1,6 @@
 # Number verification — Phase 2C-C5
 
-- Generated (UTC): 2026-07-23T14:12:28+00:00
+- Generated (UTC): 2026-07-23T22:31:38+00:00
 - Manuscript: `manuscript.md`
 - Truth source: `truth.json`
 - Total core checks: 43
@@ -58,6 +58,6 @@
 | `t4_fatal_rr_crude` | Table 4 fatal RR | 1.3073021425448186 (1.307) | 0.005 | **MATCH** | 1.307 | |Δ|=0.0003 ≤ tol=0.005 |
 | `t4_fatal_p_raw` | Table 4 fatal raw p | 0.08702400026164696 (0.0870) | 0.005 | **MATCH** | 0.087 | |Δ|=0.0000 ≤ tol=0.005 |
 | `t4_fatal_p_bonferroni` | Table 4 fatal Bonferroni | 0.6961920020931757 (0.6962) | 0.02 | **MATCH** | 0.696 | |Δ|=0.0002 ≤ tol=0.02 |
-| `t4_fatal_nb_count_ratio` | Table 4 fatal NB approx | 1.2270252117875835 (1.227) | 0.02 | **MATCH** | 1.227 | |Δ|=0.0000 ≤ tol=0.02 |
+| `t4_fatal_nb_count_ratio` | Table 4 fatal NB approx | 1.2270252117875835 (1.227) | 0.02 | **MATCH** | 1.23 | |Δ|=0.0030 ≤ tol=0.02 |
 | `t4_nighttime_rr_crude` | Table 4 nighttime RR | 1.2668495914952258 (1.267) | 0.005 | **MATCH** | 1.267 | |Δ|=0.0002 ≤ tol=0.005 |
 | `t4_daytime_rr_crude` | Table 4 daytime RR | 0.9538421009227274 (0.954) | 0.005 | **MATCH** | 0.954 | |Δ|=0.0002 ≤ tol=0.005 |

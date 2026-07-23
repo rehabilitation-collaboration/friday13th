@@ -18,9 +18,9 @@ MANUSCRIPT_MD = PROJECT_DIR / "manuscript.md"
 FIGURE_FILES = {
     "Figure 1": "figure1_scatter.png",
     "Figure 2": "figure2_forest.png",
-    "Figure S1": "S1_pearson_residuals_03_primary.png",
-    "Figure S2": "S2_same_month_pair_plot.png",
-    "Figure S3": "S3_prefecture_forest.png",
+    "Figure 3": "S1_pearson_residuals_03_primary.png",
+    "Figure 4": "S2_same_month_pair_plot.png",
+    "Figure 5": "S3_prefecture_forest.png",
 }
 
 CSS = """
@@ -86,8 +86,7 @@ def extract_figure_legends(md_text: str) -> dict[str, str]:
 
 def build_figures_html(legends: dict[str, str]) -> str:
     """Build HTML for figures section."""
-    html = '<div style="page-break-before:always"></div>\n'
-    html += "<h2>Figures</h2>\n"
+    html = ""
 
     for fig_label, fig_file in FIGURE_FILES.items():
         fig_path = FIGURES_DIR / fig_file

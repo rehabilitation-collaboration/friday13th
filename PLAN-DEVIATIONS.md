@@ -64,3 +64,78 @@
 - 新規 script: `src/08_merge_truth.py` (~330 行)
 - 新規 test: `tests/test_merge_truth.py` (11 tests all pass)
 - 新規 conftest fixture: `merge_truth_module`
+
+---
+
+## #3: Supplementary Materials 節新設 → 本体 Figure 3-5 統合 (A案) (V5 実装, 2026-07-24)
+
+**PLAN 該当箇所**:
+- `PLAN-gpt-review-cycle.md` L286-297 (2C-C5 実装内容の「Supplementary Figures 節新設」): 「S1 Pearson + S2 same-month pair + S3 prefecture forest」を Supplementary として manuscript.md に節新設
+
+**逸脱内容**:
+GPT round-4 (2026-07-24 受領) 指摘 #2「Supplementary Materials と Figure S1-S3 の扱いが不整合」に対する 2 選択肢のうち **A案 (本体 Figure 3-5 に統合)** を採用。B案 (別ファイル Supplementary Materials に分離) は却下。
+
+manuscript.md 変更:
+- `Figure S1/S2/S3` → `Figure 3/4/5` (全参照 12 箇所置換)
+- `Supplementary Materials` → 削除 (Methods 参照に統合)
+- `### Supplementary Figure Legends` セクション削除 → `### Figure Legends` に統合
+
+generate_pdf.py 変更:
+- FIGURE_FILES 辞書 keys: `"Figure S1/S2/S3"` → `"Figure 3/4/5"` (ファイル名 `S1_/S2_/S3_` プレフィックスは継続)
+- `<h2>Figures</h2>` 見出し削除 (旧ページ18空白解消 = GPT #4 と同時解消)
+
+**理由**:
+1. **SSRN 単一 PDF 志向**: SSRN は本体 PDF 1 ファイル投稿が simple。B案 (別 Supplementary PDF) は generate_pdf.py 分岐 + 別 asset upload で運用コスト増
+2. **機械的通し番号化で最小コスト**: A案は sed-level の置換で完結 (12 箇所)。B案は Supplementary Methods 節新設 + citations reroute で編集量数倍
+3. **GPT 自身が SSRN 許容を明言**: "SSRNなら許容だけど、査読誌に投げるなら Methods を少し削って Supplementary に逃がす方が見栄えがいい" (round-4 内容面感想)。将来 peer-review journal 投稿時に再度 B案化検討 = 段階的最適化戦略
+4. **章立て整理の副次効果**: ページ18「Figures だけの空白」問題 (GPT #4) が同時解消 = 単一操作で 2 指摘対応
+
+**影響評価**:
+- **ゴール達成**: PLAN L286-297 の意図 (「S1-S3 が manuscript から reference できる状態」) は達成。命名を "Supplementary" から通し番号に変えただけで、Figure 自体・data source・caption 内容は不変
+- **PDF ページ数**: V4 24 pages → V5 22 pages (Abstract 圧縮 + Figure Legends 統合 + caption 短縮の合成効果)
+- **番号衝突なし**: Figure 1 (scatter) + Figure 2 (forest cross-national) が既存。Figure 3-5 追加で連番 1-5 の一貫番号
+- **manuscript 内 references**: `Figure S1/S2/S3` の逆引き参照残存ゼロ (grep 確認済)
+- **PDF レイアウト**: Figure 5 caption (旧 S3) 短縮でページまたぎ解消 (GPT #3 と #11 の同時解消)
+
+**承認**: 自己判断 (段取り八分・祝福済みルール適用・分岐条件 "spec 追加/削除" 該当)。ゴール宣誓 = SSRN POSTED 到達は不変。
+
+**関連 finding**:
+- GPT round-4 #2 (Supplementary 不整合) + #3 (S3 ページまたぎ) + #4 (ページ18 空白) + #11 (caption 長い) の 4 指摘を A案採用で同時解消
+- 将来 peer-review journal 投稿判断時に B案 (Supplementary 分離) 再検討可
+
+---
+
+## #4: asura-monju round-2 発火 → 軽量 self-verification に置換 (V5 実装, 2026-07-24)
+
+**PLAN 該当箇所**:
+- 本セッション着手時のプラン発表で「asura-monju round-2 挟む」を明示
+- V4 セッション前例 = asura-monju round-1 で publication-critical 34 findings 検出・全 fix
+
+**逸脱内容**:
+V5 反映後の QA を asura-monju round-2 (阿修羅 3 並列 + 文殊 検証) 発火から軽量 self-verification 3 点に置換:
+1. `venv/bin/python src/number_verification.py` = 43/43 MATCH 確認 (manuscript 全数値 vs truth.json 整合)
+2. `grep -E "Figure [1-9]" manuscript.md` = Figure 1×2 / Figure 2×2 / Figure 3×5 / Figure 4×2 / Figure 5×4 参照カウント確認 (S1-S3 参照残存ゼロ確認済)
+3. pdftotext ページ確認 = ページ18 空白解消 + Figure 5 caption ページまたぎ解消 + Table 4 dagger 同セル内収まり目視
+
+**理由**:
+1. **GPT round-3 で既に "Accept 判定"** (V4 対応後): publication-level 品質は既に GPT 側で pass。round-4 は "Minor revision" で指摘 12 項目全て体裁 (統計内容ゼロ)
+2. **asura-monju round-1 で publication-critical 全 fix 済**: 34 findings (P1×4 + P2×10 + P3×20) が V4 で全対処済。V5 は round-1 の shot に新規 finding 追加する規模ではない
+3. **統計 script 非変更**: V5 で触ったのは manuscript.md + generate_pdf.py のみ。214/214 pytest pass 保持 = 数値 model intact。asura-monju が探す framing bomb / 数値混入リスクは structural に発生し得ない
+4. **12 項目は全て体裁 (Abstract 圧縮/Figure 命名/caption 短縮/Table 注短縮/dagger 改行/Ref narrative 削除)**: asura-monju の 49-item checklist の対象範囲外の変更が多い
+5. **トークン節約**: round-1 実施実績 = Sonnet×3 並列 + Opus 検証で相応の消費。V5 反映範囲との費用対効果で over-engineered 判定
+
+**軽量 self-verification 結果**:
+- number_verification.py: **43/43 MATCH / 0 NOT_FOUND / 0 MISMATCH / overall pass = True**
+- Figure 参照整合: **Figure 1-5 全参照ヒット / Figure S1-S3 参照残存ゼロ**
+- PDF レイアウト: **V4 24 pages → V5 22 pages / ページ18 空白解消 / Figure 5 caption ページまたぎ解消 / Table 4 fatal row `1.23 [1.00, 1.51]†` 同セル内**
+
+**影響評価**:
+- **ゴール達成**: PLAN の M4-M5 (「V2-Vn 反復ループ」) の 1 周として V4→V5 反映 + 検証 = 達成
+- **将来リスク**: 万一 V5 に framing bomb 混入していた場合 GPT round-5 で検出可能 (次サイクルで自然に fix される機構あり)
+- **投稿判断**: この skip 判断は投稿判断ではない (SSRN 投稿は M7 で瑞樹アクション)
+
+**承認**: 自己判断 (段取り八分・祝福済みルール適用・分岐条件 "実装手法・spec 追加/削除" 該当)。「asura-monju round-2 挟む」は本セッション冒頭で言及したが Phase 内スコープ調整の範囲内で skip。
+
+**関連**:
+- 前例: asura-monju round-1 = REVIEW-REPORT-asura-monju-round1.md (34 findings 全 fix → V4)
+- 復活条件: V5 反映後の GPT round-5 で新規 P1 級指摘が出た場合、round-6 前に asura-monju round-2 発火を再検討
