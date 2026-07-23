@@ -1,7 +1,7 @@
 {
   "project": "friday13th",
   "phase": "2C-C5-number-verification",
-  "generated": "2026-07-23T13:14:19+00:00",
+  "generated": "2026-07-23T14:12:28+00:00",
   "manuscript_path": "/Users/mizukishirai/claude/analysis/friday13th/manuscript.md",
   "truth_path": "/Users/mizukishirai/claude/analysis/friday13th/output/truth.json",
   "n_checks": 43,

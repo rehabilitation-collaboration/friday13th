@@ -1,13 +1,14 @@
 # Reference Verification Report
 
-Generated: 2026-03-27 11:38
+Generated: 2026-07-23 22:32
 Tool: verify_refs.py (CrossRef API)
 
 ## Summary
 
-- Total references: 12
-- MATCH: 9
-- MISMATCH: 3
+- Total references: 16
+- MATCH: 11
+- MISMATCH: 4
+- MANUAL: 1
 
 ## Issues Requiring Attention
 
@@ -16,6 +17,7 @@ Tool: verify_refs.py (CrossRef API)
 | [5] | MISMATCH | title, year, author_1_surname | Resolved via title search (lower confidence) |
 | [10] | MISMATCH | title, year | Resolved via title search (lower confidence) |
 | [11] | MISMATCH | title, year, author_count, author_1_surname | Resolved via title search (lower confidence) |
+| [15] | MISMATCH | author_1_surname | Resolved via DOI (high confidence) |
 
 ## Mismatch Details
 
@@ -40,6 +42,11 @@ Tool: verify_refs.py (CrossRef API)
   - **author_1_surname**: manuscript=`Davies RJ, Ikeno O` / crossref=`Moore CA`
 - **Suggested**: Moore CA. Editor's Suppliment:* The Enigmatic Japanese Mind. The Japanese Mind. 1967:288-319. doi:10.1515/9780824843052-016.
 
+### Ref [15]
+- **Manuscript**: Cameron AC, Miller DL. A practitioner's guide to cluster-robust inference. *J Human Resources*. 2015;50(2):317-372. doi:10.3368/jhr.50.2.317
+  - **author_1_surname**: manuscript=`Cameron AC, Miller DL` / crossref=`Colin Cameron A, Miller DL`
+- **Suggested**: Colin Cameron A, Miller DL. A Practitioner’s Guide to Cluster-Robust Inference. Journal of Human Resources. 2015;50:317-372. doi:10.3368/jhr.50.2.317.
+
 ## Full Results
 
 | Ref | Status | DOI | Notes |
@@ -56,3 +63,7 @@ Tool: verify_refs.py (CrossRef API)
 | [10] | MISMATCH | 10.1093/oso/9780195078824.003.0001 | Resolved via title search (lower confidence) |
 | [11] | MISMATCH | 10.1515/9780824843052-016 | Resolved via title search (lower confidence) |
 | [12] | MATCH | 10.1136/bmj.323.7327.1443 | Resolved via DOI (high confidence) |
+| [13] | MATCH | 10.1093/oxfordjournals.aje.a115853 | Resolved via DOI (high confidence) |
+| [14] | MATCH | 10.1093/biostatistics/kxl013 | Resolved via DOI (high confidence) |
+| [15] | MISMATCH | 10.3368/jhr.50.2.317 | Resolved via DOI (high confidence) |
+| [16] | MANUAL |  | Title search returned low-confidence match (overlap=27%). Manual check required. |

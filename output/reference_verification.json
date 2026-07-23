@@ -366,7 +366,7 @@
   {
     "ref_number": 12,
     "status": "MATCH",
-    "raw_text": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS. The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death. *BMJ*. 2001;323(7327):1443-1446. doi:10.1136/bmj.323.7327.1443\n\n---",
+    "raw_text": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS. The Hound of the Baskervilles effect: natural experiment on the influence of psychological stress on timing of death. *BMJ*. 2001;323(7327):1443-1446. doi:10.1136/bmj.323.7327.1443",
     "mismatched_fields": [],
     "manuscript_data": {
       "authors": "Phillips DP, Liu GC, Kwok K, Jarvinen JR, Zhang W, Abramson IS",
@@ -393,6 +393,128 @@
     "url_status": 0,
     "notes": [
       "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 13,
+    "status": "MATCH",
+    "raw_text": "Maclure M. The case-crossover design: a method for studying transient effects on the risk of acute events. *Am J Epidemiol*. 1991;133(2):144-153. doi:10.1093/oxfordjournals.aje.a115853",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Maclure M",
+      "title": "The case-crossover design: a method for studying transient effects on the risk of acute events",
+      "journal": "",
+      "year": "1991",
+      "volume": "133",
+      "pages": "144-153",
+      "doi": "10.1093/oxfordjournals.aje.a115853"
+    },
+    "crossref_data": {
+      "title": "The Case-Crossover Design: A Method for Studying Transient Effects on the Risk of Acute Events",
+      "journal": "American Journal of Epidemiology",
+      "year": "1991",
+      "volume": "133",
+      "page": "144-153",
+      "doi": "10.1093/oxfordjournals.aje.a115853",
+      "authors": "Maclure M"
+    },
+    "crossref_doi": "10.1093/oxfordjournals.aje.a115853",
+    "corrected_citation": "Maclure M. The Case-Crossover Design: A Method for Studying Transient Effects on the Risk of Acute Events. American Journal of Epidemiology. 1991;133:144-153. doi:10.1093/oxfordjournals.aje.a115853.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 14,
+    "status": "MATCH",
+    "raw_text": "Lu Y, Zeger SL. On the equivalence of case-crossover and time series methods in environmental epidemiology. *Biostatistics*. 2007;8(2):337-344. doi:10.1093/biostatistics/kxl013",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Lu Y, Zeger SL",
+      "title": "On the equivalence of case-crossover and time series methods in environmental epidemiology",
+      "journal": "",
+      "year": "2007",
+      "volume": "8",
+      "pages": "337-344",
+      "doi": "10.1093/biostatistics/kxl013"
+    },
+    "crossref_data": {
+      "title": "On the equivalence of case-crossover and time series methods in environmental epidemiology",
+      "journal": "Biostatistics",
+      "year": "2007",
+      "volume": "8",
+      "page": "337-344",
+      "doi": "10.1093/biostatistics/kxl013",
+      "authors": "Lu Y, Zeger SL"
+    },
+    "crossref_doi": "10.1093/biostatistics/kxl013",
+    "corrected_citation": "Lu Y, Zeger SL. On the equivalence of case-crossover and time series methods in environmental epidemiology. Biostatistics. 2007;8:337-344. doi:10.1093/biostatistics/kxl013.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 15,
+    "status": "MISMATCH",
+    "raw_text": "Cameron AC, Miller DL. A practitioner's guide to cluster-robust inference. *J Human Resources*. 2015;50(2):317-372. doi:10.3368/jhr.50.2.317",
+    "mismatched_fields": [
+      "author_1_surname"
+    ],
+    "manuscript_data": {
+      "authors": "Cameron AC, Miller DL",
+      "title": "A practitioner's guide to cluster-robust inference",
+      "journal": "",
+      "year": "2015",
+      "volume": "50",
+      "pages": "317-372",
+      "doi": "10.3368/jhr.50.2.317"
+    },
+    "crossref_data": {
+      "title": "A Practitioner’s Guide to Cluster-Robust Inference",
+      "journal": "Journal of Human Resources",
+      "year": "2015",
+      "volume": "50",
+      "page": "317-372",
+      "doi": "10.3368/jhr.50.2.317",
+      "authors": "Colin Cameron A, Miller DL"
+    },
+    "crossref_doi": "10.3368/jhr.50.2.317",
+    "corrected_citation": "Colin Cameron A, Miller DL. A Practitioner’s Guide to Cluster-Robust Inference. Journal of Human Resources. 2015;50:317-372. doi:10.3368/jhr.50.2.317.",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Resolved via DOI (high confidence)"
+    ]
+  },
+  {
+    "ref_number": 16,
+    "status": "MANUAL",
+    "raw_text": "Pesarin F, Salmaso L. *Permutation Tests for Complex Data: Theory, Applications and Software*. Chichester, UK: John Wiley & Sons; 2010.\n\n---",
+    "mismatched_fields": [],
+    "manuscript_data": {
+      "authors": "Pesarin F, Salmaso L",
+      "title": "*Permutation Tests for Complex Data: Theory, Applications and Software*",
+      "journal": "",
+      "year": "2010",
+      "volume": "",
+      "pages": "",
+      "doi": ""
+    },
+    "crossref_data": {},
+    "crossref_doi": "",
+    "corrected_citation": "",
+    "is_retracted": false,
+    "retraction_doi": "",
+    "url_status": 0,
+    "notes": [
+      "Title search returned low-confidence match (overlap=27%). Manual check required."
     ]
   }
 ]
