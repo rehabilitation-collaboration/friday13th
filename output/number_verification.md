@@ -1,6 +1,6 @@
 # Number verification — Phase 2C-C5
 
-- Generated (UTC): 2026-07-23T23:12:21+00:00
+- Generated (UTC): 2026-07-23T23:30:14+00:00
 - Manuscript: `manuscript.md`
 - Truth source: `truth.json`
 - Total core checks: 43
