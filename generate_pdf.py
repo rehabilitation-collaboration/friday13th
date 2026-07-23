@@ -55,6 +55,7 @@ strong { font-weight: bold; }
 em { font-style: italic; }
 .figure-block {
     page-break-inside: avoid;
+    page-break-before: always;
     margin: 1.5em 0;
     text-align: center;
 }
@@ -62,6 +63,7 @@ em { font-style: italic; }
     display: block;
     margin: 0 auto;
     max-width: 95%;
+    max-height: 78vh;
 }
 .figure-caption {
     font-size: 10pt;
