@@ -44,6 +44,7 @@ sup { font-size: 0.75em; }
 table {
     border-collapse: collapse; width: 100%; margin: 10pt 0;
     font-size: 9pt;
+    page-break-inside: avoid;
 }
 th, td {
     border: 1px solid #999; padding: 3pt 5pt; text-align: left;
