@@ -95,7 +95,7 @@ FOREST_DATA = [
     ("Lo 2012 - Penetrating (USA)", 1.65, 1.04, 2.61, True, False),
     ("Ranganathan 2024 (Canada)", 1.02, 0.94, 1.09, False, False),
     ("Shekhar 2025 (USA)", 1.00, None, None, False, False),
-    ("Present study (Japan)", 1.02, 0.54, 1.94, False, True),
+    ("Present study (Japan)", 1.02, 0.54, 1.91, False, True),
 ]
 
 
