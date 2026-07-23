@@ -48,7 +48,7 @@ Traffic accident data were obtained from the National Police Agency (NPA) of Jap
 
 ### Study design
 
-We identified 10 Friday the 13th dates during the study period (September 2019 through December 2024) and compared daily accident counts against control Fridays using multiple analytical frameworks. To maximize comparability with prior literature, we reproduced three established approaches alongside three original analyses (a case-crossover analysis, a covariate-adjusted 47-prefecture negative binomial panel model, and 47 prefecture-specific negative binomial fits summarized as a forest plot).
+We identified 10 Friday the 13th dates during the study period (September 2019 through December 2024) and compared daily accident counts against control Fridays using multiple analytical frameworks. To maximize comparability with prior literature, we reproduced three established approaches alongside two original inferential analyses: a case-crossover analysis and a covariate-adjusted 47-prefecture negative binomial panel model. We additionally performed prefecture-specific fits to display heterogeneity.
 
 **Scanlon method (paired comparison):** Following Scanlon et al.,^1^ we compared each Friday the 13th with the Friday the 6th of the same month using a paired t-test, with the Wilcoxon signed-rank test as a non-parametric robustness check. Normality of paired differences was confirmed by the Shapiro-Wilk test (W=0.97, p = 0.91).
 
