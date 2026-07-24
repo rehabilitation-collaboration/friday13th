@@ -9,7 +9,11 @@
   h2 { font-size: 1.15em; margin-top: 1.4em; margin-bottom: 0.4em; }
   h3 { font-size: 1em; margin-top: 1em; margin-bottom: 0.3em; color: #444; }
   code { background: #f0f0f0; padding: 0.05em 0.3em; border-radius: 2px; font-size: 0.9em; }
-  pre { background: #f6f6f6; padding: 0.6em 0.8em; border-radius: 3px; border: 1px solid #ddd; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; margin: 0.4em 0 0.8em; }
+  .copy-container { position: relative; margin: 0.4em 0 0.8em; }
+  .copy-container pre { background: #f6f6f6; padding: 0.6em 3em 0.6em 0.8em; border-radius: 3px; border: 1px solid #ddd; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; margin: 0; }
+  .copy-btn { position: absolute; top: 0.35em; right: 0.4em; padding: 0.2em 0.6em; font-size: 0.75em; background: #005a9c; color: #fff; border: none; border-radius: 3px; cursor: pointer; }
+  .copy-btn:hover { background: #003d6b; }
+  .copy-btn.copied { background: #28a745; }
   ul { margin: 0.3em 0 0.6em; padding-left: 1.4em; }
   li { margin: 0.15em 0; }
   a { color: #005a9c; }
@@ -17,6 +21,34 @@
 </style>
 </head>
 <body>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('pre').forEach(pre => {
+    const container = document.createElement('div');
+    container.className = 'copy-container';
+    pre.parentNode.insertBefore(container, pre);
+    container.appendChild(pre);
+    const btn = document.createElement('button');
+    btn.className = 'copy-btn';
+    btn.textContent = 'Copy';
+    btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(pre.textContent);
+        btn.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+          btn.classList.remove('copied');
+        }, 1500);
+      } catch (e) {
+        btn.textContent = 'Failed';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      }
+    });
+    container.appendChild(btn);
+  });
+});
+</script>
 
 <h1>SSRN 投稿ガイド - Friday the 13th (V10)</h1>
 
