@@ -2,204 +2,165 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<title>SSRN 投稿ガイド - Friday the 13th Study (V10)</title>
+<title>SSRN 投稿ガイド - Friday the 13th (V10)</title>
 <style>
-  body { font-family: -apple-system, "Helvetica Neue", "Hiragino Sans", sans-serif; max-width: 900px; margin: 2em auto; padding: 0 1em; line-height: 1.6; color: #222; }
-  h1 { border-bottom: 3px solid #005a9c; padding-bottom: 0.3em; }
-  h2 { border-bottom: 1px solid #ccc; padding-bottom: 0.2em; margin-top: 1.6em; }
-  h3 { color: #005a9c; margin-top: 1.4em; }
-  code, pre { background: #f4f4f4; padding: 0.1em 0.4em; border-radius: 3px; font-family: "SF Mono", Monaco, Consolas, monospace; font-size: 0.9em; }
-  pre { padding: 0.8em; overflow-x: auto; }
-  .checkbox { list-style: none; padding-left: 0; }
-  .checkbox li { padding-left: 2em; text-indent: -2em; margin: 0.3em 0; }
-  .checkbox li::before { content: "☐ "; color: #005a9c; font-weight: bold; }
-  .critical { background: #fff3cd; border-left: 4px solid #ff8800; padding: 0.6em 1em; margin: 1em 0; }
-  .warning { background: #f8d7da; border-left: 4px solid #dc3545; padding: 0.6em 1em; margin: 1em 0; }
-  .info { background: #d1ecf1; border-left: 4px solid #0c5460; padding: 0.6em 1em; margin: 1em 0; }
-  .copy-block { background: #f4f4f4; padding: 0.8em; border-radius: 4px; border: 1px solid #ddd; margin: 0.6em 0; font-size: 0.9em; white-space: pre-wrap; }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-  th, td { border: 1px solid #ccc; padding: 0.5em; text-align: left; vertical-align: top; }
-  th { background: #e8e8e8; }
+  body { font-family: -apple-system, "Helvetica Neue", sans-serif; max-width: 860px; margin: 1.5em auto; padding: 0 1em; line-height: 1.55; color: #222; }
+  h1 { font-size: 1.4em; margin-bottom: 0.3em; }
+  h2 { font-size: 1.15em; margin-top: 1.4em; margin-bottom: 0.4em; }
+  h3 { font-size: 1em; margin-top: 1em; margin-bottom: 0.3em; color: #444; }
+  code { background: #f0f0f0; padding: 0.05em 0.3em; border-radius: 2px; font-size: 0.9em; }
+  pre { background: #f6f6f6; padding: 0.6em 0.8em; border-radius: 3px; border: 1px solid #ddd; font-size: 0.85em; white-space: pre-wrap; word-wrap: break-word; margin: 0.4em 0 0.8em; }
+  ul { margin: 0.3em 0 0.6em; padding-left: 1.4em; }
+  li { margin: 0.15em 0; }
   a { color: #005a9c; }
+  hr { border: none; border-top: 1px solid #ddd; margin: 1.4em 0; }
 </style>
 </head>
 <body>
 
-<h1>SSRN 投稿ガイド - Friday the 13th Study (V10)</h1>
-
-<p><strong>対象論文</strong>: <em>Friday the 13th and Traffic Accidents in Japan: A Natural Cultural Control Study of 1.9 Million Police Records</em> (第 6 弾)</p>
-<p><strong>投稿 PDF</strong>: <code>~/Desktop/friday13_SSRN_v10.pdf</code> (945 KB / 22 page / commit <code>e85e1b1</code>)</p>
-<p><strong>投稿者</strong>: 瑞樹 (手動投稿・M7)</p>
-<p><strong>作成日</strong>: 2026-07-24 (M6 完遂・GPT round-9 Accept 確定後)</p>
-
-<div class="info">
-<strong>投稿までの全体像</strong>:<br>
-M6 (このガイド作成・完了) → <strong>M7 (瑞樹手動投稿)</strong> → SSRN Editorial review (最大 10 business days) → M8 (POSTED 掲載メール受領 + Abstract ID + 公開 URL 記録)
-</div>
-
-<h2>0. 事前準備チェックリスト</h2>
-
-<ul class="checkbox">
-<li>SSRN アカウント作成済 (未作成なら <a href="https://hq.ssrn.com/login/pubSignInJoin.cfm">https://hq.ssrn.com/login/pubSignInJoin.cfm</a> でサインアップ・author profile 完成)</li>
-<li>Full-text PDF (英語・title + author affiliations 表示): <code>~/Desktop/friday13_SSRN_v10.pdf</code></li>
-<li>Author info 確認: Mizuki Shirai, MHS / Specified Nonprofit Corporation Rehabilitation Collaboration / <code>rehabilitation.collaboration@gmail.com</code> / ORCID: 0009-0005-3615-0670</li>
-<li>AI disclosure statement (Anthropic Claude 使用・Acknowledgments に既記載済)</li>
-<li>Medical paper 要件確認: 本論文は publicly available aggregate NPA data のみ (individual identifier なし) = <strong>patient consent 対象外</strong>。Ethics 節に明記済 (Japanese Ethical Guidelines Article 3-1-1 exemption)</li>
-<li>Funding: none (Funding 節に明記済)</li>
-<li>Conflict of Interest: none (CoI 節に明記済)</li>
-</ul>
-
-<h2>1. 投稿ポータル URL</h2>
-
-<div class="critical">
-<strong>Submission portal</strong>: <a href="https://hq.ssrn.com/login/pubSignInJoin.cfm">https://hq.ssrn.com/login/pubSignInJoin.cfm</a><br>
-サインイン後、"Submit a Paper" or "New Submission" ボタンから新規投稿開始
-</div>
-
-<h2>2. 論文メタ情報 (form 入力用・コピペ推奨)</h2>
-
-<h3>Title</h3>
-<div class="copy-block">Friday the 13th and Traffic Accidents in Japan: A Natural Cultural Control Study of 1.9 Million Police Records</div>
-
-<h3>Running title (Short title)</h3>
-<div class="copy-block">Friday the 13th: a Japan cultural-control study</div>
-
-<h3>Date the paper was written</h3>
-<p><strong>2026-05-24</strong> (論文骨子作成日 = intellectual priority date)</p>
-<div class="info">
-SSRN の "Date the paper was written" は<strong>最初に written された日付</strong> (intellectual priority date) の意味。V10 commit 日 (2026-07-24) は最終改訂日で別概念。Working paper の慣例で research の initial creation date を使うのが standard。
-</div>
-
-<h3>Abstract</h3>
-
-<p><strong>Background:</strong></p>
-<div class="copy-block">Evidence on whether Friday the 13th increases accident risk remains inconsistent and methodologically contested, with reported effects ranging from a 52% increase in hospital admissions to null findings. Japan, where 13 is not a traditionally salient unlucky number (the culturally emphasized inauspicious numbers are 4 and 9, not 13), provides a natural control population to test whether the "Friday the 13th effect" is culturally mediated.</div>
-
-<p><strong>Methods:</strong></p>
-<div class="copy-block">We analyzed 1,884,793 police-recorded traffic accidents across Japan (2019-2024), comparing accident counts on 10 Friday the 13ths against other Fridays. We reproduced three established Western analytical approaches (Scanlon paired comparison, Näyhä negative binomial regression, and Lo multi-date ANOVA) and added a case-crossover analysis (three complementary tests) and a covariate-adjusted 47-prefecture negative binomial panel model with weather and holiday adjustment. Subgroup analyses examined accident severity, age groups, and time of day.</div>
-
-<p><strong>Results:</strong></p>
-<div class="copy-block">Across all analytical approaches, no large Friday the 13th effect was detected. The Scanlon-method rate ratio was 1.04 (paired t-test p = 0.47), the Näyhä-method count ratio was 1.01 (95% confidence interval [CI], 0.54-1.91; p = 0.97), and the Lo-method ANOVA showed no between-group differences (F = 0.16, p = 0.93). Case-crossover analyses across three complementary tests were all consistent with the null (conditional Poisson p = 0.40, exact sign p = 0.11, sign-flip permutation p = 0.45). The 47-prefecture negative binomial panel model with weather and holiday adjustment yielded a count ratio of 1.02 (95% CI, 0.97-1.08; p = 0.36), centered near the null and excluding effects of the magnitude reported in early Western studies. Prefecture-specific fits ranged from 0.59 to 1.29 (median 1.01), null-compatible after multiple-comparison correction. A sparse-count Poisson approximation for fatal accidents was borderline but exploratory and non-significant after multiple-comparison correction across the 8 pre-specified subgroups. All sensitivity analyses excluding COVID-period data, holidays, and Obon/New Year periods yielded consistent null results (RR range: 1.01-1.06).</div>
-
-<p><strong>Conclusions:</strong></p>
-<div class="copy-block">In this large national dataset from a culture where 13 is not a traditionally salient unlucky number, Friday the 13th was not associated with a detectable population-level increase in traffic accidents. Large effects of the magnitude reported by earlier Western studies can be excluded, but small effects cannot. Although the study was motivated by a cultural-mediation hypothesis, our null findings — combined with recent large studies from Western populations that also report no effect — are more consistent with a universal null effect than with a purely culturally mediated one. The absence of a large effect in Japan therefore adds to the growing evidence that Friday the 13th has, at most, only a very small influence on population-level accident rates in any country studied to date.</div>
-
-<h3>Keywords</h3>
-<div class="copy-block">Friday the 13th, triskaidekaphobia, traffic accidents, superstition, cultural epidemiology, Japan, cross-national comparison</div>
-
-<h3>Authors</h3>
-
-<table>
-<tr><th>Field</th><th>Value</th></tr>
-<tr><td>Name</td><td>Mizuki Shirai, MHS</td></tr>
-<tr><td>Affiliation</td><td>Specified Nonprofit Corporation Rehabilitation Collaboration</td></tr>
-<tr><td>Location</td><td>Suita, Osaka, Japan</td></tr>
-<tr><td>Email</td><td><code>rehabilitation.collaboration@gmail.com</code></td></tr>
-<tr><td>ORCID</td><td>0009-0005-3615-0670</td></tr>
-</table>
-
-<h3>AI Disclosure Statement</h3>
-
-<p>Acknowledgments に既記載 (PDF 内で表示済み):</p>
-<div class="copy-block">Data analysis and manuscript preparation were assisted by Claude Opus 4.6 (Anthropic), which was used for statistical programming, literature search, and drafting. The author assumes full responsibility for the accuracy of the content, interpretation, and conclusions. All references were verified against PubMed and CrossRef records where applicable.</div>
-
-<h2>3. Classification (Step 4 - 最重要・投稿後変更不可)</h2>
-
-<div class="warning">
-<strong>⚠️ 重要</strong>: SSRN の Step 4 (Classification) は<strong>投稿後に追加・削除できない</strong>。最初に慎重に選択すること。最大 7 個まで選択可能で、Top-Ten ranking eligibility にも影響。
-</div>
-
-<h3>推奨 categories (最大 7 個・優先度順)</h3>
-
-<table>
-<tr><th>優先度</th><th>Discipline</th><th>Sub-category</th><th>理由</th></tr>
-<tr><td>1</td><td>Health Economics & Policy</td><td>Public Health / Epidemiology</td><td>本論文の主分野・NPA データ + epidemiological methods (NB regression / case-crossover)</td></tr>
-<tr><td>2</td><td>Public Health & Safety</td><td>Injury Prevention / Traffic Safety</td><td>traffic accidents = 主要 outcome</td></tr>
-<tr><td>3</td><td>Behavioral & Experimental Economics</td><td>Behavioral Economics</td><td>superstition / cultural mediation の話題</td></tr>
-<tr><td>4</td><td>Sociology</td><td>Cultural Sociology / Sociology of Culture</td><td>cross-cultural comparison + triskaidekaphobia</td></tr>
-<tr><td>5</td><td>Statistics & Econometrics</td><td>Applied Statistics / Econometric Methods</td><td>NB2 panel + case-crossover + Cameron-Miller cluster SE</td></tr>
-<tr><td>6</td><td>Anthropology</td><td>Cultural Anthropology (該当あれば)</td><td>13 vs 4/9 の cultural salience 比較</td></tr>
-<tr><td>7</td><td>Health Services Research</td><td>Health Data Analytics (該当あれば)</td><td>大規模行政データ (NPA 1.88M records) 活用</td></tr>
-</table>
-
-<p><strong>選択方針</strong>: 上位 5 個を最低限確保。6-7 は SSRN 側の browse tree で該当があれば追加、なければ 5 個で提出。「search for relevant categories using keywords」機能で "Friday the 13th" / "superstition" / "traffic" / "case-crossover" / "cultural epidemiology" で検索して該当分類を探す。</p>
-
-<h3>JEL Codes (Social Sciences 選択時のみ表示)</h3>
-
-<p>もし Behavioral Economics or Sociology を選んだ場合、Step 4 末尾に JEL Codes セクションが出現。以下推奨:</p>
-
-<table>
-<tr><th>JEL Code</th><th>Category</th><th>理由</th></tr>
-<tr><td>I12</td><td>Health Behavior</td><td>superstition 由来の behavioral change 仮説</td></tr>
-<tr><td>Z12</td><td>Religion (Cultural Economics)</td><td>triskaidekaphobia = 宗教文化的信念</td></tr>
-<tr><td>R41</td><td>Transportation Economics: Transportation Safety</td><td>traffic accident outcome</td></tr>
-<tr><td>C25</td><td>Discrete Regression and Qualitative Choice Models</td><td>NB regression + case-crossover</td></tr>
-</table>
-
-<h2>4. Submission Steps (推定 6 step form)</h2>
-
-<div class="info">
-SSRN の新 submission form (2024- 以降) は Step 1-6 の tabbed interface。<strong>各 step は clickable で自動保存</strong>される。中断→再開可能 (My Papers page に draft 保存)。
-</div>
-
-<ol>
-<li><strong>Step 1 - Manuscript details</strong>: Title (英語) / Date written (2026-07-24) / Abstract (Background/Methods/Results/Conclusions 全部貼付) / Keywords (カンマ区切り)</li>
-<li><strong>Step 2 - Authors</strong>: Mizuki Shirai の name + affiliation + email + ORCID を入力。Co-author なし (single author)</li>
-<li><strong>Step 3 - Files</strong>: <code>~/Desktop/friday13_SSRN_v10.pdf</code> をアップロード。ファイル名は SSRN 側で自動 rename されるので気にしない</li>
-<li><strong>Step 4 - Classify (最重要・投稿後変更不可)</strong>: 上記「推奨 categories」から 5-7 個選択。Social Sciences 選択時は JEL Codes も入力</li>
-<li><strong>Step 5 - Working paper series</strong>: 該当なし = skip or "N/A". Institutional series (大学の working paper series 等) に該当しない</li>
-<li><strong>Step 6 - Review & Submit</strong>: 全 step の内容を最終確認 → Submit ボタンで完了 → 確認 email 受信</li>
-</ol>
-
-<h2>5. 想定 blocker と対処法</h2>
-
-<table>
-<tr><th>Blocker</th><th>対処法</th></tr>
-<tr><td>SSRN account 未作成 or author profile 不完全</td><td>Step 0 で <a href="https://hq.ssrn.com/login/pubSignInJoin.cfm">portal</a> でサインアップ → profile 完成 (affiliation / ORCID 入力)</td></tr>
-<tr><td>PDF アップロード失敗</td><td>ファイルサイズ 10MB 以下想定 (本 PDF = 945 KB で余裕)。ネットワーク不安定なら再試行</td></tr>
-<tr><td>Category 選択で該当なし</td><td>keyword search で "epidemiology" / "traffic safety" / "cultural economics" 等で該当を探す。7 個未満でも提出可</td></tr>
-<tr><td>Abstract 文字数制限</td><td>SSRN は通常 4000 chars 程度まで許容。本 Abstract は 3200 chars 程度で余裕</td></tr>
-<tr><td>Editorial review で reject</td><td><strong>SSRN は reject 理由を開示しない・appeal 不可</strong>。再投稿は同一内容不可 = manuscript 大幅改訂後の再提出のみ (低確率シナリオ)</td></tr>
-<tr><td>AI disclosure 別途要求</td><td>submission form に AI disclosure 専用 field があれば PDF 内 Acknowledgments 記述をコピペ</td></tr>
-</table>
-
-<h2>6. 投稿完了後の action</h2>
-
-<ol>
-<li>SSRN から "Your paper has been submitted" 確認 email 受信 → 該当 email を保存 (スクリーンショットも推奨)</li>
-<li>Editorial review 待機 (最大 10 business days)。追加情報要求 email が来る可能性あり (author info 補足等)。速答で対応</li>
-<li>POSTED 掲載メール受領 (Abstract ID + 公開 URL が付与される):
-  <ul>
-    <li>例: Abstract ID = <code>ssrn.XXXXXXX</code> / URL = <code>https://papers.ssrn.com/sol3/papers.cfm?abstract_id=XXXXXXX</code></li>
-  </ul>
-</li>
-<li>Abstract ID + URL を以下に記録:
-  <ul>
-    <li><code>~/.claude/projects/-Users-mizukishirai/memory/handoff-friday13th.md</code> (M8 完遂サマリ)</li>
-    <li><code>~/.claude/projects/-Users-mizukishirai/memory/handoff-paper-brainstorm.md</code> (シリーズ第 6 弾ステータス表を POSTED に更新)</li>
-    <li><code>~/.claude/projects/-Users-mizukishirai-claude-max-plan/memory/MEMORY.md</code> (第 6 弾行に POSTED 追記)</li>
-  </ul>
-</li>
-<li><strong>ゴール宣誓 SSRN POSTED 到達 = 達成 🎉</strong></li>
-</ol>
-
-<h2>7. Reference</h2>
+<h1>SSRN 投稿ガイド - Friday the 13th (V10)</h1>
 
 <ul>
-<li>SSRN Support Center - Get Started: <a href="https://www.elsevier.support/ssrn/answer/get-started">https://www.elsevier.support/ssrn/answer/get-started</a></li>
-<li>SSRN Support Center - Classification Guide: <a href="https://www.elsevier.support/ssrn/answer/classifying-your-paper-with-the-new-ssrn-submission-form">https://www.elsevier.support/ssrn/answer/classifying-your-paper-with-the-new-ssrn-submission-form</a></li>
-<li>SSRN Support Center - Review Process: <a href="https://www.elsevier.support/ssrn/answer/ssrn-review-process">https://www.elsevier.support/ssrn/answer/ssrn-review-process</a></li>
-<li>SSRN New Submission Form (PDF): <a href="https://supportcontent.elsevier.com/Support%20Hub/SSRN/SSRN_NewSubmissionForm.pdf">https://supportcontent.elsevier.com/Support%20Hub/SSRN/SSRN_NewSubmissionForm.pdf</a></li>
-<li>SSRN for Authors and Researchers: <a href="https://www.elsevier.com/products/ssrn-preprint-services/author-researchers">https://www.elsevier.com/products/ssrn-preprint-services/author-researchers</a></li>
-<li>GitHub リポ: <a href="https://github.com/rehabilitation-collaboration/friday13th">https://github.com/rehabilitation-collaboration/friday13th</a></li>
+<li><strong>論文</strong>: Friday the 13th and Traffic Accidents in Japan: A Natural Cultural Control Study of 1.9 Million Police Records</li>
+<li><strong>PDF</strong>: <code>~/Desktop/friday13_SSRN_v10.pdf</code> (945 KB / 22 page / commit <code>e85e1b1</code>)</li>
+<li><strong>投稿 portal</strong>: <a href="https://hq.ssrn.com/login/pubSignInJoin.cfm">https://hq.ssrn.com/login/pubSignInJoin.cfm</a></li>
+<li><strong>Review 期間</strong>: 最大 10 business days</li>
 </ul>
 
 <hr>
 
-<p style="text-align: center; color: #888; font-size: 0.9em;">
-Generated by クロコン (M6 SSRN 投稿ガイド作成) - 2026-07-24<br>
-Handoff: <code>~/.claude/projects/-Users-mizukishirai/memory/handoff-friday13th.md</code>
-</p>
+<h2>Step 1 — Manuscript details</h2>
+
+<h3>Title</h3>
+<pre>Friday the 13th and Traffic Accidents in Japan: A Natural Cultural Control Study of 1.9 Million Police Records</pre>
+
+<h3>Date the paper was written</h3>
+<pre>2026-05-24</pre>
+<p>(骨子作成日 = intellectual priority date。V10 commit 日 2026-07-24 は最終改訂日で別概念。SSRN は "first written" を使うのが慣例。)</p>
+
+<h3>Abstract - Background</h3>
+<pre>Evidence on whether Friday the 13th increases accident risk remains inconsistent and methodologically contested, with reported effects ranging from a 52% increase in hospital admissions to null findings. Japan, where 13 is not a traditionally salient unlucky number (the culturally emphasized inauspicious numbers are 4 and 9, not 13), provides a natural control population to test whether the "Friday the 13th effect" is culturally mediated.</pre>
+
+<h3>Abstract - Methods</h3>
+<pre>We analyzed 1,884,793 police-recorded traffic accidents across Japan (2019-2024), comparing accident counts on 10 Friday the 13ths against other Fridays. We reproduced three established Western analytical approaches (Scanlon paired comparison, Näyhä negative binomial regression, and Lo multi-date ANOVA) and added a case-crossover analysis (three complementary tests) and a covariate-adjusted 47-prefecture negative binomial panel model with weather and holiday adjustment. Subgroup analyses examined accident severity, age groups, and time of day.</pre>
+
+<h3>Abstract - Results</h3>
+<pre>Across all analytical approaches, no large Friday the 13th effect was detected. The Scanlon-method rate ratio was 1.04 (paired t-test p = 0.47), the Näyhä-method count ratio was 1.01 (95% confidence interval [CI], 0.54-1.91; p = 0.97), and the Lo-method ANOVA showed no between-group differences (F = 0.16, p = 0.93). Case-crossover analyses across three complementary tests were all consistent with the null (conditional Poisson p = 0.40, exact sign p = 0.11, sign-flip permutation p = 0.45). The 47-prefecture negative binomial panel model with weather and holiday adjustment yielded a count ratio of 1.02 (95% CI, 0.97-1.08; p = 0.36), centered near the null and excluding effects of the magnitude reported in early Western studies. Prefecture-specific fits ranged from 0.59 to 1.29 (median 1.01), null-compatible after multiple-comparison correction. A sparse-count Poisson approximation for fatal accidents was borderline but exploratory and non-significant after multiple-comparison correction across the 8 pre-specified subgroups. All sensitivity analyses excluding COVID-period data, holidays, and Obon/New Year periods yielded consistent null results (RR range: 1.01-1.06).</pre>
+
+<h3>Abstract - Conclusions</h3>
+<pre>In this large national dataset from a culture where 13 is not a traditionally salient unlucky number, Friday the 13th was not associated with a detectable population-level increase in traffic accidents. Large effects of the magnitude reported by earlier Western studies can be excluded, but small effects cannot. Although the study was motivated by a cultural-mediation hypothesis, our null findings — combined with recent large studies from Western populations that also report no effect — are more consistent with a universal null effect than with a purely culturally mediated one. The absence of a large effect in Japan therefore adds to the growing evidence that Friday the 13th has, at most, only a very small influence on population-level accident rates in any country studied to date.</pre>
+
+<h3>Keywords</h3>
+<pre>Friday the 13th, triskaidekaphobia, traffic accidents, superstition, cultural epidemiology, Japan, cross-national comparison</pre>
+
+<hr>
+
+<h2>Step 2 — Authors</h2>
+
+<ul>
+<li><strong>Name</strong>: Mizuki Shirai, MHS</li>
+<li><strong>Affiliation</strong>: Specified Nonprofit Corporation Rehabilitation Collaboration</li>
+<li><strong>Location</strong>: Suita, Osaka, Japan</li>
+<li><strong>Email</strong>: <code>rehabilitation.collaboration@gmail.com</code></li>
+<li><strong>ORCID</strong>: 0009-0005-3615-0670</li>
+</ul>
+
+<hr>
+
+<h2>Step 3 — Files</h2>
+
+<ul>
+<li>Upload: <code>~/Desktop/friday13_SSRN_v10.pdf</code></li>
+</ul>
+
+<hr>
+
+<h2>Step 4 — Classify Your Submission (投稿後変更不可・最重要)</h2>
+
+<p>クロコン推奨 5 個 (最大 7 個上限だがムリに埋めず 5 個で十分):</p>
+
+<ul>
+<li>✅ <strong>Public Health Policy Alert</strong> (Health Sciences ▶ Public Health Research Network)</li>
+<li>✅ <strong>Social Determinants of Public Health Alert</strong> (同上)</li>
+<li>✅ <strong>Violence &amp; Public Health Alert</strong> (同上・交通事故 injury public health として該当)</li>
+<li>✅ <strong>Cultural Anthropology: History, Theory, Methods &amp; Applications Alert</strong> (Social Sciences ▶ Anthropology &amp; Archaeology Research Network)</li>
+<li>✅ <strong>Cultural Sociology Alert</strong> (Social Sciences ▶ Sociology Research Network)</li>
+</ul>
+
+<p><strong>JEL Codes (Social Sciences 選択で出現時)</strong>:</p>
+
+<ul>
+<li>I12 - Health Behavior</li>
+<li>Z12 - Religion (Cultural Economics)</li>
+<li>R41 - Transportation Safety</li>
+<li>C25 - Discrete Regression Models</li>
+</ul>
+
+<hr>
+
+<h2>Step 5 — Research Integrity</h2>
+
+<h3>Declaration of Interest</h3>
+<pre>The author declares no conflicts of interest.</pre>
+
+<h3>Funder statement</h3>
+<pre>This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.</pre>
+
+<h3>Ethics approval</h3>
+<pre>This study analyzed publicly available, anonymized accident-level records released by the National Police Agency of Japan through its open data portal. The records contain no personal identifiers, and all analyses were performed on daily aggregate counts. Under the Japanese Ethical Guidelines for Medical and Biological Research Involving Human Subjects (2021 revision), research using publicly available data that do not include personal identifiers does not require ethics committee review (Article 3, Paragraph 1, Item 1). No institutional review board approval or waiver was sought.</pre>
+
+<h3>Clinical trial registration</h3>
+<pre>Not applicable. This is an observational ecological study, not a clinical trial.</pre>
+
+<h3>AI Disclosure (form に別 field あれば)</h3>
+<pre>Data analysis and manuscript preparation were assisted by Claude Opus 4.6 (Anthropic), which was used for statistical programming, literature search, and drafting. The author assumes full responsibility for the accuracy of the content, interpretation, and conclusions.</pre>
+
+<hr>
+
+<h2>Step 6 — Review and Submit</h2>
+
+<ul>
+<li>全 step の入力を最終確認</li>
+<li><strong>Submit</strong> ボタンで完了</li>
+<li>確認 email 受信 = M7 完遂</li>
+</ul>
+
+<hr>
+
+<h2>投稿完了後の action</h2>
+
+<ul>
+<li>Editorial review 待機 (最大 10 business days)</li>
+<li>POSTED メール受領 → Abstract ID + 公開 URL を以下に記録:
+  <ul>
+    <li><code>~/.claude/projects/-Users-mizukishirai/memory/handoff-friday13th.md</code></li>
+    <li><code>~/.claude/projects/-Users-mizukishirai/memory/handoff-paper-brainstorm.md</code> (シリーズ第 6 弾 = POSTED)</li>
+    <li><code>~/.claude/projects/-Users-mizukishirai-claude-max-plan/memory/MEMORY.md</code></li>
+  </ul>
+</li>
+<li><strong>ゴール宣誓 SSRN POSTED 到達 = 達成</strong></li>
+</ul>
+
+<hr>
+
+<h2>想定 blocker</h2>
+
+<ul>
+<li>Category 該当なし → search box に <code>epidemiology</code> / <code>traffic</code> / <code>superstition</code> / <code>cultural</code> で検索</li>
+<li>Editorial reject → SSRN は理由開示なし・appeal 不可 (投稿後 manuscript 大幅改訂のみ再投稿可)</li>
+<li>PDF アップロード失敗 → ファイルサイズ 10MB 以下 (本 PDF 945 KB で余裕)</li>
+</ul>
+
+<hr>
+
+<h2>Reference</h2>
+
+<ul>
+<li><a href="https://www.elsevier.support/ssrn/answer/get-started">SSRN Get Started</a></li>
+<li><a href="https://www.elsevier.support/ssrn/answer/classifying-your-paper-with-the-new-ssrn-submission-form">SSRN Classification Guide</a></li>
+<li><a href="https://www.elsevier.support/ssrn/answer/ssrn-review-process">SSRN Review Process</a></li>
+<li><a href="https://github.com/rehabilitation-collaboration/friday13th">GitHub リポ</a></li>
+</ul>
 
 </body>
 </html>
